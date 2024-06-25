@@ -1,0 +1,14 @@
+
+default: &DEFAULTS
+  app: &APP_DEFAULTS
+    scheme: GovUK-UIComponents
+    output_directory: build_output
+    workspace: GovUK-UIComponents.xcworkspace
+    project: Example/GovUK-UIComponents.xcodeproj
+    test_plan: UIComponents
+  scan:
+    devices:
+      - iPhone 15 Pro
+
+unit:
+  <<: *DEFAULTS

@@ -1,0 +1,44 @@
+{
+  "configurations" : [
+    {
+      "id" : "FCC23714-B52A-407F-A40F-46A191F25561",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:GovUK-UIComponents.xcodeproj",
+      "identifier" : "5D0278452C2AA90900F2A4EB",
+      "name" : "govuk_uicomponents_ios"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:GovUK-UIComponents.xcodeproj",
+        "identifier" : "5D02785B2C2AA91000F2A4EB",
+        "name" : "govuk_uicomponents_ios_unit_tests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:GovUK-UIComponents.xcodeproj",
+        "identifier" : "5D0278652C2AA91000F2A4EB",
+        "name" : "govuk_uicomponents_ios_ui_tests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:..",
+        "identifier" : "UIComponentsTests",
+        "name" : "UIComponentsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
