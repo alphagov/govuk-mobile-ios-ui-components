@@ -1,11 +1,5 @@
-//
-//  GovUK_UIComponentsTests.swift
-//  GovUK-UIComponentsTests
-//
-//  Created by Thomas Bates on 25/06/2024.
-//
-
 import XCTest
+
 @testable import GovUK_UIComponents
 
 final class GovUK_UIComponentsTests: XCTestCase {
