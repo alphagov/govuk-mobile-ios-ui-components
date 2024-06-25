@@ -16,6 +16,7 @@
 		5D0278612C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0278602C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift */; };
 		5D02786B2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */; };
 		5D02786D2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */; };
+		5D71C0DA2C2AD02F00E25DA5 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5D71C0D92C2AD02F00E25DA5 /* UIComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D71C0DA2C2AD02F00E25DA5 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +84,7 @@
 				5D7240F82C2AAD2C00B2D70A /* Production */,
 				5D7240F72C2AAC6400B2D70A /* Tests */,
 				5D0278472C2AA90900F2A4EB /* Products */,
+				5D71C0D82C2AD02F00E25DA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +124,13 @@
 				5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */,
 			);
 			path = govuk_uicomponents_ios_ui_tests;
+			sourceTree = "<group>";
+		};
+		5D71C0D82C2AD02F00E25DA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5D7240F62C2AAC6400B2D70A /* govuk_uicomponents_ios */ = {
@@ -199,6 +209,9 @@
 			dependencies = (
 			);
 			name = govuk_uicomponents_ios;
+			packageProductDependencies = (
+				5D71C0D92C2AD02F00E25DA5 /* UIComponents */,
+			);
 			productName = "GovUK-UIComponents";
 			productReference = 5D0278462C2AA90900F2A4EB /* govuk_uicomponents_ios.app */;
 			productType = "com.apple.product-type.application";
@@ -663,6 +676,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D71C0D92C2AD02F00E25DA5 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D02783E2C2AA90900F2A4EB /* Project object */;
 }

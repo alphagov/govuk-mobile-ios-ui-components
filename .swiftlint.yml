@@ -1,6 +1,6 @@
 included:
   - Example/Production
-  - Onboarding/Sources
+  - UIComponents/Sources
 
 analyzer_rules:
 - unused_import
