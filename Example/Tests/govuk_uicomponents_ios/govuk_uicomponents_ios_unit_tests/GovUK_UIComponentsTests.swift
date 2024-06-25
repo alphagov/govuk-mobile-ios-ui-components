@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import GovUK_UIComponents
+@testable import UIComponents
 
 final class GovUK_UIComponentsTests: XCTestCase {
 
