@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D0278452C2AA90900F2A4EB"
-               BuildableName = "GovUK-UIComponents.app"
-               BlueprintName = "GovUK-UIComponents"
+               BuildableName = "govuk_uicomponents_ios.app"
+               BlueprintName = "govuk_uicomponents_ios"
                ReferencedContainer = "container:GovUK-UIComponents.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -36,8 +36,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D02785B2C2AA91000F2A4EB"
-               BuildableName = "GovUK-UIComponentsTests.xctest"
-               BlueprintName = "GovUK-UIComponentsTests"
+               BuildableName = "govuk_uicomponents_ios_unit_tests.xctest"
+               BlueprintName = "govuk_uicomponents_ios_unit_tests"
                ReferencedContainer = "container:GovUK-UIComponents.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -47,8 +47,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D0278652C2AA91000F2A4EB"
-               BuildableName = "GovUK-UIComponentsUITests.xctest"
-               BlueprintName = "GovUK-UIComponentsUITests"
+               BuildableName = "govuk_uicomponents_ios_ui_tests.xctest"
+               BlueprintName = "govuk_uicomponents_ios_ui_tests"
                ReferencedContainer = "container:GovUK-UIComponents.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -69,8 +69,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5D0278452C2AA90900F2A4EB"
-            BuildableName = "GovUK-UIComponents.app"
-            BlueprintName = "GovUK-UIComponents"
+            BuildableName = "govuk_uicomponents_ios.app"
+            BlueprintName = "govuk_uicomponents_ios"
             ReferencedContainer = "container:GovUK-UIComponents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -86,8 +86,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5D0278452C2AA90900F2A4EB"
-            BuildableName = "GovUK-UIComponents.app"
-            BlueprintName = "GovUK-UIComponents"
+            BuildableName = "govuk_uicomponents_ios.app"
+            BlueprintName = "govuk_uicomponents_ios"
             ReferencedContainer = "container:GovUK-UIComponents.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
