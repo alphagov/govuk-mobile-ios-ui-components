@@ -95,7 +95,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5D0278482C2AA90900F2A4EB /* GovUK-UIComponents */ = {
+		5D0278482C2AA90900F2A4EB /* govuk_uicomponents_ios */ = {
 			isa = PBXGroup;
 			children = (
 				5D0278492C2AA90900F2A4EB /* AppDelegate.swift */,
@@ -106,31 +106,31 @@
 				5D0278542C2AA90F00F2A4EB /* LaunchScreen.storyboard */,
 				5D0278572C2AA90F00F2A4EB /* Info.plist */,
 			);
-			path = "GovUK-UIComponents";
+			path = govuk_uicomponents_ios;
 			sourceTree = "<group>";
 		};
-		5D02785F2C2AA91000F2A4EB /* GovUK-UIComponentsTests */ = {
+		5D02785F2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests */ = {
 			isa = PBXGroup;
 			children = (
 				5D0278602C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift */,
 			);
-			path = "GovUK-UIComponentsTests";
+			path = govuk_uicomponents_ios_unit_tests;
 			sourceTree = "<group>";
 		};
-		5D0278692C2AA91000F2A4EB /* GovUK-UIComponentsUITests */ = {
+		5D0278692C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests */ = {
 			isa = PBXGroup;
 			children = (
 				5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */,
 				5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */,
 			);
-			path = "GovUK-UIComponentsUITests";
+			path = govuk_uicomponents_ios_ui_tests;
 			sourceTree = "<group>";
 		};
 		5D7240F62C2AAC6400B2D70A /* govuk_uicomponents_ios */ = {
 			isa = PBXGroup;
 			children = (
-				5D0278692C2AA91000F2A4EB /* GovUK-UIComponentsUITests */,
-				5D02785F2C2AA91000F2A4EB /* GovUK-UIComponentsTests */,
+				5D0278692C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests */,
+				5D02785F2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests */,
 			);
 			path = govuk_uicomponents_ios;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 		5D7240F82C2AAD2C00B2D70A /* Production */ = {
 			isa = PBXGroup;
 			children = (
-				5D0278482C2AA90900F2A4EB /* GovUK-UIComponents */,
+				5D0278482C2AA90900F2A4EB /* govuk_uicomponents_ios */,
 			);
 			path = Production;
 			sourceTree = "<group>";
@@ -468,7 +468,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8W395F695;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Production/GovUK-UIComponents/Info.plist";
+				INFOPLIST_FILE = Production/govuk_uicomponents_ios/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -496,7 +496,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8W395F695;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Production/GovUK-UIComponents/Info.plist";
+				INFOPLIST_FILE = Production/govuk_uicomponents_ios/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
