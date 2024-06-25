@@ -98,13 +98,10 @@
 		5D0278482C2AA90900F2A4EB /* govuk_uicomponents_ios */ = {
 			isa = PBXGroup;
 			children = (
-				5D0278492C2AA90900F2A4EB /* AppDelegate.swift */,
-				5D02784B2C2AA90900F2A4EB /* SceneDelegate.swift */,
-				5D02784D2C2AA90900F2A4EB /* ViewController.swift */,
-				5D02784F2C2AA90900F2A4EB /* Main.storyboard */,
-				5D0278522C2AA90F00F2A4EB /* Assets.xcassets */,
-				5D0278542C2AA90F00F2A4EB /* LaunchScreen.storyboard */,
-				5D0278572C2AA90F00F2A4EB /* Info.plist */,
+				5DA285F42C2ABCE200C1B88D /* Resources */,
+				5DA285F32C2ABCC600C1B88D /* Storyboards */,
+				5DA285F22C2ABC9F00C1B88D /* SupportingFiles */,
+				5DA285F52C2ABCED00C1B88D /* ViewControllers */,
 			);
 			path = govuk_uicomponents_ios;
 			sourceTree = "<group>";
@@ -149,6 +146,41 @@
 				5D0278482C2AA90900F2A4EB /* govuk_uicomponents_ios */,
 			);
 			path = Production;
+			sourceTree = "<group>";
+		};
+		5DA285F22C2ABC9F00C1B88D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5D0278492C2AA90900F2A4EB /* AppDelegate.swift */,
+				5D0278572C2AA90F00F2A4EB /* Info.plist */,
+				5D02784B2C2AA90900F2A4EB /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5DA285F32C2ABCC600C1B88D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5D0278542C2AA90F00F2A4EB /* LaunchScreen.storyboard */,
+				5D02784F2C2AA90900F2A4EB /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5DA285F42C2ABCE200C1B88D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D0278522C2AA90F00F2A4EB /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DA285F52C2ABCED00C1B88D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D02784D2C2AA90900F2A4EB /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,7 +500,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8W395F695;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Production/govuk_uicomponents_ios/Info.plist;
+				INFOPLIST_FILE = Production/govuk_uicomponents_ios/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -496,7 +528,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8W395F695;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Production/govuk_uicomponents_ios/Info.plist;
+				INFOPLIST_FILE = Production/govuk_uicomponents_ios/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
