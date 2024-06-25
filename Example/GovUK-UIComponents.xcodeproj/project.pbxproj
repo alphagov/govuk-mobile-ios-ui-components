@@ -79,9 +79,8 @@
 		5D02783D2C2AA90900F2A4EB = {
 			isa = PBXGroup;
 			children = (
-				5D0278482C2AA90900F2A4EB /* GovUK-UIComponents */,
-				5D02785F2C2AA91000F2A4EB /* GovUK-UIComponentsTests */,
-				5D0278692C2AA91000F2A4EB /* GovUK-UIComponentsUITests */,
+				5D7240F82C2AAD2C00B2D70A /* Production */,
+				5D7240F72C2AAC6400B2D70A /* Tests */,
 				5D0278472C2AA90900F2A4EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +124,31 @@
 				5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */,
 			);
 			path = "GovUK-UIComponentsUITests";
+			sourceTree = "<group>";
+		};
+		5D7240F62C2AAC6400B2D70A /* govuk_uicomponents_ios */ = {
+			isa = PBXGroup;
+			children = (
+				5D0278692C2AA91000F2A4EB /* GovUK-UIComponentsUITests */,
+				5D02785F2C2AA91000F2A4EB /* GovUK-UIComponentsTests */,
+			);
+			path = govuk_uicomponents_ios;
+			sourceTree = "<group>";
+		};
+		5D7240F72C2AAC6400B2D70A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5D7240F62C2AAC6400B2D70A /* govuk_uicomponents_ios */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5D7240F82C2AAD2C00B2D70A /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				5D0278482C2AA90900F2A4EB /* GovUK-UIComponents */,
+			);
+			path = Production;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,7 +468,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8W395F695;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "GovUK-UIComponents/Info.plist";
+				INFOPLIST_FILE = "Production/GovUK-UIComponents/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -472,7 +496,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N8W395F695;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "GovUK-UIComponents/Info.plist";
+				INFOPLIST_FILE = "Production/GovUK-UIComponents/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
