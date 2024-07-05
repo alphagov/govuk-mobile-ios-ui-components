@@ -74,7 +74,7 @@ extension GOVUKButtonTests {
     @MainActor
     func test_addBackground() {
         let sut = sut.addBackgroundTo(color: .red)
-        sut.setTitle("test title dfsdf ssfd s sdf sdf s fsd sdfsdfs d dfg fdgh fghj fgc cbvbc v ", for: .normal)
+        sut.setTitle("test title", for: .normal)
 
         dump(sut.bounds)
 

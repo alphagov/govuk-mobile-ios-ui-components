@@ -84,24 +84,14 @@ final public class GOVUKButton: UIButton {
     }
 
     private func configConstraints() {
-        NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(greaterThanOrEqualToConstant: 24),
-            self.widthAnchor.constraint(greaterThanOrEqualToConstant: 24)
-        ])
-
         if let titleLabel = self.titleLabel {
             NSLayoutConstraint.activate([
-                self.heightAnchor.constraint(greaterThanOrEqualTo: titleLabel.heightAnchor, constant: 16)
-            ])
-        }
+                self.heightAnchor.constraint(greaterThanOrEqualTo: titleLabel.heightAnchor, constant: 25),
 
-
-        if let titleLabel = self.titleLabel {
-            NSLayoutConstraint.activate([
-                titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,
-                                                    constant: (self.layer.cornerRadius)),
-                titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,
-                                                     constant: -(self.layer.cornerRadius))
+                self.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor,
+                                              constant: (self.layer.cornerRadius - 16)),
+                self.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor,
+                                               constant: (self.layer.cornerRadius + 16))
             ])
         }
     }
@@ -115,6 +105,10 @@ final public class GOVUKButton: UIButton {
         titleLabel?.preferredMaxLayoutWidth = width
 
         updateBackground()
+
+        titleLabel?.constraints.forEach({
+            $0.shouldBeArchived = true
+        })
 
         updateConstraints()
     }
@@ -135,7 +129,7 @@ extension GOVUKButton {
 }
 
 extension GOVUKButton {
-    public enum ButtonShape {
+    public enum ButtonShape: Equatable {
         case roundedRect(CGFloat)
         case capsule
     }
@@ -156,25 +150,13 @@ extension GOVUKButton {
     private func updateBackground() {
         switch buttonShape {
         case .roundedRect(let radius):
-            self.layer.cornerRadius = radius
+            self.layer.cornerRadius = min(radius, 22)
         case .capsule:
-            let radius = self.bounds.height / 2
-            self.layer.cornerRadius = radius
+            self.layer.cornerRadius = 22
         case .none:
             self.layer.cornerRadius = 0
         }
-
-        if let titleLabel = self.titleLabel {
-            NSLayoutConstraint.activate([
-//                titleLabel.widthAnchor.constraint(equalToConstant: titleWidth)
-
-                titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,
-                                                    constant: (self.layer.cornerRadius * 2)),
-                titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,
-                                                     constant: (self.layer.cornerRadius * 2))
-            ])
-        }
-        self.updateConstraints()
+        self.layer.cornerCurve = .continuous
     }
 
     private var titleWidth: Double {
