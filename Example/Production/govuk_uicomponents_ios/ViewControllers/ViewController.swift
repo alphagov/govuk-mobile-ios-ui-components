@@ -14,7 +14,10 @@ class ViewController: UIViewController {
 
 
 //        let button = UIButton.govUK.addBackgroundTo(color: .red, buttonShape: .roundedRect(15))
-        let button = UIButton.govUK.addBackgroundTo(color: .red, buttonShape: .capsule)
+//        let button = UIButton.govUK.addBackgroundTo(color: .red, buttonShape: .capsule)
+
+        let button = UIButton.govUK.primary
+
         button.setTitle("Confirm your identity another way V", for: .normal)
 
         let button2 = UIButton.govUK

@@ -96,26 +96,21 @@ final public class GOVUKButton: UIButton {
         }
     }
 
-
     public override func layoutSubviews() {
         super.layoutSubviews()
-
 
         guard let width = titleLabel?.frame.width else { return }
         titleLabel?.preferredMaxLayoutWidth = width
 
         updateBackground()
-
-        titleLabel?.constraints.forEach({
-            $0.shouldBeArchived = true
-        })
-
         updateConstraints()
     }
 }
 
 extension GOVUKButton {
     @objc public func buttonShapesStyle() {
+        guard _backgroundColor == nil else { return }
+
         if UIAccessibility.buttonShapesEnabled {
             backgroundColor = accessibilityBackgroundColor == nil ?
                 .secondarySystemBackground : accessibilityBackgroundColor
@@ -134,7 +129,11 @@ extension GOVUKButton {
         case capsule
     }
 
-    public func addBackgroundTo(
+    public var primary: GOVUKButton {
+        self.addBackgroundTo(color: UIColor(resource: .myBlue))
+    }
+
+    private func addBackgroundTo(
         color: UIColor,
         radius: CGFloat? = nil,
         buttonShape: ButtonShape = .capsule
@@ -163,3 +162,16 @@ extension GOVUKButton {
         self.bounds.width - self.layer.cornerRadius * 2
     }
 }
+
+/*
+ need to add this notification code to scene delegate
+
+ func sceneWillEnterForeground(_ scene: UIScene) {
+ postNotification()
+ }
+
+ func postNotification() {
+ let nc = NotificationCenter.default
+ nc.post(Notification(name: Notification.Name( "buttonShapesEnabled"), object: nil))
+ }
+ */
