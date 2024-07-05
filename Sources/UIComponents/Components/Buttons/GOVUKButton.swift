@@ -65,9 +65,10 @@ final public class GOVUKButton: UIButton {
         titleLabel?.font = UIFont(style: .body, weight: fontWeight)
         titleLabel?.textAlignment = .center
 
+        contentEdgeInsets = .init(top: 13, left: 16, bottom: 13, right: 16)
+
         buttonShapesStyle()
         configNotifications()
-        configConstraints()
         updateBackground()
     }
 
@@ -81,19 +82,6 @@ final public class GOVUKButton: UIButton {
 
     deinit {
         NotificationCenter.default.removeObserver(Notification.Name("buttonShapesEnabled"))
-    }
-
-    private func configConstraints() {
-        if let titleLabel = self.titleLabel {
-            NSLayoutConstraint.activate([
-                self.heightAnchor.constraint(greaterThanOrEqualTo: titleLabel.heightAnchor, constant: 25),
-
-                self.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor,
-                                              constant: (self.layer.cornerRadius - 16)),
-                self.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor,
-                                               constant: (self.layer.cornerRadius + 16))
-            ])
-        }
     }
 
     public override func layoutSubviews() {
@@ -112,11 +100,13 @@ extension GOVUKButton {
         guard _backgroundColor == nil else { return }
 
         if UIAccessibility.buttonShapesEnabled {
+            backgroundColor = nil
             backgroundColor = accessibilityBackgroundColor == nil ?
                 .secondarySystemBackground : accessibilityBackgroundColor
-            contentEdgeInsets = .init(top: 13, left: 8, bottom: 13, right: 8)
-            layer.cornerRadius = 10
-            layer.cornerCurve = .continuous
+
+            self.layer.cornerRadius = 10
+            self.layer.cornerCurve = .continuous
+            contentEdgeInsets = .init(top: 13, left: 12, bottom: 13, right: 12)
         } else {
             backgroundColor = .none
         }
@@ -153,7 +143,9 @@ extension GOVUKButton {
         case .capsule:
             self.layer.cornerRadius = 22
         case .none:
-            self.layer.cornerRadius = 0
+            if _backgroundColor != nil {
+                self.layer.cornerRadius = 0
+            }
         }
         self.layer.cornerCurve = .continuous
     }

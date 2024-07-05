@@ -8,9 +8,10 @@ class ViewController: UIViewController {
 
         let stack = UIStackView()
         stack.axis = .vertical
-        stack.distribution = .equalSpacing
+        stack.distribution = .fill
         stack.alignment = .fill
         stack.isLayoutMarginsRelativeArrangement = true
+        stack.spacing = 16
 
 
 //        let button = UIButton.govUK.addBackgroundTo(color: .red, buttonShape: .roundedRect(15))
@@ -34,15 +35,12 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             view.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: -16),
             view.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: 16),
-            view.topAnchor.constraint(equalTo: stack.topAnchor, constant: -100),
-            view.bottomAnchor.constraint(equalTo: stack.bottomAnchor, constant: 100),
-            stack.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            view.topAnchor.constraint(lessThanOrEqualTo: stack.topAnchor, constant: -100),
+            view.bottomAnchor.constraint(greaterThanOrEqualTo: stack.bottomAnchor, constant: 30),
+
+            button2.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 16)
         ])
 
-        button.setNeedsUpdateConstraints()
-
-        button.updateConstraints()
-        view.layoutSubviews()
-        dump(button.bounds)
+        view.backgroundColor = .tertiarySystemBackground
     }
 }
