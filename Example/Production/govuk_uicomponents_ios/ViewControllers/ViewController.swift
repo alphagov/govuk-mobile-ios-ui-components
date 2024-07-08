@@ -13,13 +13,9 @@ class ViewController: UIViewController {
         stack.isLayoutMarginsRelativeArrangement = true
         stack.spacing = 16
 
-
-//        let button = UIButton.govUK.addBackgroundTo(color: .red, buttonShape: .roundedRect(15))
-//        let button = UIButton.govUK.addBackgroundTo(color: .red, buttonShape: .capsule)
-
         let button = UIButton.govUK.primary
 
-        button.setTitle("Confirm your identity another way V", for: .normal)
+        button.setTitle("Welcome to the GOV.UK app", for: .normal)
 
         let button2 = UIButton.govUK
         button2.setTitle("Another button", for: .normal)

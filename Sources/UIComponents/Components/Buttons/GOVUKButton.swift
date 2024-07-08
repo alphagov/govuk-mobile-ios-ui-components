@@ -14,8 +14,8 @@ final public class GOVUKButton: UIButton {
     private var buttonShape: ButtonShape?
     private(set) var hasBackground: Bool = false
 
-    var accessibilityBackgroundColor: UIColor?
-    var fullKeyboardAccessBackgroundColor: UIColor?
+    public var buttonShapesBackground: UIColor?
+    public var accessibilityBackgroundColor: UIColor?
 
     public var fontWeight: UIFont.Weight = .regular
 
@@ -24,6 +24,12 @@ final public class GOVUKButton: UIButton {
             backgroundColor = _backgroundColor
         }
     }
+//
+//    private var _titleColor: UIColor? {
+//        didSet {
+//            self.setTitleColor(_titleColor, for: .normal)
+//        }
+//    }
 
     public override var backgroundColor: UIColor? {
         didSet {
@@ -58,6 +64,10 @@ final public class GOVUKButton: UIButton {
         self.addAction(action, for: .touchUpInside)
     }
 
+    deinit {
+        NotificationCenter.default.removeObserver(Notification.Name("buttonShapesEnabled"))
+    }
+
     private func initialisation() {
         titleLabel?.numberOfLines = 0
         titleLabel?.lineBreakMode = .byWordWrapping
@@ -80,9 +90,10 @@ final public class GOVUKButton: UIButton {
         }
     }
 
-    deinit {
-        NotificationCenter.default.removeObserver(Notification.Name("buttonShapesEnabled"))
-    }
+//    public override func setTitleColor(_ color: UIColor?, for state: UIControl.State) {
+//        super.setTitleColor(color, for: state)
+//        _titleColor = color
+//    }
 
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -101,8 +112,8 @@ extension GOVUKButton {
 
         if UIAccessibility.buttonShapesEnabled {
             backgroundColor = nil
-            backgroundColor = accessibilityBackgroundColor == nil ?
-                .secondarySystemBackground : accessibilityBackgroundColor
+            backgroundColor = buttonShapesBackground == nil ?
+                .secondarySystemBackground : buttonShapesBackground
 
             self.layer.cornerRadius = 10
             self.layer.cornerCurve = .continuous
@@ -120,7 +131,12 @@ extension GOVUKButton {
     }
 
     public var primary: GOVUKButton {
-        self.addBackgroundTo(color: UIColor(resource: .myBlue))
+        let button = self.addBackgroundTo(color: UIColor(resource: .myBlue))
+        button.titleLabel?.font = .bodySemiBold
+        button.accessibilityBackgroundColor = .yellow
+        button.setTitleColor(.systemBackground, for: .normal)
+        button.setTitleColor(.label, for: .focused)
+        return button
     }
 
     private func addBackgroundTo(
@@ -152,6 +168,31 @@ extension GOVUKButton {
 
     private var titleWidth: Double {
         self.bounds.width - self.layer.cornerRadius * 2
+    }
+
+    public override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        if let nextItem = context.nextFocusedItem, nextItem.isEqual(self) {
+            if let color = self.accessibilityBackgroundColor {
+                backgroundColor = color
+            }
+        } else {
+            if let color = self._backgroundColor {
+                backgroundColor = color
+            }
+        }
+    }
+
+    public override func accessibilityElementDidBecomeFocused() {
+        if let color = self.accessibilityBackgroundColor {
+            backgroundColor = color
+        }
+    }
+
+    public override func accessibilityElementDidLoseFocus() {
+        if let color = self._backgroundColor {
+            backgroundColor = color
+        }
+        setTitleColor(.label, for: .normal)
     }
 }
 
