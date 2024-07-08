@@ -24,12 +24,6 @@ final public class GOVUKButton: UIButton {
             backgroundColor = _backgroundColor
         }
     }
-//
-//    private var _titleColor: UIColor? {
-//        didSet {
-//            self.setTitleColor(_titleColor, for: .normal)
-//        }
-//    }
 
     public override var backgroundColor: UIColor? {
         didSet {
@@ -37,6 +31,18 @@ final public class GOVUKButton: UIButton {
 
             if backgroundColor == UIColor.clear {
                 hasBackground = false
+            }
+        }
+    }
+
+    override public var isHighlighted: Bool {
+        willSet {
+            if newValue == true {
+                backgroundColor = backgroundColor?.withAlphaComponent(0.7)
+                self.layer.setAffineTransform(.init(scaleX: 0.95, y: 0.95))
+            } else {
+                backgroundColor = backgroundColor?.withAlphaComponent(1)
+                self.layer.setAffineTransform(.init(scaleX: 1, y: 1))
             }
         }
     }
@@ -89,11 +95,6 @@ final public class GOVUKButton: UIButton {
             self.buttonShapesStyle()
         }
     }
-
-//    public override func setTitleColor(_ color: UIColor?, for state: UIControl.State) {
-//        super.setTitleColor(color, for: state)
-//        _titleColor = color
-//    }
 
     public override func layoutSubviews() {
         super.layoutSubviews()
@@ -171,13 +172,23 @@ extension GOVUKButton {
     }
 
     public override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        var normalColor: UIColor?
+
         if let nextItem = context.nextFocusedItem, nextItem.isEqual(self) {
             if let color = self.accessibilityBackgroundColor {
                 backgroundColor = color
+
+                normalColor = self.titleColor(for: .normal)
+
+                if let titleColorFocused = self.titleColor(for: .focused) {
+                    self.setTitleColor(titleColorFocused, for: .normal)
+                }
             }
         } else {
             if let color = self._backgroundColor {
                 backgroundColor = color
+
+                self.setTitleColor(normalColor, for: .normal)
             }
         }
     }
