@@ -12,6 +12,7 @@ extension UIButton {
 
 final public class GOVUKButton: UIButton {
     private var buttonShape: ButtonShape?
+
     private(set) var hasBackground: Bool = false
 
     public var buttonShapesBackground: UIColor?
@@ -74,6 +75,10 @@ final public class GOVUKButton: UIButton {
         NotificationCenter.default.removeObserver(Notification.Name("buttonShapesEnabled"))
     }
 
+//    public override func setBackgroundColor(color: UIColor, forState: UIControl.State) {
+//        <#code#>
+//    }
+
     private func initialisation() {
         titleLabel?.numberOfLines = 0
         titleLabel?.lineBreakMode = .byWordWrapping
@@ -108,7 +113,7 @@ final public class GOVUKButton: UIButton {
 }
 
 extension GOVUKButton {
-    @objc public func buttonShapesStyle() {
+    func buttonShapesStyle() {
         guard _backgroundColor == nil else { return }
 
         if UIAccessibility.buttonShapesEnabled {
@@ -219,3 +224,93 @@ extension GOVUKButton {
  nc.post(Notification(name: Notification.Name( "buttonShapesEnabled"), object: nil))
  }
  */
+
+//class BackgroundColorManager {
+//    var state: BackgroundState = .normal
+//
+//    var normal: UIColor?
+//    var focused: UIColor?
+//    var highlighted: UIColor?
+//}
+//
+//enum BackgroundState {
+//    case normal
+//    case focused
+//    case highlighted
+//}
+
+
+//class BackgroundColorManager {
+//    var state: BackgroundState = .normal()
+//
+//    var normal: BackgroundState = .normal()
+//    var focused: BackgroundState = .focused()
+//
+//    var highlighted: UIColor? {
+//        switch state {
+//        case .normal(let color), .focused(let color):
+//            color?.withAlphaComponent(0.7)
+//        }
+//    }
+//
+//    func setBackground(color: UIColor, for: BackgroundState) {
+//
+//    }
+//}
+//
+//enum BackgroundState {
+//    case normal(UIColor? = nil)
+//    case focused(UIColor? = nil)
+//}
+//
+//
+//extension GOVUKButton {
+//    func setBackgroundImage(_ color: UIColor, for state: UIButton.State) {
+//        self.setBackgroundImage(UIImage(color), for: state)
+//    }
+//
+//    public func setBackgroundColor(color: UIColor, for state: UIControl.State) {
+//        self.clipsToBounds = true
+//
+//        self.setBackgroundImage(color, for: state)
+//    }
+//}
+//
+//
+//extension UIImage {
+//    convenience init?(_ color: UIColor) {
+////
+////        let context = UIGraphicsRendererContext()
+////        let minimumSize: CGSize = CGSize(width: 1.0, height: 1.0)
+////
+////
+////        let renderer = UIGraphicsImageRenderer()
+////
+////        let image = renderer.image { context in
+////            color.setFill()
+////
+////            context.fill(CGRect(origin: .zero, size: minimumSize))
+////        }
+////
+////        if let image = image.cgImage {
+////            self.init(cgImage: image)
+////        } else { return nil }
+//
+//
+//
+//        let minimumSize: CGSize = CGSize(width: 1.0, height: 1.0)
+//
+//        UIGraphicsBeginImageContext(minimumSize)
+//
+//        if let context = UIGraphicsGetCurrentContext() {
+//            context.setFillColor(color.cgColor)
+//            context.fill(CGRect(origin: .zero, size: minimumSize))
+//        }
+//
+//        if let image = UIGraphicsGetImageFromCurrentImageContext()?.cgImage {
+//            self.init(cgImage: image)
+//        } else { return nil }
+//
+//        UIGraphicsEndImageContext()
+//    }
+//}

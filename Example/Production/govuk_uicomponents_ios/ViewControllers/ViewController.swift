@@ -16,6 +16,9 @@ class ViewController: UIViewController {
         let button = UIButton.govUK.primary
 
         button.setTitle("Welcome to the GOV.UK app", for: .normal)
+//        button.backgroundColor = .cyan
+//        button.setBackgroundColor(color: .cyan, for: .normal)
+//        button.setBackgroundColor(color: .yellow, for: .focused)
 
         let button2 = UIButton.govUK
         button2.setTitle("Another button", for: .normal)
