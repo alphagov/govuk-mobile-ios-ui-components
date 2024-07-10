@@ -4,10 +4,6 @@ extension UIButton {
     public static var govUK: GOVUKButton {
         GOVUKButton()
     }
-
-    public static func govUK(action: UIAction) -> GOVUKButton {
-        GOVUKButton(action: action)
-    }
 }
 
 

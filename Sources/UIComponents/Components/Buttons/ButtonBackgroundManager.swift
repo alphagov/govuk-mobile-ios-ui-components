@@ -41,6 +41,7 @@ extension GOVUKButton {
         let titleFocused: UIColor?
 
         let titleFont: UIFont?
+        let textAlignment: NSTextAlignment?
 
         let backgroundNormal: UIColor
         let backgroundFocused: UIColor?
@@ -51,6 +52,7 @@ extension GOVUKButton {
         public init(titleNormal: UIColor? = nil,
                     titleFocused: UIColor? = nil,
                     titleFont: UIFont? = nil,
+                    textAlignment: NSTextAlignment? = nil,
                     backgroundNormal: UIColor,
                     backgroundFocused: UIColor? = nil,
                     backgroundShape: ButtonShape? = nil,
@@ -58,6 +60,7 @@ extension GOVUKButton {
             self.titleNormal = titleNormal
             self.titleFocused = titleFocused
             self.titleFont = titleFont
+            self.textAlignment = textAlignment
             self.backgroundNormal = backgroundNormal
             self.backgroundFocused = backgroundFocused
             self.backgroundShape = backgroundShape

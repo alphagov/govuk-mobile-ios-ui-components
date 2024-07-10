@@ -2,14 +2,16 @@ import UIKit
 
 extension GOVUKButton {
     public var primary: GOVUKButton {
-        let button = self.addBackgroundTo()
-        button.titleLabel?.font = .bodySemiBold
+        GOVUKButton(.primary)
+    }
+}
 
-        button.setBackgroundFocused(color: .yellow)
-        button.setBackgroundNormal(color: UIColor(resource: .myBlue))
-
-        button.setTitleColor(.systemBackground, for: .normal)
-        button.setTitleColor(.label, for: .focused)
-        return button
+extension GOVUKButton.ButtonConfiguration {
+    public static var primary: GOVUKButton.ButtonConfiguration {
+        .init(titleNormal: .white,
+              titleFocused: .black,
+              backgroundNormal: UIColor(resource: .myBlue),
+              backgroundFocused: .systemYellow,
+              backgroundShape: .capsule)
     }
 }

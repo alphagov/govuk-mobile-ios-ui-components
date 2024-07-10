@@ -31,7 +31,6 @@ final public class GOVUKButton: UIButton {
     }
 
     public func viewModelUpdate(viewModel: ButtonViewModel) {
-
         self.setTitle(viewModel.localisedTitle, for: .normal)
 
         // todo - add loading state handling
@@ -47,33 +46,35 @@ final public class GOVUKButton: UIButton {
             }
         }, for: .touchUpInside)
 
-
-        // config
-        if let color = viewModel.buttonConfiguration?.titleNormal {
-            setTitleColor(color, for: .normal)
-        }
-
-        if let color = viewModel.buttonConfiguration?.titleFocused {
-            setTitleColor(color, for: .focused)
-        }
-
-        if let title = viewModel.buttonConfiguration?.titleFont {
-            self.titleLabel?.font = title
-        }
-
-        if let color = viewModel.buttonConfiguration?.backgroundNormal {
-            setBackgroundNormal(color: color)
-        }
-
-        if let color = viewModel.buttonConfiguration?.backgroundFocused {
-            setBackgroundFocused(color: color)
-        }
-
-        if let shape = viewModel.buttonConfiguration?.backgroundShape {
-            self.addBackground(buttonShape: shape)
+        if let configuration = viewModel.buttonConfiguration {
+            updateButtonConfig(configuration)
         }
 
         self.viewModel = viewModel
+    }
+
+    public func updateButtonConfig(_ config: GOVUKButton.ButtonConfiguration) {
+        if let color = config.titleNormal {
+            setTitleColor(color, for: .normal)
+        }
+
+        if let color = config.titleFocused {
+            setTitleColor(color, for: .focused)
+        }
+
+        if let title = config.titleFont {
+            self.titleLabel?.font = title
+        }
+
+        setBackgroundNormal(color: config.backgroundNormal)
+
+        if let color = config.backgroundFocused {
+            setBackgroundFocused(color: color)
+        }
+
+        if let shape = config.backgroundShape {
+            self.addBackground(buttonShape: shape)
+        }
     }
 
     override public var isHighlighted: Bool {
@@ -114,10 +115,16 @@ final public class GOVUKButton: UIButton {
         initialisation()
     }
 
-    required public init(action: UIAction) {
+    public init(viewModel: ButtonViewModel) {
         super.init(frame: .zero)
         initialisation()
-        self.addAction(action, for: .touchUpInside)
+        self.viewModelUpdate(viewModel: viewModel)
+    }
+
+    public init(_ configuration: GOVUKButton.ButtonConfiguration) {
+        super.init(frame: .zero)
+        initialisation()
+        self.updateButtonConfig(configuration)
     }
 
     deinit {
