@@ -33,12 +33,15 @@ class ViewController: UIViewController {
         stack.spacing = 16
 
 
-//        let button = UIButton.govUK
-        let button = UIButton.govUK.primary
-//        let viewModel = MockViewModel {
-//            print("button tapped")
-//        }
-//        button.viewModelUpdate(viewModel: viewModel)
+            //        let button = UIButton.govUK.primary
+            //        let button = UIButton.govUK
+        let viewModel = MockViewModel {
+            print("button tapped")
+        }
+
+            //        let button = GOVUKButton(viewModel: viewModel)
+        let button = GOVUKButton(.primary)
+            //        button.viewModelUpdate(viewModel: viewModel)
 
         button.setTitle("Welcome to the GOV.UK app", for: .normal)
 
