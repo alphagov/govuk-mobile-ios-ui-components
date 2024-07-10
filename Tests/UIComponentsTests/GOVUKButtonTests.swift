@@ -62,7 +62,7 @@ extension GOVUKButtonTests {
 
         sut.backgroundColor = .cyan
 
-        XCTAssertTrue(sut.hasBackground)
+        XCTAssertTrue(sut.backgroundManager.hasBackground)
         XCTAssertNotNil(sut.backgroundColor)
 
         sut.backgroundColor = .clear
@@ -73,13 +73,11 @@ extension GOVUKButtonTests {
 
     @MainActor
     func test_addBackground() {
-        let sut = sut.addBackgroundTo(color: .red)
+        let sut = sut.addBackgroundTo()
         sut.setTitle("test title", for: .normal)
-
-        dump(sut.bounds)
 
         let buttonShape = GOVUKButton.ButtonShape.capsule
 
-        XCTAssertEqual(sut.layer.cornerRadius, 15)
+        XCTAssertEqual(sut.layer.cornerRadius, 22)
     }
 }

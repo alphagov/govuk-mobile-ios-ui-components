@@ -1,46 +1,22 @@
 import UIKit
 
-class BackgroundColorManager {
-    let setColor: (UIColor, UIButton.State) -> ()
+final class BackgroundColorManager {
+    private let setColor: (UIColor, UIButton.State) -> ()
 
     var hasBackground: Bool = false
 
-//    private var _normal: UIColor?
-//    var normal: UIColor? {
-//        get { _normal }
-//        set {
-//            _normal = newValue
-//
-//            if newValue != nil {
-//                hasBackground = true
-//            } else {
-//                hasBackground = false
-//            }
-//        }
-//    }
-
-            var normal: UIColor? {
-                didSet {
-                    highlighted = normal?.withAlphaComponent(0.7)
-        
-                    if let normal {
-                        setColor(normal, .normal)
-                    }
-                }
+    var normal: UIColor? {
+        didSet {
+            if let normal {
+                setColor(normal, .normal)
             }
+        }
+    }
 
     var focused: UIColor? {
         didSet {
             if let focused {
                 setColor(focused, .focused)
-            }
-        }
-    }
-
-    private(set) var highlighted: UIColor? {
-        didSet {
-            if let highlighted {
-                setColor(highlighted, .highlighted)
             }
         }
     }
@@ -51,5 +27,23 @@ class BackgroundColorManager {
         self.normal = normal
         self.focused = focused
         self.setColor = setColor
+    }
+}
+
+extension GOVUKButton {
+    public enum ButtonShape: Equatable {
+        case roundedRect(CGFloat)
+        case capsule
+    }
+
+    struct ButtonConfiguration {
+        let titleNormal: UIColor
+        let titleFocused: UIColor?
+
+        let titleFont: UIFont?
+
+        let backgroundNormal: UIColor?
+        let backgroundFocused: UIColor?
+        let backgroundShape: ButtonShape?
     }
 }

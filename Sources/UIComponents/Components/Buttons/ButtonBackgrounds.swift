@@ -1,11 +1,6 @@
 import UIKit
 
 extension GOVUKButton {
-    public enum ButtonShape: Equatable {
-        case roundedRect(CGFloat)
-        case capsule
-    }
-
     func addBackgroundTo(
         radius: CGFloat? = nil,
         buttonShape: ButtonShape = .capsule
