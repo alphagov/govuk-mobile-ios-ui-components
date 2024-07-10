@@ -2,10 +2,7 @@ import UIKit
 
 final public class GOVUKButton: UIButton {
     private(set) var viewModel: ButtonViewModel? 
-
-    var buttonShape: ButtonShape?
-
-    lazy var backgroundManager = BackgroundColorManager(setColor: setBackgroundColor)
+    lazy var backgroundManager = BackgroundManager(setColor: setBackgroundColor)
 
     private(set) var _backgroundColor: UIColor? {
         didSet {
@@ -51,30 +48,6 @@ final public class GOVUKButton: UIButton {
         }
 
         self.viewModel = viewModel
-    }
-
-    public func updateButtonConfig(_ config: GOVUKButton.ButtonConfiguration) {
-        if let color = config.titleNormal {
-            setTitleColor(color, for: .normal)
-        }
-
-        if let color = config.titleFocused {
-            setTitleColor(color, for: .focused)
-        }
-
-        if let title = config.titleFont {
-            self.titleLabel?.font = title
-        }
-
-        setBackgroundNormal(color: config.backgroundNormal)
-
-        if let color = config.backgroundFocused {
-            setBackgroundFocused(color: color)
-        }
-
-        if let shape = config.backgroundShape {
-            self.addBackground(buttonShape: shape)
-        }
     }
 
     override public var isHighlighted: Bool {

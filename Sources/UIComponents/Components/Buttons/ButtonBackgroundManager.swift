@@ -1,7 +1,13 @@
 import UIKit
 
-final class BackgroundColorManager {
+public enum ButtonShape: Equatable {
+    case roundedRect(CGFloat)
+    case capsule
+}
+
+final class BackgroundManager {
     private let setColor: (UIColor, UIButton.State) -> ()
+    var buttonShape: ButtonShape?
 
     var hasBackground: Bool = false
 
@@ -27,44 +33,5 @@ final class BackgroundColorManager {
         self.normal = normal
         self.focused = focused
         self.setColor = setColor
-    }
-}
-
-extension GOVUKButton {
-    public enum ButtonShape: Equatable {
-        case roundedRect(CGFloat)
-        case capsule
-    }
-
-    public struct ButtonConfiguration {
-        let titleNormal: UIColor?
-        let titleFocused: UIColor?
-
-        let titleFont: UIFont?
-        let textAlignment: NSTextAlignment?
-
-        let backgroundNormal: UIColor
-        let backgroundFocused: UIColor?
-        let backgroundShape: ButtonShape?
-
-        let accessibilityButtonShapes: UIColor?
-
-        public init(titleNormal: UIColor? = nil,
-                    titleFocused: UIColor? = nil,
-                    titleFont: UIFont? = nil,
-                    textAlignment: NSTextAlignment? = nil,
-                    backgroundNormal: UIColor,
-                    backgroundFocused: UIColor? = nil,
-                    backgroundShape: ButtonShape? = nil,
-                    accessibilityButtonShapes: UIColor? = nil) {
-            self.titleNormal = titleNormal
-            self.titleFocused = titleFocused
-            self.titleFont = titleFont
-            self.textAlignment = textAlignment
-            self.backgroundNormal = backgroundNormal
-            self.backgroundFocused = backgroundFocused
-            self.backgroundShape = backgroundShape
-            self.accessibilityButtonShapes = accessibilityButtonShapes
-        }
     }
 }

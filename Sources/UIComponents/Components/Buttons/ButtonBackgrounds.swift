@@ -5,7 +5,7 @@ extension GOVUKButton {
         radius: CGFloat? = nil,
         buttonShape: ButtonShape? = .capsule
     ) {
-        self.buttonShape = buttonShape
+        self.backgroundManager.buttonShape = buttonShape
         updateBackground()
     }
 
@@ -13,13 +13,13 @@ extension GOVUKButton {
         radius: CGFloat? = nil,
         buttonShape: ButtonShape = .capsule
     ) -> Self {
-        self.buttonShape = buttonShape
+        self.backgroundManager.buttonShape = buttonShape
         updateBackground()
         return self
     }
 
     func updateBackground() {
-        switch buttonShape {
+        switch backgroundManager.buttonShape {
         case .roundedRect(let radius):
             self.layer.cornerRadius = min(radius, 22)
         case .capsule:

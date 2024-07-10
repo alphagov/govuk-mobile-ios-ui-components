@@ -6,3 +6,4 @@ public protocol ButtonViewModel {
 
     var buttonConfiguration: GOVUKButton.ButtonConfiguration? { get }
 }
+
