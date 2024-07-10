@@ -1,20 +1,46 @@
 @testable import UIComponents
 import XCTest
 
+struct MockViewModel: ButtonViewModel {
+    var localisedTitle: String = "configured button"
+
+    var action: () async throws -> Void
+
+    var buttonConfiguration: GOVUKButton.ButtonConfiguration = .init(
+        titleNormal: .purple,
+        titleFocused: .green,
+        titleFont: .title3,
+        backgroundNormal: .green,
+        backgroundFocused: .cyan,
+        backgroundShape: .roundedRect(5))
+
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
+}
+
 final class GOVUKButtonTests: XCTestCase {
     var sut: GOVUKButton!
     var didTap: Bool!
+    var viewModel: ButtonViewModel!
 
     override func setUp() {
         super.setUp()
 
         sut = GOVUKButton()
         didTap = false
+
+        viewModel = MockViewModel {
+            print("configured button was tapped")
+            self.didTap = true
+        }
     }
 
     override func tearDown() {
         sut = nil
         didTap = nil
+
+        viewModel = nil
 
         super.tearDown()
     }
@@ -71,7 +97,6 @@ extension GOVUKButtonTests {
         XCTAssertNotNil(sut.backgroundColor)
     }
 
-    @MainActor
     func test_addBackground() {
         let sut = sut.addBackgroundTo()
         sut.setTitle("test title", for: .normal)
@@ -79,5 +104,13 @@ extension GOVUKButtonTests {
         let buttonShape = GOVUKButton.ButtonShape.capsule
 
         XCTAssertEqual(sut.layer.cornerRadius, 22)
+    }
+
+    func test_buttonViewModelConfiguration() {
+        sut = UIButton.govUK.primary
+        sut.viewModel = viewModel
+        
+
+
     }
 }

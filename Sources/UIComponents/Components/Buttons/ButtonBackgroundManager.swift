@@ -36,14 +36,32 @@ extension GOVUKButton {
         case capsule
     }
 
-    struct ButtonConfiguration {
-        let titleNormal: UIColor
+    public struct ButtonConfiguration {
+        let titleNormal: UIColor?
         let titleFocused: UIColor?
 
         let titleFont: UIFont?
 
-        let backgroundNormal: UIColor?
+        let backgroundNormal: UIColor
         let backgroundFocused: UIColor?
         let backgroundShape: ButtonShape?
+
+        let accessibilityButtonShapes: UIColor?
+
+        public init(titleNormal: UIColor? = nil,
+                    titleFocused: UIColor? = nil,
+                    titleFont: UIFont? = nil,
+                    backgroundNormal: UIColor,
+                    backgroundFocused: UIColor? = nil,
+                    backgroundShape: ButtonShape? = nil,
+                    accessibilityButtonShapes: UIColor? = nil) {
+            self.titleNormal = titleNormal
+            self.titleFocused = titleFocused
+            self.titleFont = titleFont
+            self.backgroundNormal = backgroundNormal
+            self.backgroundFocused = backgroundFocused
+            self.backgroundShape = backgroundShape
+            self.accessibilityButtonShapes = accessibilityButtonShapes
+        }
     }
 }

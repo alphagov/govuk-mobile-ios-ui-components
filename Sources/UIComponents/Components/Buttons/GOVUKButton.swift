@@ -1,11 +1,9 @@
 import UIKit
 
 final public class GOVUKButton: UIButton {
-    private(set) var hasBackground: Bool = false
-    var buttonShape: ButtonShape?
+    private(set) var viewModel: ButtonViewModel? 
 
-    public var buttonShapesBackground: UIColor?
-    public var fontWeight: UIFont.Weight = .regular
+    var buttonShape: ButtonShape?
 
     lazy var backgroundManager = BackgroundColorManager(setColor: setBackgroundColor)
 
@@ -24,14 +22,59 @@ final public class GOVUKButton: UIButton {
         }
     }
 
-    public func setBackgroundFocused(color: UIColor) {
+    public func setBackgroundFocused(color: UIColor?) {
         backgroundManager.focused = color
     }
 
-    public func setBackgroundNormal(color: UIColor) {
+    public func setBackgroundNormal(color: UIColor?) {
         backgroundManager.normal = color
     }
 
+    public func viewModelUpdate(viewModel: ButtonViewModel) {
+
+        self.setTitle(viewModel.localisedTitle, for: .normal)
+
+        // todo - add loading state handling
+        self.addAction(UIAction { _ in
+                // start loading state
+            Task {
+                do {
+                    try await viewModel.action()
+                } catch {
+                        // handle errors
+                }
+                    // stop loading state
+            }
+        }, for: .touchUpInside)
+
+
+        // config
+        if let color = viewModel.buttonConfiguration?.titleNormal {
+            setTitleColor(color, for: .normal)
+        }
+
+        if let color = viewModel.buttonConfiguration?.titleFocused {
+            setTitleColor(color, for: .focused)
+        }
+
+        if let title = viewModel.buttonConfiguration?.titleFont {
+            self.titleLabel?.font = title
+        }
+
+        if let color = viewModel.buttonConfiguration?.backgroundNormal {
+            setBackgroundNormal(color: color)
+        }
+
+        if let color = viewModel.buttonConfiguration?.backgroundFocused {
+            setBackgroundFocused(color: color)
+        }
+
+        if let shape = viewModel.buttonConfiguration?.backgroundShape {
+            self.addBackground(buttonShape: shape)
+        }
+
+        self.viewModel = viewModel
+    }
 
     override public var isHighlighted: Bool {
         willSet {
@@ -85,7 +128,7 @@ final public class GOVUKButton: UIButton {
         titleLabel?.numberOfLines = 0
         titleLabel?.lineBreakMode = .byWordWrapping
         titleLabel?.adjustsFontForContentSizeCategory = true
-        titleLabel?.font = UIFont(style: .body, weight: fontWeight)
+        titleLabel?.font = UIFont(style: .body, weight: .semibold)
         titleLabel?.textAlignment = .center
 
         contentEdgeInsets = .init(top: 13, left: 16, bottom: 13, right: 16)

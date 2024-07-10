@@ -1,6 +1,25 @@
 import UIComponents
 import UIKit
 
+struct MockViewModel: ButtonViewModel {
+    var localisedTitle: String = "configured button"
+
+    var action: () async throws -> Void
+
+    var buttonConfiguration: GOVUKButton.ButtonConfiguration? = .init(
+        titleNormal: .magenta,
+        titleFocused: .green,
+        titleFont: .title3,
+        backgroundNormal: .green,
+        backgroundFocused: .cyan,
+        backgroundShape: .roundedRect(5)
+    )
+
+    init(action: @escaping () -> Void) {
+        self.action = action
+    }
+}
+
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
@@ -13,12 +32,16 @@ class ViewController: UIViewController {
         stack.isLayoutMarginsRelativeArrangement = true
         stack.spacing = 16
 
+
+//        let button = UIButton.govUK
         let button = UIButton.govUK.primary
+//        let viewModel = MockViewModel {
+//            print("button tapped")
+//        }
+//        button.viewModelUpdate(viewModel: viewModel)
 
         button.setTitle("Welcome to the GOV.UK app", for: .normal)
-//        button.backgroundColor = .cyan
-//        button.setBackgroundColor(color: .cyan, for: .normal)
-//        button.setBackgroundColor(color: .yellow, for: .focused)
+
 
         let button2 = UIButton.govUK
         button2.setTitle("Another button", for: .normal)

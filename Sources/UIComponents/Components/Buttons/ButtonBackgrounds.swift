@@ -1,6 +1,14 @@
 import UIKit
 
 extension GOVUKButton {
+    func addBackground(
+        radius: CGFloat? = nil,
+        buttonShape: ButtonShape? = .capsule
+    ) {
+        self.buttonShape = buttonShape
+        updateBackground()
+    }
+
     func addBackgroundTo(
         radius: CGFloat? = nil,
         buttonShape: ButtonShape = .capsule
@@ -35,8 +43,9 @@ extension GOVUKButton {
 
         if UIAccessibility.buttonShapesEnabled {
             backgroundColor = nil
-            backgroundColor = buttonShapesBackground == nil ?
-                .secondarySystemBackground : buttonShapesBackground
+            backgroundColor = viewModel?.buttonConfiguration?.accessibilityButtonShapes == nil ?
+                .secondarySystemBackground :
+            viewModel?.buttonConfiguration?.accessibilityButtonShapes
 
             self.layer.cornerRadius = 10
             self.layer.cornerCurve = .continuous
