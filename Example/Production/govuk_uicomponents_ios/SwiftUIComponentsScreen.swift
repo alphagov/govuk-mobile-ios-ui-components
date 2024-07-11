@@ -1,23 +1,27 @@
 import SwiftUI
 import UIComponents
 
-struct SwiftUIComponentsScreen: View {
-    let buttonViewModel1: ButtonViewModel
-    let buttonViewModel2: ButtonViewModel
+public struct SwiftUIComponentsScreen: View {
+    public let viewModel: ButtonScreenViewModel
 
-    var body: some View {
-        ScrollView {
-            VStack(spacing: 16) {
-                SwiftUIButton<GOVUKButton>(viewModel: buttonViewModel1)
+    public var body: some View {
+        VStack(spacing: 16) {
+            Text("SwiftUI screen")
+            Spacer()
+            SwiftUIButton<GOVUKButton>(viewModel: viewModel.button2)
 
-                SwiftUIButton<GOVUKButton>(viewModel: buttonViewModel2)
-            }
-            .padding()
+            SwiftUIButton<GOVUKButton>(viewModel: viewModel.button1)
         }
+        .padding()
     }
 }
 
 #Preview {
-    SwiftUIComponentsScreen(buttonViewModel1: MockViewModel(action: {}),
-    buttonViewModel2: PrimaryButtonViewModel(localisedTitle: "primary button", action: {}))
+    SwiftUIComponentsScreen(viewModel: ButtonScreenViewModel())
+}
+
+
+public struct ButtonScreenViewModel {
+    let button1 = MockViewModel(action: {})
+    let button2 = PrimaryButtonViewModel(localisedTitle: "primary button", action: {})
 }

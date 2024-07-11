@@ -41,14 +41,3 @@ public struct SwiftUIButton<WrappedButton: WrappableButton>: View {
         self.viewModel = viewModel
     }
 }
-
-public struct PrimaryButtonViewModel: ButtonViewModel {
-    public let localisedTitle: String
-    public let action: () async throws -> Void
-    public let buttonConfiguration: GOVUKButton.ButtonConfiguration? = .primary
-
-    public init(localisedTitle: String, action: @escaping () -> Void) {
-        self.localisedTitle = localisedTitle
-        self.action = action
-    }
-}

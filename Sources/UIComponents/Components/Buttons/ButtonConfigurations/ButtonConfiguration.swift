@@ -24,7 +24,7 @@ extension GOVUKButton {
                     contentHorizontalAlignment: UIControl.ContentHorizontalAlignment? = nil,
                     contentVerticalAlignment: UIControl.ContentVerticalAlignment? = nil,
                     contentEdgeInsets: UIEdgeInsets? = nil,
-                    backgroundNormal: UIColor?,
+                    backgroundNormal: UIColor? = nil,
                     backgroundFocused: UIColor? = nil,
                     backgroundShape: ButtonShape? = nil,
                     accessibilityButtonShapes: UIColor? = nil) {
