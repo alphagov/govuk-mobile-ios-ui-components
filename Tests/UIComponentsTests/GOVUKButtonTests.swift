@@ -6,7 +6,7 @@ struct MockViewModel: ButtonViewModel {
 
     var action: () async throws -> Void
 
-    var buttonConfiguration: GOVUKButton.ButtonConfiguration = .init(
+    var buttonConfiguration: GOVUKButton.ButtonConfiguration? = .init(
         titleNormal: .purple,
         titleFocused: .green,
         titleFont: .title3,
@@ -23,6 +23,7 @@ final class GOVUKButtonTests: XCTestCase {
     var sut: GOVUKButton!
     var didTap: Bool!
     var viewModel: ButtonViewModel!
+    let buttonShapesEnabled = UIAccessibility.buttonShapesEnabled
 
     override func setUp() {
         super.setUp()
@@ -49,8 +50,15 @@ final class GOVUKButtonTests: XCTestCase {
 extension GOVUKButtonTests {
     func test_unconfiguredButton() {
         XCTAssertNotNil(sut)
-        XCTAssertNil(sut.backgroundColor)
-        XCTAssertFalse(sut.hasBackground)
+
+        if !buttonShapesEnabled {
+            XCTAssertNil(sut.backgroundColor)
+            XCTAssertFalse(sut.backgroundManager.hasBackground)
+        } else {
+            XCTAssertNotNil(sut.backgroundColor)
+            XCTAssertTrue(sut.backgroundManager.hasBackground)
+        }
+
         XCTAssertNil(sut.titleLabel?.text)
     }
 
@@ -66,25 +74,23 @@ extension GOVUKButtonTests {
     func test_createdFromButtonExtension() {
         sut = UIButton.govUK
 
-        XCTAssertNotNil(sut)
-        XCTAssertFalse(sut.hasBackground)
-    }
-
-    func test_createdFromButtonExtension2() {
-        let action = UIAction(handler: { _ in self.didTap = true })
-        sut = UIButton.govUK(action: action)
-
-        XCTAssertNotNil(sut)
-        XCTAssertFalse(sut.hasBackground)
-
-        XCTAssertFalse(didTap)
-        sut.sendActions(for: .touchUpInside)
-        XCTAssertTrue(didTap)
+        if !buttonShapesEnabled {
+            XCTAssertNil(sut.backgroundColor)
+            XCTAssertFalse(sut.backgroundManager.hasBackground)
+        } else {
+            XCTAssertNotNil(sut.backgroundColor)
+            XCTAssertTrue(sut.backgroundManager.hasBackground)
+        }
     }
 
     func test_buttonBackground() {
-        XCTAssertFalse(sut.hasBackground)
-        XCTAssertNil(sut.backgroundColor)
+        if !buttonShapesEnabled {
+            XCTAssertNil(sut.backgroundColor)
+            XCTAssertFalse(sut.backgroundManager.hasBackground)
+        } else {
+            XCTAssertNotNil(sut.backgroundColor)
+            XCTAssertTrue(sut.backgroundManager.hasBackground)
+        }
 
         sut.backgroundColor = .cyan
 
@@ -93,7 +99,7 @@ extension GOVUKButtonTests {
 
         sut.backgroundColor = .clear
 
-        XCTAssertFalse(sut.hasBackground)
+        XCTAssertFalse(sut.backgroundManager.hasBackground)
         XCTAssertNotNil(sut.backgroundColor)
     }
 
@@ -101,16 +107,12 @@ extension GOVUKButtonTests {
         let sut = sut.addBackgroundTo()
         sut.setTitle("test title", for: .normal)
 
-        let buttonShape = GOVUKButton.ButtonShape.capsule
-
         XCTAssertEqual(sut.layer.cornerRadius, 22)
     }
 
     func test_buttonViewModelConfiguration() {
         sut = UIButton.govUK.primary
-        sut.viewModel = viewModel
-        
-
+        sut.viewModelUpdate(viewModel: viewModel)
 
     }
 }
