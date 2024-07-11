@@ -11,7 +11,7 @@ extension GOVUKButton {
         let contentVerticalAlignment: UIControl.ContentVerticalAlignment?
         let contentEdgeInsets: UIEdgeInsets?
 
-        let backgroundNormal: UIColor
+        let backgroundNormal: UIColor?
         let backgroundFocused: UIColor?
         let backgroundShape: ButtonShape?
 
@@ -24,7 +24,7 @@ extension GOVUKButton {
                     contentHorizontalAlignment: UIControl.ContentHorizontalAlignment? = nil,
                     contentVerticalAlignment: UIControl.ContentVerticalAlignment? = nil,
                     contentEdgeInsets: UIEdgeInsets? = nil,
-                    backgroundNormal: UIColor,
+                    backgroundNormal: UIColor?,
                     backgroundFocused: UIColor? = nil,
                     backgroundShape: ButtonShape? = nil,
                     accessibilityButtonShapes: UIColor? = nil) {
@@ -71,7 +71,9 @@ extension GOVUKButton {
             self.contentEdgeInsets = insets
         }
 
-        setBackgroundNormal(color: config.backgroundNormal)
+        if let color = config.backgroundNormal {
+            setBackgroundNormal(color: color)
+        }
 
         if let color = config.backgroundFocused {
             setBackgroundFocused(color: color)

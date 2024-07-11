@@ -16,6 +16,7 @@
 		5D02786B2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */; };
 		5D02786D2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */; };
 		5D71C0DA2C2AD02F00E25DA5 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5D71C0D92C2AD02F00E25DA5 /* UIComponents */; };
+		9681C3142C3FE2020094661E /* SwiftUIComponentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C3132C3FE2020094661E /* SwiftUIComponentsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5D0278662C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govuk_uicomponents_ios_ui_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUK_UIComponentsUITests.swift; sourceTree = "<group>"; };
 		5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUK_UIComponentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9681C3132C3FE2020094661E /* SwiftUIComponentsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftUIComponentsScreen.swift; path = Production/govuk_uicomponents_ios/SwiftUIComponentsScreen.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				5D02784D2C2AA90900F2A4EB /* ViewController.swift */,
+				9681C3132C3FE2020094661E /* SwiftUIComponentsScreen.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D02784E2C2AA90900F2A4EB /* ViewController.swift in Sources */,
+				9681C3142C3FE2020094661E /* SwiftUIComponentsScreen.swift in Sources */,
 				5D02784A2C2AA90900F2A4EB /* AppDelegate.swift in Sources */,
 				5D02784C2C2AA90900F2A4EB /* SceneDelegate.swift in Sources */,
 			);

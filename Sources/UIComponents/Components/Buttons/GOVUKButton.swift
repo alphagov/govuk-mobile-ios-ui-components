@@ -1,7 +1,8 @@
 import UIKit
 
 final public class GOVUKButton: UIButton {
-    private(set) var viewModel: ButtonViewModel? 
+    public var viewModel: ButtonViewModel?
+    
     lazy var backgroundManager = BackgroundManager(setColor: setBackgroundColor)
 
     private(set) var _backgroundColor: UIColor? {
@@ -108,9 +109,10 @@ final public class GOVUKButton: UIButton {
         titleLabel?.numberOfLines = 0
         titleLabel?.lineBreakMode = .byWordWrapping
         titleLabel?.adjustsFontForContentSizeCategory = true
+
+        // possibly should be set as a Button Configuration and stored as an instance variable
         titleLabel?.font = UIFont(style: .body, weight: .semibold)
         titleLabel?.textAlignment = .center
-
         contentEdgeInsets = .init(top: 13, left: 16, bottom: 13, right: 16)
 
         buttonShapesStyle()

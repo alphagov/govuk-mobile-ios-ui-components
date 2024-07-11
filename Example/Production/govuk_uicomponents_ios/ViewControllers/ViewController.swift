@@ -39,8 +39,8 @@ class ViewController: UIViewController {
             print("button tapped")
         }
 
-            //        let button = GOVUKButton(viewModel: viewModel)
-        let button = GOVUKButton(.primary)
+                    let button = GOVUKButton(viewModel: viewModel)
+//        let button = GOVUKButton(.primary)
             //        button.viewModelUpdate(viewModel: viewModel)
 
         button.setTitle("Welcome to the GOV.UK app", for: .normal)
