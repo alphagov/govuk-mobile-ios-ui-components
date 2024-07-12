@@ -7,6 +7,8 @@ public enum ButtonShape: Equatable {
 
 final class BackgroundManager {
     private let setColor: (UIColor, UIButton.State) -> ()
+    var tempColor: UIColor?
+
     var buttonShape: ButtonShape?
 
     var hasBackground: Bool = false

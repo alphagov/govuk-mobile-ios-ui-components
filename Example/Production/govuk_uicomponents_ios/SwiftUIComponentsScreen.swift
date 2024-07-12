@@ -11,8 +11,12 @@ public struct SwiftUIComponentsScreen: View {
             SwiftUIButton<GOVUKButton>(viewModel: viewModel.button2)
 
             SwiftUIButton<GOVUKButton>(viewModel: viewModel.button1)
+
+            SwiftUIButton<GOVUKButton>(viewModel: viewModel.button3)
+
+            SwiftUIButton<GOVUKButton>(viewModel: viewModel.button4)
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 
@@ -24,4 +28,8 @@ public struct SwiftUIComponentsScreen: View {
 public struct ButtonScreenViewModel {
     let button1 = MockViewModel(action: {})
     let button2 = PrimaryButtonViewModel(localisedTitle: "primary button", action: {})
+    let button3 = PlainButtonViewModel(localisedTitle: "plain button", action: {})
+    let button4 = PlainButtonViewModel(localisedTitle: "plain button - leading",
+                                       action: {},
+                                       configuration: .plainLeading)
 }
