@@ -1,4 +1,3 @@
-// swiftlint:disable function_body_length
 import UIComponents
 import UIKit
 
@@ -65,10 +64,6 @@ class ViewController: UIViewController {
         }
 
         let button2 = GOVUKButton(viewModel: viewModel)
-//        let button = GOVUKButton(.primary)
-            //        button.viewModelUpdate(viewModel: viewModel)
-
-
         button2.addAction(uiAction, for: .touchUpInside)
 
         let button3VM = PlainButtonViewModel(localisedTitle: "plain button") {
@@ -78,12 +73,19 @@ class ViewController: UIViewController {
         }
 
         let button3 = UIButton.govUK(viewModel: button3VM)
-//        button2.setTitle("Another button", for: .normal)
-//        button2.setTitleColor(.label, for: .normal)
+
+        let button4VM = PlainButtonViewModel(localisedTitle: "plain button - leading", action: {
+            Task {
+                try? await action()
+            }
+        }, configuration: .plainLeading)
+
+        let button4 = UIButton.govUK(viewModel: button4VM)
 
         stack.addArrangedSubview(button)
         stack.addArrangedSubview(button2)
         stack.addArrangedSubview(button3)
+        stack.addArrangedSubview(button4)
 
         view.addSubview(stack)
 
@@ -93,12 +95,9 @@ class ViewController: UIViewController {
             view.leadingAnchor.constraint(equalTo: stack.leadingAnchor, constant: -16),
             view.trailingAnchor.constraint(equalTo: stack.trailingAnchor, constant: 16),
             view.topAnchor.constraint(lessThanOrEqualTo: stack.topAnchor, constant: -100),
-            view.bottomAnchor.constraint(greaterThanOrEqualTo: stack.bottomAnchor, constant: 30),
-
-            button3.topAnchor.constraint(equalTo: button2.bottomAnchor, constant: 16)
+            view.bottomAnchor.constraint(greaterThanOrEqualTo: stack.bottomAnchor, constant: 30)
         ])
 
         view.backgroundColor = .tertiarySystemBackground
     }
 }
-// swiftlint:enable function_body_length
