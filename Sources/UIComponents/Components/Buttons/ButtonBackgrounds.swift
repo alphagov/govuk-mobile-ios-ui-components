@@ -49,8 +49,11 @@ extension GOVUKButton {
 
             self.layer.cornerRadius = 10
             self.layer.cornerCurve = .continuous
-            contentEdgeInsets = .init(top: 13, left: 12, bottom: 13, right: 12)
+            contentEdgeInsets = .init(top: 4, left: 8, bottom: 4, right: 8)
         } else {
+            if let contentEdgeInsets = self.viewModel?.buttonConfiguration?.contentEdgeInsets {
+                self.contentEdgeInsets = contentEdgeInsets
+            }
             backgroundColor = .none
         }
     }

@@ -44,6 +44,7 @@ final public class GOVUKButton: UIButton {
     }
 
     public func setBackgroundNormal(color: UIColor?) {
+        _backgroundColor = color
         backgroundManager.normal = color
     }
 

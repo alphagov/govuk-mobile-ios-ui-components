@@ -57,22 +57,22 @@ class ViewController: UIViewController {
         let button = GOVUKButton(.primary)
         button.setTitle("primary button", for: .normal)
         button.addAction(uiAction, for: .touchUpInside)
-
-
-        let viewModel = MockViewModel {
-            print("button tapped")
-        }
-
-        let button2 = GOVUKButton(viewModel: viewModel)
-        button2.addAction(uiAction, for: .touchUpInside)
-
-        let button3VM = PlainButtonViewModel(localisedTitle: "plain button") {
-            Task {
-                try? await action()
-            }
-        }
-
-        let button3 = UIButton.govUK(viewModel: button3VM)
+//
+//
+//        let viewModel = MockViewModel {
+//            print("button tapped")
+//        }
+//
+//        let button2 = GOVUKButton(viewModel: viewModel)
+//        button2.addAction(uiAction, for: .touchUpInside)
+//
+//        let button3VM = PlainButtonViewModel(localisedTitle: "plain button") {
+//            Task {
+//                try? await action()
+//            }
+//        }
+//
+//        let button3 = UIButton.govUK(viewModel: button3VM)
 
         let button4VM = PlainButtonViewModel(localisedTitle: "plain button - leading", action: {
             Task {
@@ -83,8 +83,8 @@ class ViewController: UIViewController {
         let button4 = UIButton.govUK(viewModel: button4VM)
 
         stack.addArrangedSubview(button)
-        stack.addArrangedSubview(button2)
-        stack.addArrangedSubview(button3)
+//        stack.addArrangedSubview(button2)
+//        stack.addArrangedSubview(button3)
         stack.addArrangedSubview(button4)
 
         view.addSubview(stack)
