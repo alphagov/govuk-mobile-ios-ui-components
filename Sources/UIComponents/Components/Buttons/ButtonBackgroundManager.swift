@@ -6,17 +6,15 @@ public enum ButtonShape: Equatable {
 }
 
 final class BackgroundManager {
-    private let setColor: (UIColor, UIButton.State) -> ()
+    weak var button: GOVUKButton?
     var tempColor: UIColor?
-
     var buttonShape: ButtonShape?
-
     var hasBackground: Bool = false
 
     var normal: UIColor? {
         didSet {
             if let normal {
-                setColor(normal, .normal)
+                button?.setBackgroundColor(color: normal, for: .normal)
             }
         }
     }
@@ -24,16 +22,17 @@ final class BackgroundManager {
     var focused: UIColor? {
         didSet {
             if let focused {
-                setColor(focused, .focused)
+                button?.setBackgroundColor(color: focused, for: .focused)
             }
         }
     }
 
     init(normal: UIColor? = nil,
          focused: UIColor? = nil,
-         setColor: @escaping (UIColor, UIButton.State) -> Void) {
+         button: GOVUKButton?
+    ) {
         self.normal = normal
         self.focused = focused
-        self.setColor = setColor
+        self.button = button
     }
 }

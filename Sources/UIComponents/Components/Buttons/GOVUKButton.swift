@@ -3,8 +3,7 @@ import UIKit
 final public class GOVUKButton: UIButton {
     public var viewModel: ButtonViewModel?
 
-
-    lazy var backgroundManager = BackgroundManager(setColor: setBackgroundColor)
+    lazy var backgroundManager = BackgroundManager(button: self)
 
     private(set) var _backgroundColor: UIColor? {
         didSet {
