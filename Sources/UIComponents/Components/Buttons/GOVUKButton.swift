@@ -144,7 +144,7 @@ final public class GOVUKButton: UIButton {
         NotificationCenter.default.addObserver(forName: Notification.Name("buttonShapesEnabled"),
                                                object: nil,
                                                queue: nil) { _ in
-            self.buttonShapesStyle()
+            self.layoutSubviews()
         }
     }
 
@@ -156,6 +156,7 @@ final public class GOVUKButton: UIButton {
 
         updateBackground()
         updateConstraints()
+        buttonShapesStyle()
     }
 }
 
