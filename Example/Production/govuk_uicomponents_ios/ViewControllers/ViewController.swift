@@ -1,4 +1,3 @@
-// swiftlint:disable function_body_length
 import UIComponents
 import UIKit
 
@@ -34,25 +33,8 @@ class ViewController: UIViewController {
         stack.isLayoutMarginsRelativeArrangement = true
         stack.spacing = 16
 
-
-        let swiftUIScreenViewVM = ButtonScreenViewModel()
-        let swiftUIVC = HostingViewController<SwiftUIComponentsScreen>(viewModel: swiftUIScreenViewVM)
-
-        var action: () async throws -> Void {
-            {
-            if let navController = self.navigationController {
-                navController.pushViewController(swiftUIVC, animated: true)
-            }
-            }
-        }
-
-        let uiAction = UIAction { _ in
-            Task {
-                do {
-                    print("button action tapped")
-                    try await action()
-                }
-            }
+        let uiAction = UIAction { [weak self] _ in
+            self?.pushSwiftUIView()
         }
 
         let button = GOVUKButton(.primary)
@@ -66,19 +48,22 @@ class ViewController: UIViewController {
         let button2 = GOVUKButton(viewModel: viewModel)
         button2.addAction(uiAction, for: .touchUpInside)
 
-        let button3VM = PlainButtonViewModel(localisedTitle: "plain button") {
-            Task {
-                try? await action()
+        let button3VM = PlainButtonViewModel(
+            localisedTitle: "plain button",
+            action: { [weak self] in
+                self?.pushSwiftUIView()
             }
-        }
+        )
 
         let button3 = UIButton.govUK(viewModel: button3VM)
 
-        let button4VM = PlainButtonViewModel(localisedTitle: "plain button - leading", action: {
-            Task {
-                try? await action()
-            }
-        }, configuration: .plainLeading)
+        let button4VM = PlainButtonViewModel(
+            localisedTitle: "plain button - leading",
+            action: { [weak self] in
+                self?.pushSwiftUIView()
+            },
+            configuration: .plainLeading
+        )
 
         let button4 = UIButton.govUK(viewModel: button4VM)
 
@@ -100,5 +85,10 @@ class ViewController: UIViewController {
 
         view.backgroundColor = .tertiarySystemBackground
     }
+
+    private func pushSwiftUIView() {
+        let swiftUIScreenViewVM = ButtonScreenViewModel()
+        let swiftUIVC = HostingViewController<SwiftUIComponentsScreen>(viewModel: swiftUIScreenViewVM)
+        navigationController?.pushViewController(swiftUIVC, animated: true)
+    }
 }
-// swiftlint:enable function_body_length

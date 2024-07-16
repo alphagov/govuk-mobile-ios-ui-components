@@ -140,11 +140,14 @@ final public class GOVUKButton: UIButton {
     }
 
     private func configNotifications() {
-        NotificationCenter.default.addObserver(forName: Notification.Name("buttonShapesEnabled"),
-                                               object: nil,
-                                               queue: nil) { _ in
-            self.layoutSubviews()
-        }
+        NotificationCenter.default.addObserver(
+            forName: Notification.Name("buttonShapesEnabled"),
+            object: nil,
+            queue: nil,
+            using: { [weak self] _ in
+                self?.layoutSubviews()
+            }
+        )
     }
 
     public override func layoutSubviews() {
