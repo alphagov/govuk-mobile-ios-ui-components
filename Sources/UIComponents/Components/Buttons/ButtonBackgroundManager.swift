@@ -5,9 +5,8 @@ public enum ButtonShape: Equatable {
     case capsule
 }
 
-final class BackgroundManager {
+final class ButtonBackgroundManager {
     weak var button: GOVUKButton?
-    var tempColor: UIColor?
     var buttonShape: ButtonShape?
     var hasBackground: Bool = false
 

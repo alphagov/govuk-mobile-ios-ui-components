@@ -2,8 +2,8 @@ import UIKit
 
 final public class GOVUKButton: UIButton {
     public var viewModel: ButtonViewModel?
-
-    lazy var backgroundManager = BackgroundManager(button: self)
+    lazy var backgroundManager = ButtonBackgroundManager(button: self)
+    private var tempColor: UIColor?
 
     private(set) var _backgroundColor: UIColor? {
         didSet {
@@ -23,19 +23,19 @@ final public class GOVUKButton: UIButton {
     public override func accessibilityElementDidBecomeFocused() {
         super.accessibilityElementDidBecomeFocused()
 
-        backgroundManager.tempColor = backgroundManager.normal
+        tempColor = backgroundManager.normal
 
         if backgroundManager.hasBackground {
             self.setBackgroundNormal(color: backgroundManager.focused)
 
-            backgroundColor = backgroundManager.tempColor
+            backgroundColor = tempColor
         }
     }
 
     public override func accessibilityElementDidLoseFocus() {
         super.accessibilityElementDidLoseFocus()
 
-        self.setBackgroundNormal(color: backgroundManager.tempColor)
+        self.setBackgroundNormal(color: tempColor)
     }
 
     public func setBackgroundFocused(color: UIColor?) {

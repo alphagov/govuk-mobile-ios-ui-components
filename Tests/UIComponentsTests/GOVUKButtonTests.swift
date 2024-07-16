@@ -7,12 +7,12 @@ struct MockViewModel: ButtonViewModel {
     var action: () async throws -> Void
 
     var buttonConfiguration: GOVUKButton.ButtonConfiguration? = .init(
-        titleNormal: .purple,
-        titleFocused: .green,
+        titleColorNormal: .purple,
+        titleColorFocused: .green,
         titleFont: .title3,
-        backgroundNormal: .green,
-        backgroundFocused: .cyan,
-        backgroundShape: .roundedRect(5))
+        backgroundColorNormal: .green,
+        backgroundColorFocused: .cyan,
+        buttonShape: .roundedRect(5))
 
     init(action: @escaping () -> Void) {
         self.action = action

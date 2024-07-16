@@ -2,8 +2,8 @@ import UIKit
 
 extension GOVUKButton {
     public struct ButtonConfiguration {
-        let titleNormal: UIColor?
-        let titleFocused: UIColor?
+        let titleColorNormal: UIColor?
+        let titleColorFocused: UIColor?
 
         let titleFont: UIFont?
         let textAlignment: NSTextAlignment?
@@ -11,43 +11,43 @@ extension GOVUKButton {
         let contentVerticalAlignment: UIControl.ContentVerticalAlignment?
         let contentEdgeInsets: UIEdgeInsets?
 
-        let backgroundNormal: UIColor?
-        let backgroundFocused: UIColor?
-        let backgroundShape: ButtonShape?
+        let backgroundColorNormal: UIColor?
+        let backgroundColorFocused: UIColor?
+        let buttonShape: ButtonShape?
 
-        let accessibilityButtonShapes: UIColor?
+        let accessibilityButtonShapesColor: UIColor?
 
-        public init(titleNormal: UIColor? = nil,
-                    titleFocused: UIColor? = nil,
+        public init(titleColorNormal: UIColor? = nil,
+                    titleColorFocused: UIColor? = nil,
                     titleFont: UIFont? = nil,
                     textAlignment: NSTextAlignment? = nil,
                     contentHorizontalAlignment: UIControl.ContentHorizontalAlignment? = nil,
                     contentVerticalAlignment: UIControl.ContentVerticalAlignment? = nil,
                     contentEdgeInsets: UIEdgeInsets? = nil,
-                    backgroundNormal: UIColor? = nil,
-                    backgroundFocused: UIColor? = nil,
-                    backgroundShape: ButtonShape? = nil,
-                    accessibilityButtonShapes: UIColor? = nil) {
-            self.titleNormal = titleNormal
-            self.titleFocused = titleFocused
+                    backgroundColorNormal: UIColor? = nil,
+                    backgroundColorFocused: UIColor? = nil,
+                    buttonShape: ButtonShape? = nil,
+                    accessibilityButtonShapesColor: UIColor? = nil) {
+            self.titleColorNormal = titleColorNormal
+            self.titleColorFocused = titleColorFocused
             self.titleFont = titleFont
             self.textAlignment = textAlignment
             self.contentHorizontalAlignment = contentHorizontalAlignment
             self.contentVerticalAlignment = contentVerticalAlignment
             self.contentEdgeInsets = contentEdgeInsets
-            self.backgroundNormal = backgroundNormal
-            self.backgroundFocused = backgroundFocused
-            self.backgroundShape = backgroundShape
-            self.accessibilityButtonShapes = accessibilityButtonShapes
+            self.backgroundColorNormal = backgroundColorNormal
+            self.backgroundColorFocused = backgroundColorFocused
+            self.buttonShape = buttonShape
+            self.accessibilityButtonShapesColor = accessibilityButtonShapesColor
         }
     }
 
     public func updateButtonConfig(_ config: GOVUKButton.ButtonConfiguration) {
-        if let color = config.titleNormal {
+        if let color = config.titleColorNormal {
             setTitleColor(color, for: .normal)
         }
 
-        if let color = config.titleFocused {
+        if let color = config.titleColorFocused {
             setTitleColor(color, for: .focused)
         }
 
@@ -71,16 +71,16 @@ extension GOVUKButton {
             self.contentEdgeInsets = insets
         }
 
-        if let color = config.backgroundNormal {
+        if let color = config.backgroundColorNormal {
             setBackgroundNormal(color: color)
         }
 
-        if let color = config.backgroundFocused {
+        if let color = config.backgroundColorFocused {
             setBackgroundFocused(color: color)
         }
 
-        if let shape = config.backgroundShape {
-            self.addBackground(buttonShape: shape)
+        if let shape = config.buttonShape {
+            self.addBackgroundTo(buttonShape: shape)
         }
     }
 }

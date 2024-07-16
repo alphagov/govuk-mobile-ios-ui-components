@@ -9,7 +9,7 @@ extension GOVUKButton {
 extension GOVUKButton.ButtonConfiguration {
     public static var plain: GOVUKButton.ButtonConfiguration {
         .init(
-            titleNormal: .label,
+            titleColorNormal: .label,
             titleFont: .body
         )
     }
@@ -24,7 +24,7 @@ extension GOVUKButton {
 extension GOVUKButton.ButtonConfiguration {
     public static var plainLeading: GOVUKButton.ButtonConfiguration {
         .init(
-            titleNormal: .label,
+            titleColorNormal: .label,
             titleFont: .body,
             textAlignment: .left,
             contentHorizontalAlignment: .leading,

@@ -8,10 +8,10 @@ extension GOVUKButton {
 
 extension GOVUKButton.ButtonConfiguration {
     public static var primary: GOVUKButton.ButtonConfiguration {
-        .init(titleNormal: .white,
-              titleFocused: .black,
-              backgroundNormal: UIColor(resource: .govukBlue),
-              backgroundFocused: .systemYellow,
-              backgroundShape: .capsule)
+        .init(titleColorNormal: .white,
+              titleColorFocused: .black,
+              backgroundColorNormal: UIColor(resource: .govukBlue),
+              backgroundColorFocused: .systemYellow,
+              buttonShape: .capsule)
     }
 }
