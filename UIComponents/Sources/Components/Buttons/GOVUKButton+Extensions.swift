@@ -22,7 +22,7 @@ extension GOVUKButton {
             contentEdgeInsets = viewModel?.buttonConfiguration?.contentEdgeInsets ??
                 .init(top: 13, left: 16, bottom: 13, right: 16)
         case .none:
-            if _backgroundColor != nil {
+            if privateBackgroundColor != nil {
                 self.layer.cornerRadius = 0
             }
         }
@@ -32,7 +32,7 @@ extension GOVUKButton {
 
 extension GOVUKButton {
     func buttonShapesStyle() {
-        guard _backgroundColor == nil else { return }
+        guard privateBackgroundColor == nil else { return }
 
         if UIAccessibility.buttonShapesEnabled {
             backgroundColor = nil

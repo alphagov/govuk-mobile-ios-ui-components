@@ -5,9 +5,9 @@ final public class GOVUKButton: UIButton {
     lazy var backgroundManager = ButtonBackgroundManager(button: self)
     private var tempColor: UIColor?
 
-    private(set) var _backgroundColor: UIColor? {
+    private(set) var privateBackgroundColor: UIColor? {
         didSet {
-            backgroundColor = _backgroundColor
+            backgroundColor = privateBackgroundColor
         }
     }
 
@@ -43,7 +43,7 @@ final public class GOVUKButton: UIButton {
     }
 
     public func setBackgroundNormal(color: UIColor?) {
-        _backgroundColor = color
+        privateBackgroundColor = color
         backgroundManager.normal = color
     }
 

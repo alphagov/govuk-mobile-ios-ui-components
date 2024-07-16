@@ -12,10 +12,6 @@ extension GOVUKButton: WrappableButton {}
 struct SwiftUIWrappedButton<WrappedButton: WrappableButton>: UIViewRepresentable {
     let viewModel: ButtonViewModel
 
-    init(viewModel: ButtonViewModel) {
-        self.viewModel = viewModel
-    }
-
     func makeUIView(context: Context) -> WrappedButton {
         let button = WrappedButton(viewModel: viewModel)
         button.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)

@@ -14,14 +14,21 @@ let package = Package(
         )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "UIComponents"
+            name: "UIComponents",
+            path: "UIComponents",
+            sources: [
+                "Sources"
+            ],
+            resources: [.process("Resources")]
         ),
         .testTarget(
             name: "UIComponentsTests",
-            dependencies: ["UIComponents"]
+            dependencies: ["UIComponents"],
+            path: "UIComponents",
+            sources: [
+                "Tests"
+            ]
         )
     ]
 )

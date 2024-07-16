@@ -16,7 +16,7 @@ extension UIButton {
         self.setBackgroundImage(UIImage(color), for: state)
     }
 
-    public func setBackgroundColor(color: UIColor, for state: UIControl.State) -> Void {
+    public func setBackgroundColor(color: UIColor, for state: UIControl.State) {
         self.clipsToBounds = true
 
         self.setBackgroundImage(color, for: state)

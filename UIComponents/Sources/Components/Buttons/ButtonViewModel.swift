@@ -26,7 +26,7 @@ public struct PlainButtonViewModel: ButtonViewModel {
     public let action: () async throws -> Void
     public let buttonConfiguration: GOVUKButton.ButtonConfiguration?
 
-    public init(localisedTitle: String, 
+    public init(localisedTitle: String,
                 action: @escaping () -> Void,
                 configuration: GOVUKButton.ButtonConfiguration = .plain) {
         self.localisedTitle = localisedTitle
