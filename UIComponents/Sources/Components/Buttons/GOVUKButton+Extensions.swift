@@ -4,8 +4,8 @@ extension GOVUKButton {
     @discardableResult
     func addBackgroundTo(
         radius: CGFloat? = nil,
-        buttonShape: ButtonShape = .capsule
-    ) -> Self {
+        buttonShape: ButtonShape = .capsule)
+    -> Self {
         self.backgroundManager.buttonShape = buttonShape
         updateBackground()
         return self

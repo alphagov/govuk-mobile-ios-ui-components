@@ -84,3 +84,19 @@ extension GOVUKButton {
         }
     }
 }
+
+#if DEBUG
+extension GOVUKButton.ButtonConfiguration {
+    public static var mockConfig: Self {
+        let config = GOVUKButton.ButtonConfiguration(
+            titleColorNormal: .magenta,
+            titleColorFocused: .green,
+            titleFont: .title3,
+            backgroundColorNormal: .green,
+            backgroundColorFocused: .cyan,
+            buttonShape: .roundedRect(5)
+        )
+        return config
+    }
+}
+#endif

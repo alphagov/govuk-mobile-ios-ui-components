@@ -26,10 +26,12 @@ public struct SwiftUIComponentsScreen: View {
 
 
 public struct ButtonScreenViewModel {
-    let button1 = MockViewModel(action: {})
-    let button2 = PrimaryButtonViewModel(localisedTitle: "primary button", action: {})
-    let button3 = PlainButtonViewModel(localisedTitle: "plain button", action: {})
-    let button4 = PlainButtonViewModel(localisedTitle: "plain button - leading",
+    let button1 = GOVUKButtonViewModel(localisedTitle: "configured button",
+                                       action: {},
+                                       configuration: GOVUKButton.ButtonConfiguration.mockConfig)
+    let button2 = GOVUKButtonViewModel(localisedTitle: "primary button", action: {})
+    let button3 = GOVUKButtonViewModel(localisedTitle: "plain button", action: {}, configuration: .plain)
+    let button4 = GOVUKButtonViewModel(localisedTitle: "plain button - leading",
                                        action: {},
                                        configuration: .plainLeading)
 }

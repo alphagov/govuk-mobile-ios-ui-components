@@ -1,25 +1,6 @@
 import UIComponents
 import UIKit
 
-struct MockViewModel: ButtonViewModel {
-    var localisedTitle: String = "configured button"
-
-    var action: () async throws -> Void
-
-    var buttonConfiguration: GOVUKButton.ButtonConfiguration? = .init(
-        titleColorNormal: .magenta,
-        titleColorFocused: .green,
-        titleFont: .title3,
-        backgroundColorNormal: .green,
-        backgroundColorFocused: .cyan,
-        buttonShape: .roundedRect(5)
-    )
-
-    init(action: @escaping () -> Void) {
-        self.action = action
-    }
-}
-
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,23 +22,23 @@ class ViewController: UIViewController {
         button.setTitle("primary button", for: .normal)
         button.addAction(uiAction, for: .touchUpInside)
 
-        let viewModel = MockViewModel {
-            print("button tapped")
-        }
+        let viewModel = GOVUKButtonViewModel(localisedTitle: "configured button",
+                                             action: {},
+                                             configuration: GOVUKButton.ButtonConfiguration.mockConfig)
 
         let button2 = GOVUKButton(viewModel: viewModel)
         button2.addAction(uiAction, for: .touchUpInside)
 
-        let button3VM = PlainButtonViewModel(
+        let button3VM = GOVUKButtonViewModel(
             localisedTitle: "plain button",
             action: { [weak self] in
                 self?.pushSwiftUIView()
-            }
+            }, configuration: .plain
         )
 
         let button3 = UIButton.govUK(viewModel: button3VM)
 
-        let button4VM = PlainButtonViewModel(
+        let button4VM = GOVUKButtonViewModel(
             localisedTitle: "plain button - leading",
             action: { [weak self] in
                 self?.pushSwiftUIView()
