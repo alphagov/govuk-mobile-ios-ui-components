@@ -21,13 +21,4 @@ class SceneDelegate: UIResponder,
         window.makeKeyAndVisible()
         self.window = window
     }
-
-    func sceneWillEnterForeground(_ scene: UIScene) {
-        postNotification()
-    }
-
-    func postNotification() {
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.post(Notification(name: Notification.Name( "buttonShapesEnabled"), object: nil))
-    }
 }

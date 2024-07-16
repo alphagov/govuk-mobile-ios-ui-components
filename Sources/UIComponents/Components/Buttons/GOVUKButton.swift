@@ -121,7 +121,7 @@ final public class GOVUKButton: UIButton {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(Notification.Name("buttonShapesEnabled"))
+        NotificationCenter.default.removeObserver(UIApplication.willEnterForegroundNotification)
     }
 
     private func initialisation() {
@@ -141,7 +141,7 @@ final public class GOVUKButton: UIButton {
 
     private func configNotifications() {
         NotificationCenter.default.addObserver(
-            forName: Notification.Name("buttonShapesEnabled"),
+            forName: UIApplication.willEnterForegroundNotification,
             object: nil,
             queue: nil,
             using: { [weak self] _ in
@@ -161,16 +161,3 @@ final public class GOVUKButton: UIButton {
         buttonShapesStyle()
     }
 }
-
-/*
- need to add this notification code to scene delegate
-
- func sceneWillEnterForeground(_ scene: UIScene) {
- postNotification()
- }
-
- func postNotification() {
- let nc = NotificationCenter.default
- nc.post(Notification(name: Notification.Name( "buttonShapesEnabled"), object: nil))
- }
- */
