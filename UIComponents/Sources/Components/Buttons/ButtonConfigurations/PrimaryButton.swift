@@ -10,6 +10,7 @@ extension GOVUKButton.ButtonConfiguration {
     public static var primary: GOVUKButton.ButtonConfiguration {
         .init(titleColorNormal: .white,
               titleColorFocused: .black,
+              titleFont: .bodySemiBold,
               backgroundColorNormal: UIColor(resource: .govukBlue),
               backgroundColorFocused: .systemYellow,
               buttonShape: .capsule)

@@ -18,35 +18,34 @@ class ViewController: UIViewController {
             self?.pushSwiftUIView()
         }
 
-        let button = GOVUKButton(.primary)
+        let button = UIButton.govUK.primary
         button.setTitle("primary button", for: .normal)
         button.addAction(uiAction, for: .touchUpInside)
 
         let viewModel = GOVUKButtonViewModel(localisedTitle: "configured button",
-                                             action: {},
-                                             configuration: GOVUKButton.ButtonConfiguration.mockConfig)
+                                             action: {})
 
-        let button2 = GOVUKButton(viewModel: viewModel)
+        let button2 = GOVUKButton(.mockConfig, viewModel: viewModel)
         button2.addAction(uiAction, for: .touchUpInside)
 
         let button3VM = GOVUKButtonViewModel(
             localisedTitle: "plain button",
             action: { [weak self] in
                 self?.pushSwiftUIView()
-            }, configuration: .plain
-        )
+            })
 
-        let button3 = UIButton.govUK(viewModel: button3VM)
+        let button3 = GOVUKButton(.plain)
+        button3.viewModel = button3VM
 
         let button4VM = GOVUKButtonViewModel(
             localisedTitle: "plain button - leading",
             action: { [weak self] in
                 self?.pushSwiftUIView()
-            },
-            configuration: .plainLeading
-        )
+            })
 
-        let button4 = UIButton.govUK(viewModel: button4VM)
+        let button4 = GOVUKButton(.plainLeading)
+//        let button4 = UIButton.govUK(viewModel: button4VM)
+        button4.viewModel = button4VM
 
         stack.addArrangedSubview(button)
         stack.addArrangedSubview(button2)

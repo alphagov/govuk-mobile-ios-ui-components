@@ -42,18 +42,12 @@ extension GOVUKButton {
         }
     }
 
-    public func updateButtonConfig(_ config: GOVUKButton.ButtonConfiguration) {
-        if let color = config.titleColorNormal {
-            setTitleColor(color, for: .normal)
-        }
-
-        if let color = config.titleColorFocused {
-            setTitleColor(color, for: .focused)
-        }
-
-        if let title = config.titleFont {
-            self.titleLabel?.font = title
-        }
+    public func setButton(config: GOVUKButton.ButtonConfiguration) {
+        setTitleColor(config.titleColorNormal, for: .normal)
+        setTitleColor(config.titleColorFocused, for: .focused)
+        self.titleLabel?.font = config.titleFont
+        setBackgroundNormal(color: config.backgroundColorNormal )
+        setBackgroundFocused(color: config.backgroundColorFocused)
 
         if let textAlignment = config.textAlignment {
             self.titleLabel?.textAlignment = textAlignment
@@ -69,14 +63,6 @@ extension GOVUKButton {
 
         if let insets = config.contentEdgeInsets {
             self.contentEdgeInsets = insets
-        }
-
-        if let color = config.backgroundColorNormal {
-            setBackgroundNormal(color: color)
-        }
-
-        if let color = config.backgroundColorFocused {
-            setBackgroundFocused(color: color)
         }
 
         if let shape = config.buttonShape {

@@ -28,7 +28,7 @@ final class GOVUKButtonTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        sut = GOVUKButton()
+        sut = GOVUKButton(.plain)
         didTap = false
 
         viewModel = MockViewModel {
@@ -50,14 +50,9 @@ final class GOVUKButtonTests: XCTestCase {
 extension GOVUKButtonTests {
     func test_unconfiguredButton() {
         XCTAssertNotNil(sut)
-
-        if !buttonShapesEnabled {
-            XCTAssertNil(sut.backgroundColor)
-            XCTAssertFalse(sut.backgroundManager.hasBackground)
-        } else {
-            XCTAssertNotNil(sut.backgroundColor)
-            XCTAssertTrue(sut.backgroundManager.hasBackground)
-        }
+        
+        XCTAssertNil(sut.backgroundColor)
+        XCTAssertFalse(sut.backgroundManager.hasBackground)
 
         XCTAssertNil(sut.titleLabel?.text)
     }
@@ -72,25 +67,15 @@ extension GOVUKButtonTests {
     }
 
     func test_createdFromButtonExtension() {
-        sut = UIButton.govUK
+        sut = GOVUKButton(.plain)
 
-        if !buttonShapesEnabled {
-            XCTAssertNil(sut.backgroundColor)
-            XCTAssertFalse(sut.backgroundManager.hasBackground)
-        } else {
-            XCTAssertNotNil(sut.backgroundColor)
-            XCTAssertTrue(sut.backgroundManager.hasBackground)
-        }
+        XCTAssertNil(sut.backgroundColor)
+        XCTAssertFalse(sut.backgroundManager.hasBackground)
     }
 
     func test_buttonBackground() {
-        if !buttonShapesEnabled {
-            XCTAssertNil(sut.backgroundColor)
-            XCTAssertFalse(sut.backgroundManager.hasBackground)
-        } else {
-            XCTAssertNotNil(sut.backgroundColor)
-            XCTAssertTrue(sut.backgroundManager.hasBackground)
-        }
+        XCTAssertNil(sut.backgroundColor)
+        XCTAssertFalse(sut.backgroundManager.hasBackground)
 
         sut.backgroundColor = .cyan
 
@@ -110,9 +95,9 @@ extension GOVUKButtonTests {
         XCTAssertEqual(sut.layer.cornerRadius, 22)
     }
 
-    func test_buttonViewModelConfiguration() {
-        sut = UIButton.govUK.primary
-        sut.viewModelUpdate(viewModel: viewModel)
-
-    }
+//    func test_buttonViewModelConfiguration() {
+//        sut = UIButton.govUK.primary
+//        sut.viewModelUpdate(viewModel: viewModel)
+//
+//    }
 }

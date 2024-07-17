@@ -1,9 +1,28 @@
 import UIKit
 
 final public class GOVUKButton: UIButton {
-    public var viewModel: ButtonViewModel?
     lazy var backgroundManager = ButtonBackgroundManager(button: self)
     private var tempColor: UIColor?
+
+    private var privateButtonConfiguration: ButtonConfiguration?
+    public var buttonConfiguration: ButtonConfiguration? {
+        get { privateButtonConfiguration }
+        set {
+            if let config = newValue {
+                setButton(config: config)
+            }
+        }
+    }
+
+    private var privateViewModel: ButtonViewModel?
+    public var viewModel: ButtonViewModel? {
+        get { privateViewModel }
+        set {
+            if let viewModel = newValue {
+                viewModelUpdate(viewModel: viewModel)
+            }
+        }
+    }
 
     private(set) var privateBackgroundColor: UIColor? {
         didSet {
@@ -47,9 +66,10 @@ final public class GOVUKButton: UIButton {
         backgroundManager.normal = color
     }
 
-    public func viewModelUpdate(viewModel: ButtonViewModel) {
+    private func viewModelUpdate(viewModel: ButtonViewModel) {
         self.setTitle(viewModel.localisedTitle, for: .normal)
 
+        self.removeAllActions()
         // todo - add loading state handling
         self.addAction(UIAction { _ in
                 // start loading state
@@ -63,11 +83,7 @@ final public class GOVUKButton: UIButton {
             }
         }, for: .touchUpInside)
 
-        if let configuration = viewModel.buttonConfiguration {
-            updateButtonConfig(configuration)
-        }
-
-        self.viewModel = viewModel
+        self.privateViewModel = viewModel
     }
 
     override public var isHighlighted: Bool {
@@ -98,26 +114,19 @@ final public class GOVUKButton: UIButton {
                       height: titlesize.height + contentEdgeInsets.vertical)
     }
 
-    public init() {
-        super.init(frame: .zero)
-        initialisation()
-    }
-
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialisation()
     }
 
-    public init(viewModel: ButtonViewModel) {
+    public init(_ configuration: GOVUKButton.ButtonConfiguration,
+                viewModel: ButtonViewModel? = nil) {
         super.init(frame: .zero)
-        initialisation()
-        self.viewModelUpdate(viewModel: viewModel)
-    }
 
-    public init(_ configuration: GOVUKButton.ButtonConfiguration) {
-        super.init(frame: .zero)
+        self.viewModel = viewModel
         initialisation()
-        self.updateButtonConfig(configuration)
+        self.buttonConfiguration = configuration
+        self.setButton(config: configuration)
     }
 
     deinit {

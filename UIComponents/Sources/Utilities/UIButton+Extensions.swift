@@ -1,13 +1,17 @@
 import UIKit
 
 extension UIButton {
-    public static var govUK: GOVUKButton {
-        GOVUKButton()
+    public static var govUK: GOVUKButtonBuilder {
+        GOVUKButtonBuilder()
     }
 
-    public static func govUK(viewModel: ButtonViewModel) -> GOVUKButton {
-        GOVUKButton(viewModel: viewModel)
-    }
+//    public static func govUK(viewModel: ButtonViewModel) -> GOVUKButton {
+//        GOVUKButton(viewModel: viewModel)
+//    }
+}
+
+public struct GOVUKButtonBuilder {
+    public let primary = GOVUKButton(.primary)
 }
 
 
@@ -21,5 +25,21 @@ extension UIButton {
 
         self.setBackgroundImage(color, for: state)
         backgroundColor = color
+    }
+}
+
+extension UIButton {
+    func removeAllActions() {
+        self.enumerateEventHandlers { action, targetAction, event, end in
+            if let action {
+                self.removeAction(action, for: event)
+            }
+
+            if let (target, selector) = targetAction {
+                self.removeTarget(target, action: selector, for: event)
+            }
+
+            end = true
+        }
     }
 }
