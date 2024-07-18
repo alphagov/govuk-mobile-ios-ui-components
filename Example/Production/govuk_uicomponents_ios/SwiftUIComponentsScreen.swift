@@ -8,13 +8,13 @@ public struct SwiftUIComponentsScreen: View {
         VStack(spacing: 16) {
             Text("SwiftUI screen")
             Spacer()
-            SwiftUIButton<GOVUKButton>(.primary, viewModel: viewModel.button2)
+            SwiftUIButton(.primary, viewModel: viewModel.button2)
 
-            SwiftUIButton<GOVUKButton>(.mockConfig, viewModel: viewModel.button1)
+            SwiftUIButton(.mockConfig, viewModel: viewModel.button1)
 
-            SwiftUIButton<GOVUKButton>(.plain, viewModel: viewModel.button3)
+            SwiftUIButton(.secondary, viewModel: viewModel.button3)
 
-            SwiftUIButton<GOVUKButton>(.plainLeading, viewModel: viewModel.button4)
+            SwiftUIButton(.plainLeading, viewModel: viewModel.button4)
         }
         .padding(.horizontal)
     }
@@ -26,10 +26,20 @@ public struct SwiftUIComponentsScreen: View {
 
 
 public struct ButtonScreenViewModel {
-    let button1 = GOVUKButtonViewModel(localisedTitle: "configured button",
-                                       action: {})
-    let button2 = GOVUKButtonViewModel(localisedTitle: "primary button", action: {})
-    let button3 = GOVUKButtonViewModel(localisedTitle: "plain button", action: {})
-    let button4 = GOVUKButtonViewModel(localisedTitle: "plain button - leading",
-                                       action: {})
+    let button1 = GOVUKButton.ButtonViewModel(
+        localisedTitle: "configured button",
+        action: {}
+    )
+    let button2 = GOVUKButton.ButtonViewModel(
+        localisedTitle: "primary button",
+        action: {}
+    )
+    let button3 = GOVUKButton.ButtonViewModel(
+        localisedTitle: "plain button",
+        action: {}
+    )
+    let button4 = GOVUKButton.ButtonViewModel(
+        localisedTitle: "plain button - leading",
+        action: {}
+    )
 }

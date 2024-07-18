@@ -1,132 +1,28 @@
 import UIKit
 
 final public class GOVUKButton: UIButton {
-    lazy var backgroundManager = ButtonBackgroundManager(button: self)
-    private var tempColor: UIColor?
-
-    private var privateButtonConfiguration: ButtonConfiguration?
-    public var buttonConfiguration: ButtonConfiguration? {
-        get { privateButtonConfiguration }
-        set {
-            if let config = newValue {
-                setButton(config: config)
-            }
+    public var buttonConfiguration: ButtonConfiguration {
+        didSet {
+            buttonConfigurationUpdate()
         }
     }
 
-    private var privateViewModel: ButtonViewModel?
     public var viewModel: ButtonViewModel? {
-        get { privateViewModel }
-        set {
-            if let viewModel = newValue {
-                viewModelUpdate(viewModel: viewModel)
-            }
-        }
-    }
-
-    private(set) var privateBackgroundColor: UIColor? {
         didSet {
-            backgroundColor = privateBackgroundColor
+            viewModelUpdate()
         }
     }
 
-    public override var backgroundColor: UIColor? {
-        didSet {
-            backgroundManager.hasBackground = backgroundColor == nil ? false : true
-            if backgroundColor == UIColor.clear {
-                backgroundManager.hasBackground = false
-            }
-        }
-    }
-
-    public override func accessibilityElementDidBecomeFocused() {
-        super.accessibilityElementDidBecomeFocused()
-
-        tempColor = backgroundManager.normal
-
-        if backgroundManager.hasBackground {
-            self.setBackgroundNormal(color: backgroundManager.focused)
-
-            backgroundColor = tempColor
-        }
-    }
-
-    public override func accessibilityElementDidLoseFocus() {
-        super.accessibilityElementDidLoseFocus()
-
-        self.setBackgroundNormal(color: tempColor)
-    }
-
-    public func setBackgroundFocused(color: UIColor?) {
-        backgroundManager.focused = color
-    }
-
-    public func setBackgroundNormal(color: UIColor?) {
-        privateBackgroundColor = color
-        backgroundManager.normal = color
-    }
-
-    private func viewModelUpdate(viewModel: ButtonViewModel) {
-        self.setTitle(viewModel.localisedTitle, for: .normal)
-
-        self.removeAllActions()
-        // todo - add loading state handling
-        self.addAction(UIAction { _ in
-                // start loading state
-            Task {
-                do {
-                    try await viewModel.action()
-                } catch {
-                        // handle errors
-                }
-                    // stop loading state
-            }
-        }, for: .touchUpInside)
-
-        self.privateViewModel = viewModel
-    }
-
-    override public var isHighlighted: Bool {
-        willSet {
-            if newValue {
-                let currentState = self.state
-                let currentImage = self.backgroundImage(for: currentState)
-                let currentTitleColor = self.titleColor(for: currentState)
-
-                self.setBackgroundImage(currentImage, for: .highlighted)
-                self.setTitleColor(currentTitleColor, for: .highlighted)
-
-                self.layer.opacity = 0.7
-
-                self.layer.setAffineTransform(.init(scaleX: 0.99, y: 0.99))
-            } else {
-                backgroundColor = backgroundColor?.withAlphaComponent(1)
-                self.layer.opacity = 1
-                self.layer.setAffineTransform(.init(scaleX: 1, y: 1))
-            }
-        }
-    }
-
-    public override var intrinsicContentSize: CGSize {
-        let titlesize = titleLabel?.intrinsicContentSize ?? .zero
-
-        return CGSize(width: titlesize.width + contentEdgeInsets.horizontal,
-                      height: titlesize.height + contentEdgeInsets.vertical)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initialisation()
-    }
-
-    public init(_ configuration: GOVUKButton.ButtonConfiguration,
+    public init(_ configuration: ButtonConfiguration,
                 viewModel: ButtonViewModel? = nil) {
-        super.init(frame: .zero)
-
         self.viewModel = viewModel
-        initialisation()
         self.buttonConfiguration = configuration
-        self.setButton(config: configuration)
+        super.init(frame: .zero)
+        initialisation()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     deinit {
@@ -138,17 +34,60 @@ final public class GOVUKButton: UIButton {
         titleLabel?.lineBreakMode = .byWordWrapping
         titleLabel?.adjustsFontForContentSizeCategory = true
 
-        // possibly should be set as a Button Configuration and stored as an instance variable
-        titleLabel?.font = UIFont(style: .body, weight: .semibold)
-        titleLabel?.textAlignment = .center
-        contentEdgeInsets = .init(top: 13, left: 16, bottom: 13, right: 16)
+        viewModelUpdate()
+        buttonConfigurationUpdate()
 
-        buttonShapesStyle()
-        configNotifications()
-        updateBackground()
+        configureButtonShapesStyle()
+        configureNotifications()
+        configureCornerRadius()
     }
 
-    private func configNotifications() {
+    private func addNewAction(_ action: @escaping () async throws -> Void) {
+        // todo - add loading state handling
+        let action = UIAction(
+            handler: { _ in
+                Task {
+                    do {
+                        try await action()
+                    } catch {
+                        // handle errors
+                    }
+                    // stop loading state
+                }
+
+            }
+        )
+        addAction(action, for: .touchUpInside)
+    }
+
+    override public var isHighlighted: Bool {
+        willSet {
+            if newValue {
+                let currentImage = backgroundImage(for: state)
+                let currentTitleColor = titleColor(for: state)
+
+                setBackgroundImage(currentImage, for: .highlighted)
+                setTitleColor(currentTitleColor, for: .highlighted)
+
+                layer.opacity = 0.7
+
+                layer.setAffineTransform(.init(scaleX: 0.99, y: 0.99))
+            } else {
+                backgroundColor = backgroundColor?.withAlphaComponent(1)
+                layer.opacity = 1
+                layer.setAffineTransform(.init(scaleX: 1, y: 1))
+            }
+        }
+    }
+
+    public override var intrinsicContentSize: CGSize {
+        let titlesize = titleLabel?.intrinsicContentSize ?? .zero
+
+        return CGSize(width: titlesize.width + contentEdgeInsets.horizontal,
+                      height: titlesize.height + contentEdgeInsets.vertical)
+    }
+
+    private func configureNotifications() {
         NotificationCenter.default.addObserver(
             forName: UIApplication.willEnterForegroundNotification,
             object: nil,
@@ -165,8 +104,71 @@ final public class GOVUKButton: UIButton {
         guard let width = titleLabel?.frame.width else { return }
         titleLabel?.preferredMaxLayoutWidth = width
 
-        updateBackground()
+        configureCornerRadius()
         updateConstraints()
-        buttonShapesStyle()
+        configureButtonShapesStyle()
+    }
+
+    private func viewModelUpdate() {
+        setTitle(viewModel?.localisedTitle, for: .normal)
+        removeAllActions()
+        if let action = viewModel?.action {
+            addNewAction(action)
+        }
+    }
+
+    private func buttonConfigurationUpdate() {
+        configureFonts()
+        configureBackgrounds()
+        configureAlignment()
+        configureInsets()
+        configureCornerRadius()
+    }
+
+    private func configureFonts() {
+        titleLabel?.font = buttonConfiguration.titleFont
+        setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
+        setTitleColor(buttonConfiguration.titleColorFocused, for: .focused)
+    }
+
+    private func configureBackgrounds() {
+        setBackgroundColor(color: buttonConfiguration.backgroundColorNormal, for: .normal)
+        setBackgroundColor(color: buttonConfiguration.backgroundColorFocused, for: .focused)
+    }
+
+    private func configureAlignment() {
+        titleLabel?.textAlignment = buttonConfiguration.textAlignment
+        contentHorizontalAlignment = buttonConfiguration.contentHorizontalAlignment
+        contentVerticalAlignment = buttonConfiguration.contentVerticalAlignment
+    }
+
+    private func configureInsets() {
+        contentEdgeInsets = buttonConfiguration.contentEdgeInsets
+    }
+
+    private func configureCornerRadius() {
+        layer.cornerRadius = buttonConfiguration.cornerRadius
+        layer.cornerCurve = .continuous
+    }
+
+    private func configureButtonShapesStyle() {
+        guard buttonConfiguration.backgroundColorNormal == .clear
+        else { return }
+
+        if UIAccessibility.buttonShapesEnabled {
+            backgroundColor = buttonConfiguration.accessibilityButtonShapesColor ??
+                              .secondarySystemBackground
+
+            if contentEdgeInsets.left < 4 {
+                contentEdgeInsets = .init(
+                    top: 4,
+                    left: 4,
+                    bottom: 4,
+                    right: 4
+                )
+            }
+        } else {
+            backgroundColor = .none
+        }
     }
 }
