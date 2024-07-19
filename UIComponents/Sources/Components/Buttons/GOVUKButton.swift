@@ -54,7 +54,6 @@ final public class GOVUKButton: UIButton {
                     }
                     // stop loading state
                 }
-
             }
         )
         addAction(action, for: .touchUpInside)
