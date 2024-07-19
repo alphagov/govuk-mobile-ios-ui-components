@@ -87,6 +87,18 @@ final public class GOVUKButton: UIButton {
         )
     }
 
+    public override func accessibilityElementDidLoseFocus() {
+        super.accessibilityElementDidLoseFocus()
+        setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
+        setBackgroundColor(color: buttonConfiguration.backgroundColorNormal, for: .normal)
+    }
+
+    public override func accessibilityElementDidBecomeFocused() {
+        super.accessibilityElementDidBecomeFocused()
+        setTitleColor(buttonConfiguration.titleColorFocused, for: .normal)
+        setBackgroundColor(color: buttonConfiguration.backgroundColorFocused, for: .normal)
+    }
+
     public override func layoutSubviews() {
         super.layoutSubviews()
 
