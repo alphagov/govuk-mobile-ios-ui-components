@@ -11,7 +11,6 @@ extension UIButton {
         clipsToBounds = true
 
         setBackgroundImage(color, for: state)
-        backgroundColor = color
     }
 
     func removeAllActions() {

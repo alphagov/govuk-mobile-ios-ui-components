@@ -26,7 +26,9 @@ final public class GOVUKButton: UIButton {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(UIApplication.willEnterForegroundNotification)
+        NotificationCenter.default.removeObserver(
+            UIAccessibility.buttonShapesEnabledStatusDidChangeNotification
+        )
     }
 
     private func initialisation() {
@@ -61,39 +63,27 @@ final public class GOVUKButton: UIButton {
 
     override public var isHighlighted: Bool {
         willSet {
-            if newValue {
-                let currentImage = backgroundImage(for: state)
-                let currentTitleColor = titleColor(for: state)
-
-                setBackgroundImage(currentImage, for: .highlighted)
-                setTitleColor(currentTitleColor, for: .highlighted)
-
-                layer.opacity = 0.7
-
-                layer.setAffineTransform(.init(scaleX: 0.99, y: 0.99))
-            } else {
-                backgroundColor = backgroundColor?.withAlphaComponent(1)
-                layer.opacity = 1
-                layer.setAffineTransform(.init(scaleX: 1, y: 1))
-            }
+            let value = newValue ? 0.99 : 1
+            layer.setAffineTransform(.init(scaleX: value, y: value))
         }
     }
 
     public override var intrinsicContentSize: CGSize {
         let titlesize = titleLabel?.intrinsicContentSize ?? .zero
-
-        return CGSize(width: titlesize.width + contentEdgeInsets.horizontal,
-                      height: titlesize.height + contentEdgeInsets.vertical)
+        return CGSize(
+            width: titlesize.width + contentEdgeInsets.horizontal,
+            height: titlesize.height + contentEdgeInsets.vertical
+        )
     }
 
     private func configureNotifications() {
         NotificationCenter.default.addObserver(
-            forName: UIApplication.willEnterForegroundNotification,
+            forName: UIAccessibility.buttonShapesEnabledStatusDidChangeNotification,
             object: nil,
             queue: nil,
             using: { [weak self] _ in
-                self?.layoutSubviews()
-            }
+                self?.configureButtonShapesStyle()
+           }
         )
     }
 
@@ -103,9 +93,7 @@ final public class GOVUKButton: UIButton {
         guard let width = titleLabel?.frame.width else { return }
         titleLabel?.preferredMaxLayoutWidth = width
 
-        configureCornerRadius()
         updateConstraints()
-        configureButtonShapesStyle()
     }
 
     private func viewModelUpdate() {
@@ -127,11 +115,16 @@ final public class GOVUKButton: UIButton {
     private func configureFonts() {
         titleLabel?.font = buttonConfiguration.titleFont
         setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
+        setTitleColor(buttonConfiguration.titleColorNormal, for: .highlighted)
         setTitleColor(buttonConfiguration.titleColorFocused, for: .focused)
     }
 
     private func configureBackgrounds() {
         setBackgroundColor(color: buttonConfiguration.backgroundColorNormal, for: .normal)
+        setBackgroundColor(
+            color: buttonConfiguration.backgroundColorNormal.withAlphaComponent(0.7),
+            for: .highlighted
+        )
         setBackgroundColor(color: buttonConfiguration.backgroundColorFocused, for: .focused)
     }
 
@@ -155,8 +148,10 @@ final public class GOVUKButton: UIButton {
         else { return }
 
         if UIAccessibility.buttonShapesEnabled {
-            backgroundColor = buttonConfiguration.accessibilityButtonShapesColor ??
-                              .secondarySystemBackground
+            let color = buttonConfiguration.accessibilityButtonShapesColor ??
+                        .secondarySystemBackground
+            setBackgroundColor(color: color, for: .normal)
+            setBackgroundColor(color: color.withAlphaComponent(0.7), for: .highlighted)
 
             if contentEdgeInsets.left < 4 {
                 contentEdgeInsets = .init(
@@ -167,7 +162,8 @@ final public class GOVUKButton: UIButton {
                 )
             }
         } else {
-            backgroundColor = .none
+            setBackgroundColor(color: .clear, for: .normal)
+            setBackgroundColor(color: .clear, for: .highlighted)
         }
     }
 }
