@@ -12,10 +12,11 @@ extension GOVUKButton {
         let contentEdgeInsets: UIEdgeInsets
 
         let backgroundColorNormal: UIColor
+        let backgroundColorHighlighted: UIColor
         let backgroundColorFocused: UIColor
         let cornerRadius: CGFloat
 
-        let accessibilityButtonShapesColor: UIColor?
+        let accessibilityButtonShapesColor: UIColor
 
         public init(titleColorNormal: UIColor? = nil,
                     titleColorFocused: UIColor? = nil,
@@ -25,9 +26,10 @@ extension GOVUKButton {
                     contentVerticalAlignment: UIControl.ContentVerticalAlignment = .center,
                     contentEdgeInsets: UIEdgeInsets = defaultContentEdgeInsets,
                     backgroundColorNormal: UIColor,
+                    backgroundColorHighlighted: UIColor,
                     backgroundColorFocused: UIColor,
                     cornerRadius: CGFloat = 0,
-                    accessibilityButtonShapesColor: UIColor? = nil) {
+                    accessibilityButtonShapesColor: UIColor = .secondarySystemBackground) {
             self.titleColorNormal = titleColorNormal
             self.titleColorFocused = titleColorFocused
             self.titleFont = titleFont
@@ -36,6 +38,7 @@ extension GOVUKButton {
             self.contentVerticalAlignment = contentVerticalAlignment
             self.contentEdgeInsets = contentEdgeInsets
             self.backgroundColorNormal = backgroundColorNormal
+            self.backgroundColorHighlighted = backgroundColorHighlighted
             self.backgroundColorFocused = backgroundColorFocused
             self.cornerRadius = cornerRadius
             self.accessibilityButtonShapesColor = accessibilityButtonShapesColor
@@ -60,6 +63,7 @@ extension GOVUKButton.ButtonConfiguration {
             titleColorFocused: .green,
             titleFont: .title3,
             backgroundColorNormal: .green,
+            backgroundColorHighlighted: .green.withAlphaComponent(0.7),
             backgroundColorFocused: .cyan,
             cornerRadius: 5
         )
@@ -67,3 +71,29 @@ extension GOVUKButton.ButtonConfiguration {
     }
 }
 #endif
+
+extension GOVUKButton.ButtonConfiguration {
+    func backgroundColor(for state: UIControl.State) -> UIColor {
+        switch state {
+        case .focused:
+            backgroundColorFocused
+        case .highlighted:
+            backgroundColorHighlighted
+        default:
+            backgroundColorNormal
+        }
+    }
+
+    func accessibilityButtonShapesColor(for state: UIControl.State) -> UIColor {
+        guard backgroundColorNormal == .clear
+        else { return backgroundColor(for: state) }
+        switch state {
+        case .focused:
+            return accessibilityButtonShapesColor
+        case .highlighted:
+            return accessibilityButtonShapesColor.withAlphaComponent(0.7)
+        default:
+            return accessibilityButtonShapesColor
+        }
+    }
+}

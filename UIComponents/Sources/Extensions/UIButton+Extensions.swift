@@ -1,18 +1,6 @@
 import UIKit
 
 extension UIButton {
-    func setBackgroundImage(_ color: UIColor,
-                            for state: UIButton.State) {
-        setBackgroundImage(UIImage(color), for: state)
-    }
-
-    func setBackgroundColor(color: UIColor,
-                            for state: UIControl.State) {
-        clipsToBounds = true
-
-        setBackgroundImage(color, for: state)
-    }
-
     func removeAllActions() {
         enumerateEventHandlers { action, targetAction, event, end in
             if let action {

@@ -40,8 +40,14 @@ final public class GOVUKButton: UIButton {
         buttonConfigurationUpdate()
 
         configureButtonShapesStyle()
-        configureNotifications()
+        registerNotifications()
         configureCornerRadius()
+    }
+
+    public override func didUpdateFocus(in context: UIFocusUpdateContext,
+                                        with coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocus(in: context, with: coordinator)
+        configureBackgroundColor()
     }
 
     private func addNewAction(_ action: @escaping () async throws -> Void) {
@@ -65,6 +71,8 @@ final public class GOVUKButton: UIButton {
         willSet {
             let value = newValue ? 0.99 : 1
             layer.setAffineTransform(.init(scaleX: value, y: value))
+        } didSet {
+            configureBackgroundColor()
         }
     }
 
@@ -76,7 +84,7 @@ final public class GOVUKButton: UIButton {
         )
     }
 
-    private func configureNotifications() {
+    private func registerNotifications() {
         NotificationCenter.default.addObserver(
             forName: UIAccessibility.buttonShapesEnabledStatusDidChangeNotification,
             object: nil,
@@ -90,13 +98,13 @@ final public class GOVUKButton: UIButton {
     public override func accessibilityElementDidLoseFocus() {
         super.accessibilityElementDidLoseFocus()
         setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
-        setBackgroundColor(color: buttonConfiguration.backgroundColorNormal, for: .normal)
+        configureBackgroundColor(state: .normal)
     }
 
     public override func accessibilityElementDidBecomeFocused() {
         super.accessibilityElementDidBecomeFocused()
         setTitleColor(buttonConfiguration.titleColorFocused, for: .normal)
-        setBackgroundColor(color: buttonConfiguration.backgroundColorFocused, for: .normal)
+        configureBackgroundColor(state: .focused)
     }
 
     public override func layoutSubviews() {
@@ -118,7 +126,7 @@ final public class GOVUKButton: UIButton {
 
     private func buttonConfigurationUpdate() {
         configureFonts()
-        configureBackgrounds()
+        configureBackgroundColor()
         configureAlignment()
         configureInsets()
         configureCornerRadius()
@@ -131,13 +139,12 @@ final public class GOVUKButton: UIButton {
         setTitleColor(buttonConfiguration.titleColorFocused, for: .focused)
     }
 
-    private func configureBackgrounds() {
-        setBackgroundColor(color: buttonConfiguration.backgroundColorNormal, for: .normal)
-        setBackgroundColor(
-            color: buttonConfiguration.backgroundColorNormal.withAlphaComponent(0.7),
-            for: .highlighted
-        )
-        setBackgroundColor(color: buttonConfiguration.backgroundColorFocused, for: .focused)
+    private func configureBackgroundColor(state: UIControl.State? = nil) {
+        let localState = state ?? self.state
+        let color = UIAccessibility.buttonShapesEnabled ?
+                    buttonConfiguration.accessibilityButtonShapesColor(for: localState) :
+                    buttonConfiguration.backgroundColor(for: localState)
+        backgroundColor = color
     }
 
     private func configureAlignment() {
@@ -159,12 +166,8 @@ final public class GOVUKButton: UIButton {
         guard buttonConfiguration.backgroundColorNormal == .clear
         else { return }
 
+        configureBackgroundColor()
         if UIAccessibility.buttonShapesEnabled {
-            let color = buttonConfiguration.accessibilityButtonShapesColor ??
-                        .secondarySystemBackground
-            setBackgroundColor(color: color, for: .normal)
-            setBackgroundColor(color: color.withAlphaComponent(0.7), for: .highlighted)
-
             if contentEdgeInsets.left < 4 {
                 contentEdgeInsets = .init(
                     top: 4,
@@ -174,8 +177,7 @@ final public class GOVUKButton: UIButton {
                 )
             }
         } else {
-            setBackgroundColor(color: .clear, for: .normal)
-            setBackgroundColor(color: .clear, for: .highlighted)
+            contentEdgeInsets = buttonConfiguration.contentEdgeInsets
         }
     }
 }
