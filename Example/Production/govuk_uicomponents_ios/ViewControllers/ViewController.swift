@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         button2.addAction(uiAction, for: .touchUpInside)
 
         let button3VM = GOVUKButton.ButtonViewModel(
-            localisedTitle: "plain button",
+            localisedTitle: "secondary button",
             action: { [weak self] in
                 self?.pushSwiftUIView()
             })
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
         button3.viewModel = button3VM
 
         let button4VM = GOVUKButton.ButtonViewModel(
-            localisedTitle: "plain button - leading",
+            localisedTitle: "secondary button - leading",
             action: { [weak self] in
                 self?.pushSwiftUIView()
             })
 
-        let button4 = GOVUKButton(.plainLeading)
+        let button4 = GOVUKButton(.secondaryLeading)
 //        let button4 = UIButton.govUK(viewModel: button4VM)
         button4.viewModel = button4VM
 

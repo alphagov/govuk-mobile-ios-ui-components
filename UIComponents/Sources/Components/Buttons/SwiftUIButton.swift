@@ -1,3 +1,4 @@
+import Foundation
 import SwiftUI
 
 struct SwiftUIWrappedButton: UIViewRepresentable {
@@ -12,7 +13,10 @@ struct SwiftUIWrappedButton: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: GOVUKButton, context: Context) {
-            // required for protocol conformance
+        uiView.setTitle(
+            NSLocalizedString(viewModel.localisedTitle, comment: ""),
+            for: .normal
+        )
     }
 }
 

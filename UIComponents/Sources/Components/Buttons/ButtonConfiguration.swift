@@ -3,6 +3,7 @@ import UIKit
 extension GOVUKButton {
     public struct ButtonConfiguration {
         let titleColorNormal: UIColor?
+        let titleColorHighlighted: UIColor?
         let titleColorFocused: UIColor?
 
         let titleFont: UIFont
@@ -19,6 +20,7 @@ extension GOVUKButton {
         let accessibilityButtonShapesColor: UIColor
 
         public init(titleColorNormal: UIColor? = nil,
+                    titleColorHighlighted: UIColor? = nil,
                     titleColorFocused: UIColor? = nil,
                     titleFont: UIFont,
                     textAlignment: NSTextAlignment = .center,
@@ -28,9 +30,10 @@ extension GOVUKButton {
                     backgroundColorNormal: UIColor,
                     backgroundColorHighlighted: UIColor,
                     backgroundColorFocused: UIColor,
-                    cornerRadius: CGFloat = 0,
+                    cornerRadius: CGFloat = 4,
                     accessibilityButtonShapesColor: UIColor = .secondarySystemBackground) {
             self.titleColorNormal = titleColorNormal
+            self.titleColorHighlighted = titleColorHighlighted
             self.titleColorFocused = titleColorFocused
             self.titleFont = titleFont
             self.textAlignment = textAlignment

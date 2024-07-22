@@ -3,11 +3,11 @@ import UIKit
 extension GOVUKButton.ButtonConfiguration {
     public static var primary: GOVUKButton.ButtonConfiguration {
         .init(
-            titleColorNormal: .white,
+            titleColorNormal: .systemBackground,
             titleColorFocused: .black,
             titleFont: .bodySemiBold,
-            backgroundColorNormal: UIColor(resource: .govukBlue),
-            backgroundColorHighlighted: UIColor(resource: .govukBlue).withAlphaComponent(0.7),
+            backgroundColorNormal: UIColor(resource: .accent),
+            backgroundColorHighlighted: UIColor(resource: .primaryButtonHighlight),
             backgroundColorFocused: .systemYellow,
             cornerRadius: 22
         )
@@ -15,7 +15,8 @@ extension GOVUKButton.ButtonConfiguration {
 
     public static var secondary: GOVUKButton.ButtonConfiguration {
         .init(
-            titleColorNormal: .label,
+            titleColorNormal: UIColor(resource: .accent),
+            titleColorHighlighted: UIColor(resource: .primaryButtonHighlight),
             titleColorFocused: .label.withAlphaComponent(0.7),
             titleFont: .body,
             backgroundColorNormal: .clear,
@@ -24,9 +25,10 @@ extension GOVUKButton.ButtonConfiguration {
         )
     }
 
-    public static var plainLeading: GOVUKButton.ButtonConfiguration {
+    public static var secondaryLeading: GOVUKButton.ButtonConfiguration {
         .init(
-            titleColorNormal: .label,
+            titleColorNormal: UIColor(resource: .accent),
+            titleColorHighlighted: UIColor(resource: .primaryButtonHighlight),
             titleFont: .body,
             textAlignment: .left,
             contentHorizontalAlignment: .leading,

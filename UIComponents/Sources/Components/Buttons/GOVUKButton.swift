@@ -135,7 +135,7 @@ final public class GOVUKButton: UIButton {
     private func configureFonts() {
         titleLabel?.font = buttonConfiguration.titleFont
         setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
-        setTitleColor(buttonConfiguration.titleColorNormal, for: .highlighted)
+        setTitleColor(buttonConfiguration.titleColorHighlighted, for: .highlighted)
         setTitleColor(buttonConfiguration.titleColorFocused, for: .focused)
     }
 

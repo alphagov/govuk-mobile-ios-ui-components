@@ -14,7 +14,7 @@ public struct SwiftUIComponentsScreen: View {
 
             SwiftUIButton(.secondary, viewModel: viewModel.button3)
 
-            SwiftUIButton(.plainLeading, viewModel: viewModel.button4)
+            SwiftUIButton(.secondaryLeading, viewModel: viewModel.button4)
         }
         .padding(.horizontal)
     }
