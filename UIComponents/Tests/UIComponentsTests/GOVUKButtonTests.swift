@@ -28,7 +28,7 @@ final class GOVUKButtonTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        sut = GOVUKButton(.plain)
+        sut = GOVUKButton(.secondary)
         didTap = false
 
         viewModel = MockViewModel {
@@ -67,7 +67,7 @@ extension GOVUKButtonTests {
     }
 
     func test_createdFromButtonExtension() {
-        sut = GOVUKButton(.plain)
+        sut = GOVUKButton(.secondary)
 
         XCTAssertNil(sut.backgroundColor)
         XCTAssertFalse(sut.backgroundManager.hasBackground)

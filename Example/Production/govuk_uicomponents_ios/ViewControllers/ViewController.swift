@@ -22,22 +22,24 @@ class ViewController: UIViewController {
         button.setTitle("primary button", for: .normal)
         button.addAction(uiAction, for: .touchUpInside)
 
-        let viewModel = GOVUKButtonViewModel(localisedTitle: "configured button",
-                                             action: {})
+        let viewModel = GOVUKButton.ButtonViewModel(
+            localisedTitle: "configured button",
+            action: {}
+        )
 
         let button2 = GOVUKButton(.mockConfig, viewModel: viewModel)
         button2.addAction(uiAction, for: .touchUpInside)
 
-        let button3VM = GOVUKButtonViewModel(
+        let button3VM = GOVUKButton.ButtonViewModel(
             localisedTitle: "plain button",
             action: { [weak self] in
                 self?.pushSwiftUIView()
             })
 
-        let button3 = GOVUKButton(.plain)
+        let button3 = GOVUKButton(.secondary)
         button3.viewModel = button3VM
 
-        let button4VM = GOVUKButtonViewModel(
+        let button4VM = GOVUKButton.ButtonViewModel(
             localisedTitle: "plain button - leading",
             action: { [weak self] in
                 self?.pushSwiftUIView()
