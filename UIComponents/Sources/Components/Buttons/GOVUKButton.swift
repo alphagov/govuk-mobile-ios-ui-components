@@ -141,9 +141,16 @@ final public class GOVUKButton: UIButton {
 
     private func configureBackgroundColor(state: UIControl.State? = nil) {
         let localState = state ?? self.state
-        let color = UIAccessibility.buttonShapesEnabled ?
-                    buttonConfiguration.accessibilityButtonShapesColor(for: localState) :
-                    buttonConfiguration.backgroundColor(for: localState)
+
+        let color: UIColor
+
+        if localState == .focused {
+            color = buttonConfiguration.backgroundColorFocused
+        } else {
+            color = UIAccessibility.buttonShapesEnabled ?
+            buttonConfiguration.accessibilityButtonShapesColor(for: localState) :
+            buttonConfiguration.backgroundColor(for: localState)
+        }
         backgroundColor = color
     }
 

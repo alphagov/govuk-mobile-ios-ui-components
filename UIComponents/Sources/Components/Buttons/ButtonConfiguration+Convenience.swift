@@ -8,7 +8,7 @@ extension GOVUKButton.ButtonConfiguration {
             titleFont: .bodySemiBold,
             backgroundColorNormal: UIColor(resource: .accent),
             backgroundColorHighlighted: UIColor(resource: .primaryButtonHighlight),
-            backgroundColorFocused: .systemYellow,
+            backgroundColorFocused: UIColor(resource: .buttonFocusYellow),
             cornerRadius: 22
         )
     }
@@ -17,11 +17,11 @@ extension GOVUKButton.ButtonConfiguration {
         .init(
             titleColorNormal: UIColor(resource: .accent),
             titleColorHighlighted: UIColor(resource: .primaryButtonHighlight),
-            titleColorFocused: .label.withAlphaComponent(0.7),
+            titleColorFocused: .black,
             titleFont: .body,
             backgroundColorNormal: .clear,
             backgroundColorHighlighted: .clear,
-            backgroundColorFocused: .clear
+            backgroundColorFocused: UIColor(resource: .buttonFocusYellow)
         )
     }
 
@@ -29,13 +29,14 @@ extension GOVUKButton.ButtonConfiguration {
         .init(
             titleColorNormal: UIColor(resource: .accent),
             titleColorHighlighted: UIColor(resource: .primaryButtonHighlight),
+            titleColorFocused: .black,
             titleFont: .body,
             textAlignment: .left,
             contentHorizontalAlignment: .leading,
             contentEdgeInsets: .init(top: 4, left: 0, bottom: 4, right: 0),
             backgroundColorNormal: .clear,
             backgroundColorHighlighted: .clear,
-            backgroundColorFocused: .clear
+            backgroundColorFocused: UIColor(resource: .buttonFocusYellow)
         )
     }
 }
