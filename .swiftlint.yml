@@ -25,3 +25,5 @@ large_tuple:
   error: 4
 nesting:
   type_level: 2
+identifier_name:
+  excluded: [r,g,b]
