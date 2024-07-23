@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    public static var govuk: GOVUKColors.Type { GOVUKColors.self }
+    public static var govUK: GOVUKColors.Type { GOVUKColors.self }
 }
 
 public struct GOVUKColors {
