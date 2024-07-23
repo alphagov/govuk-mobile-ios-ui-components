@@ -30,23 +30,18 @@ final class GOVUKButtonTests: XCTestCase {
 }
 
 extension GOVUKButtonTests {
-    func test_unconfiguredButton() {
+    func test_secondaryButton_noTitle() {
         XCTAssertNotNil(sut)
         XCTAssertEqual(sut.backgroundColor, UIColor.clear)
         XCTAssertNil(sut.titleLabel?.text)
     }
 
-    func test_basicButton() {
+    func test_secondaryButton_hasTitle() {
         XCTAssertNotNil(sut)
         sut.titleLabel?.text = "test button"
         XCTAssertEqual(sut.titleLabel?.text, "test button")
         XCTAssertEqual(sut.titleLabel?.textColor,
                        UIColor(resource: UIComponents.ColorResource.accent))
-    }
-
-    func test_createdFromButtonExtension() {
-        sut = GOVUKButton(.secondary)
-        XCTAssertEqual(sut.backgroundColor, UIColor.clear)
     }
 
     func test_buttonBackground() {
