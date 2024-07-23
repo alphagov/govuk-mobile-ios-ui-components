@@ -51,4 +51,21 @@ extension GOVUKButtonTests {
         sut.backgroundColor = .clear
         XCTAssertNotNil(sut.backgroundColor)
     }
+
+    func test_GOVUKButton_removeActions() {
+        XCTAssertTrue(sut.allControlEvents.isEmpty)
+
+        let viewModel = GOVUKButton.ButtonViewModel(
+            localisedTitle: "button title", action: {
+                    // empty action
+            }
+        )
+
+        sut = GOVUKButton(.secondary)
+        sut.viewModel = viewModel
+
+        XCTAssertTrue(!sut.allControlEvents.isEmpty)
+        sut.removeAllActions()
+        XCTAssertTrue(sut.allControlEvents.isEmpty)
+    }
 }
