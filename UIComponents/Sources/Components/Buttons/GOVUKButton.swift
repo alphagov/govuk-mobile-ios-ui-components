@@ -51,7 +51,7 @@ final public class GOVUKButton: UIButton {
     }
 
     private func addNewAction(_ action: @escaping () async throws -> Void) {
-        // todo - add loading state handling
+        // future ticket - add loading state handling
         let action = UIAction(
             handler: { _ in
                 Task {

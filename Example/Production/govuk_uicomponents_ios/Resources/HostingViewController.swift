@@ -30,6 +30,7 @@ final class HostingViewController<HostedView: HostableView>: UIViewController {
         let controller = UIHostingController(rootView: hostedView)
         addChild(controller)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
+        setNavBar(showNavbar ?? true, animated: false)
         view.addSubview(controller.view)
         controller.didMove(toParent: self)
 

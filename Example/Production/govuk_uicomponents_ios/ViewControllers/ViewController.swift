@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
         let viewModel = GOVUKButton.ButtonViewModel(
             localisedTitle: "configured button",
-            action: {}
+            action: { /* no action */ }
         )
 
         let button2 = GOVUKButton(.mockConfig, viewModel: viewModel)
@@ -46,7 +46,6 @@ class ViewController: UIViewController {
             })
 
         let button4 = GOVUKButton(.secondaryLeading)
-//        let button4 = UIButton.govUK(viewModel: button4VM)
         button4.viewModel = button4VM
 
         stack.addArrangedSubview(button)
