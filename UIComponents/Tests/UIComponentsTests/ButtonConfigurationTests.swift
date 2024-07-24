@@ -35,4 +35,22 @@ extension ButtonConfigurationTests {
         XCTAssertEqual(config.backgroundColorFocused,
                        UIColor(resource: UIComponents.ColorResource.buttonFocusYellow))
     }
+
+    func test_changeConfig() {
+        let config = ButtonConfiguration.secondary
+
+        let button = GOVUKButton(.primary)
+        XCTAssertEqual(button.buttonConfiguration.titleColorNormal,
+                       UIColor.systemBackground)
+        XCTAssertEqual(button.titleColor(for: .normal),
+                       UIColor.systemBackground)
+
+        button.buttonConfiguration = config
+
+        XCTAssertEqual(button.buttonConfiguration.titleColorNormal, 
+                       UIColor(resource: UIComponents.ColorResource.accent))
+        XCTAssertEqual(button.titleColor(for: .normal),
+                       UIColor(resource: UIComponents.ColorResource.accent))
+
+    }
 }
