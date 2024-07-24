@@ -33,7 +33,7 @@ public struct ButtonScreenViewModel {
         action: {}
     )
     let button3 = GOVUKButton.ButtonViewModel(
-        localisedTitle: "plain button",
+        localisedTitle: "secondary button",
         action: {}
     )
 }
