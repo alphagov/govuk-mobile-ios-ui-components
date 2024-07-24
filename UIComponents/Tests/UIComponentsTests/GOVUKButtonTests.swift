@@ -61,7 +61,7 @@ extension GOVUKButtonTests {
             }
         )
 
-        sut = GOVUKButton(.secondary)
+        sut = UIButton.govUK.secondary
         sut.viewModel = viewModel
 
         XCTAssertTrue(!sut.allControlEvents.isEmpty)

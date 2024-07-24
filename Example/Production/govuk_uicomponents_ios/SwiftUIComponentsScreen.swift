@@ -13,8 +13,6 @@ public struct SwiftUIComponentsScreen: View {
             SwiftUIButton(.mockConfig, viewModel: viewModel.button1)
 
             SwiftUIButton(.secondary, viewModel: viewModel.button3)
-
-            SwiftUIButton(.secondaryLeading, viewModel: viewModel.button4)
         }
         .padding(.horizontal)
     }
@@ -36,10 +34,6 @@ public struct ButtonScreenViewModel {
     )
     let button3 = GOVUKButton.ButtonViewModel(
         localisedTitle: "plain button",
-        action: {}
-    )
-    let button4 = GOVUKButton.ButtonViewModel(
-        localisedTitle: "plain button - leading",
         action: {}
     )
 }

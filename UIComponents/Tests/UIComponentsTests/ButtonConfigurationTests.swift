@@ -35,26 +35,4 @@ extension ButtonConfigurationTests {
         XCTAssertEqual(config.backgroundColorFocused,
                        UIColor(resource: UIComponents.ColorResource.buttonFocusYellow))
     }
-
-    func test_secondaryLeadingConfiguration() {
-        let config = ButtonConfiguration.secondaryLeading
-
-        XCTAssertEqual(config.titleColorNormal,
-                       UIColor(resource: UIComponents.ColorResource.accent))
-        XCTAssertEqual(config.titleColorHighlighted,
-                       UIColor(resource: UIComponents.ColorResource.primaryButtonHighlight))
-        XCTAssertEqual(config.titleColorFocused, UIColor.black)
-        XCTAssertEqual(config.titleFont, UIFont.body)
-        XCTAssertEqual(config.backgroundColorNormal, UIColor.clear)
-        XCTAssertEqual(config.backgroundColorHighlighted, UIColor.clear)
-        XCTAssertEqual(config.backgroundColorFocused,
-                       UIColor(resource: UIComponents.ColorResource.buttonFocusYellow))
-
-        XCTAssertEqual(config.textAlignment, .left)
-        XCTAssertEqual(config.contentHorizontalAlignment, .leading)
-        XCTAssertEqual(config.contentEdgeInsets, UIEdgeInsets(top: 4,
-                                                              left: 0,
-                                                              bottom: 4,
-                                                              right: 0))
-    }
 }

@@ -10,11 +10,11 @@ extension SwiftUIComponentsScreen: HostableView { }
 
 final class HostingViewController<HostedView: HostableView>: UIViewController {
     let viewModel: HostedView.ViewModel
-    let showNavbar: Bool?
+    let hideNavbar: Bool?
 
     init(viewModel: HostedView.ViewModel, showNavbar: Bool? = nil) {
         self.viewModel = viewModel
-        self.showNavbar = showNavbar
+        self.hideNavbar = showNavbar
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,7 +30,7 @@ final class HostingViewController<HostedView: HostableView>: UIViewController {
         let controller = UIHostingController(rootView: hostedView)
         addChild(controller)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
-        setNavBar(showNavbar ?? true, animated: false)
+        setNavBar(hideNavbar ?? false, animated: false)
         view.addSubview(controller.view)
         controller.didMove(toParent: self)
 

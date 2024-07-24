@@ -68,10 +68,7 @@ final public class GOVUKButton: UIButton {
     }
 
     override public var isHighlighted: Bool {
-        willSet {
-            let value = newValue ? 0.99 : 1
-            layer.setAffineTransform(.init(scaleX: value, y: value))
-        } didSet {
+        didSet {
             configureBackgroundColor()
         }
     }

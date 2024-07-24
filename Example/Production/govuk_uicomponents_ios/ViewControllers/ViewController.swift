@@ -39,19 +39,9 @@ class ViewController: UIViewController {
         let button3 = GOVUKButton(.secondary)
         button3.viewModel = button3VM
 
-        let button4VM = GOVUKButton.ButtonViewModel(
-            localisedTitle: "secondary button - leading",
-            action: { [weak self] in
-                self?.pushSwiftUIView()
-            })
-
-        let button4 = GOVUKButton(.secondaryLeading)
-        button4.viewModel = button4VM
-
         stack.addArrangedSubview(button)
         stack.addArrangedSubview(button2)
         stack.addArrangedSubview(button3)
-        stack.addArrangedSubview(button4)
 
         view.addSubview(stack)
 
