@@ -13,10 +13,8 @@ struct SwiftUIWrappedButton: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: GOVUKButton, context: Context) {
-        uiView.setTitle(
-            NSLocalizedString(viewModel.localisedTitle, comment: ""),
-            for: .normal
-        )
+        uiView.viewModel = viewModel
+        uiView.buttonConfiguration = config
     }
 }
 
