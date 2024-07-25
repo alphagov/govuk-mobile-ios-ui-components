@@ -5,7 +5,6 @@ import XCTest
 final class GOVUKButtonTests: XCTestCase {
     var sut: GOVUKButton!
     var configuration: GOVUKButton.ButtonConfiguration!
-    let buttonShapesEnabled = UIAccessibility.buttonShapesEnabled
 
     override func setUp() {
         super.setUp()
