@@ -42,7 +42,7 @@ public struct GOVUKFontBuilder {
     public let title3Semibold = UIFont(style: .title3, weight: .semibold)
 
     public let headlineSemibold = UIFont(style: .headline, weight: .semibold)
-    public var headlineItalic: UIFont { headlineSemibold.italic() }
+    public var headlineSemiboldItalic: UIFont { headlineSemibold.italic() }
 
     public let bodySemibold = UIFont(style: .body, weight: .semibold)
     public let body = UIFont(style: .body, weight: .regular)
@@ -52,12 +52,12 @@ public struct GOVUKFontBuilder {
     public let calloutSemibold = UIFont(style: .callout, weight: .semibold)
     public let callout = UIFont(style: .callout, weight: .regular)
     public var calloutItalic: UIFont { callout.italic() }
-    public var calloutBoldItalic: UIFont { calloutSemibold.italic() }
+    public var calloutSemiboldItalic: UIFont { calloutSemibold.italic() }
 
     public let subheadlineSemibold = UIFont(style: .subheadline, weight: .semibold)
     public let subheadline = UIFont(style: .subheadline, weight: .regular)
     public var subheadlineItalic: UIFont { subheadline.italic() }
-    public var subheadlineBoldItalic: UIFont { subheadlineSemibold.italic() }
+    public var subheadlineSemiboldItalic: UIFont { subheadlineSemibold.italic() }
 
     public let caption1Medium = UIFont(style: .caption1, weight: .medium)
     public let caption1 = UIFont(style: .caption1, weight: .regular)
