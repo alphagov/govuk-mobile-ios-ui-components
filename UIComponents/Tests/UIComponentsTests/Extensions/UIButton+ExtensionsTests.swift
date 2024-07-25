@@ -24,7 +24,8 @@ final class UIButtonExtensionsTests: XCTestCase {
 }
 
 extension UIButtonExtensionsTests {
-    func test_removeActions() {
+
+    func test_removeAllActions_withUIAction_removesAction() {
         XCTAssertTrue(sut.allControlEvents.isEmpty)
         sut.addAction(action, for: .touchUpInside)
         XCTAssertTrue(!sut.allControlEvents.isEmpty)
@@ -33,7 +34,7 @@ extension UIButtonExtensionsTests {
         XCTAssertTrue(sut.allControlEvents.isEmpty)
     }
 
-    func test_removeTargetAction() {
+    func test_removeAllActions_withTargetAction_removesAction() {
         XCTAssertTrue(sut.allControlEvents.isEmpty)
         sut.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         XCTAssertTrue(!sut.allControlEvents.isEmpty)
