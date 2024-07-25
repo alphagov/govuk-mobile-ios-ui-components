@@ -64,13 +64,15 @@ extension GOVUKButton.ButtonConfiguration {
         let config = GOVUKButton.ButtonConfiguration(
             titleColorNormal: .magenta,
             titleColorFocused: .green,
-            titleFont: .title3,
+            titleFont: UIFont.govUK.title3,
             backgroundColorNormal: .green,
             backgroundColorHighlighted: .green.withAlphaComponent(0.7),
             backgroundColorFocused: .cyan,
             cornerRadius: 5,
             accessibilityButtonShapesColor: .grey100
         )
+
+        print(config.titleFont.fontDescriptor.symbolicTraits)
         return config
     }
 }
