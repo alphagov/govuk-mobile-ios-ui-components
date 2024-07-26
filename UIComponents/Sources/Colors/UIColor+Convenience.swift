@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import SwiftUI
 
 extension UIColor {
     static let blue1: UIColor = #colorLiteral(red: 0.1137254902, green: 0.4392156863, blue: 0.7215686275, alpha: 1)
@@ -29,5 +30,31 @@ extension UIColor {
         self.init {
             $0.userInterfaceStyle == .dark ? dark : light
         }
+    }
+}
+
+extension UIColor {
+    public func toColor() -> Color {
+        let rgb = self.rgba
+        return Color(
+            red: Double(rgb.red),
+            green: Double(rgb.green),
+            blue: Double(rgb.blue),
+            opacity: Double(rgb.alpha)
+        )
+    }
+
+    // swiftlint:disable:next large_tuple
+    var rgba: (red: CGFloat,
+               green: CGFloat,
+               blue: CGFloat,
+               alpha: CGFloat) {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+
+        return (red, green, blue, alpha)
     }
 }
