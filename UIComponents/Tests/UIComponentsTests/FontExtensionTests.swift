@@ -55,15 +55,15 @@ final class FontExtensionTests: XCTestCase {
 
     // MARK: HEADLINE
     func test_headlineSemibold() {
-        let font = UIFont.govUK.title2
+        let font = UIFont.govUK.headlineSemibold
         XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
-        assertFontSize(font: font, size: 22)
+        assertFontSize(font: font, size: 17)
     }
 
     func test_headlineSemiboldItalic() {
         let font = UIFont.govUK.headlineSemiboldItalic
         XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
-        assertFontSize(font: font, size: 22)
+        assertFontSize(font: font, size: 17)
     }
 
     // MARK: BODY
