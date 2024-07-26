@@ -61,7 +61,7 @@ final class FontExtensionTests: XCTestCase {
     }
 
     func test_headlineSemiboldItalic() {
-        let font = UIFont.govUK.title2
+        let font = UIFont.govUK.headlineSemiboldItalic
         XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
         assertFontSize(font: font, size: 22)
     }
