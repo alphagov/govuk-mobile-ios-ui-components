@@ -31,7 +31,7 @@ extension GOVUKButton {
                     backgroundColorHighlighted: UIColor,
                     backgroundColorFocused: UIColor,
                     cornerRadius: CGFloat = 4,
-                    accessibilityButtonShapesColor: UIColor = .secondarySystemBackground) {
+                    accessibilityButtonShapesColor: UIColor) {
             self.titleColorNormal = titleColorNormal
             self.titleColorHighlighted = titleColorHighlighted
             self.titleColorFocused = titleColorFocused
@@ -68,7 +68,8 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorNormal: .green,
             backgroundColorHighlighted: .green.withAlphaComponent(0.7),
             backgroundColorFocused: .cyan,
-            cornerRadius: 5
+            cornerRadius: 5,
+            accessibilityButtonShapesColor: .grey100
         )
         return config
     }
@@ -77,26 +78,35 @@ extension GOVUKButton.ButtonConfiguration {
 
 extension GOVUKButton.ButtonConfiguration {
     func backgroundColor(for state: UIControl.State) -> UIColor {
-        switch state {
-        case .focused:
-            backgroundColorFocused
-        case .highlighted:
-            backgroundColorHighlighted
-        default:
-            backgroundColorNormal
-        }
+        selectedColorForState(
+            state: state,
+            highlighted: backgroundColorHighlighted,
+            focussed: backgroundColorFocused,
+            other: backgroundColorNormal
+        )
     }
 
     func accessibilityButtonShapesColor(for state: UIControl.State) -> UIColor {
         guard backgroundColorNormal == .clear
         else { return backgroundColor(for: state) }
-        switch state {
-        case .focused:
-            return accessibilityButtonShapesColor
-        case .highlighted:
-            return accessibilityButtonShapesColor.withAlphaComponent(0.7)
-        default:
-            return accessibilityButtonShapesColor
+        return selectedColorForState(
+            state: state,
+            highlighted: accessibilityButtonShapesColor.withAlphaComponent(0.7),
+            focussed: accessibilityButtonShapesColor,
+            other: accessibilityButtonShapesColor
+        )
+    }
+
+    private func selectedColorForState(state: UIControl.State,
+                                       highlighted: UIColor,
+                                       focussed: UIColor,
+                                       other: UIColor) -> UIColor {
+        if state.contains(.highlighted) {
+            return highlighted
+        } else if state.contains(.focused) {
+            return focussed
+        } else {
+            return other
         }
     }
 }

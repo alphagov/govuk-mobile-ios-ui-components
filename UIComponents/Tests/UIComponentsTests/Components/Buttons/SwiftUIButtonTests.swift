@@ -15,7 +15,8 @@ final class SwiftUIButtonTests: XCTestCase {
 }
 
 extension SwiftUIButtonTests {
-    func test_buttonCreated() {
+
+    func test_init_config_viewModel_createsButton() {
         XCTAssertNil(sut)
         let viewModel = GOVUKButton.ButtonViewModel(
             localisedTitle: "title",

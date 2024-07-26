@@ -19,8 +19,7 @@ let package = Package(
             path: "UIComponents",
             sources: [
                 "Sources"
-            ],
-            resources: [.process("Resources")]
+            ]
         ),
         .testTarget(
             name: "UIComponentsTests",
