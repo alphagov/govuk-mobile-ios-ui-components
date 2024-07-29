@@ -11,10 +11,14 @@ extension UIFont {
                             weight: Weight = .regular,
                             design: UIFontDescriptor.SystemDesign = .default) {
         guard let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: style)
-            .addingAttributes([.traits: [
-                UIFontDescriptor.TraitKey.weight: weight
-                                        ]])
-            .withDesign(design) else {
+            .addingAttributes(
+                [
+                    .traits: [
+                        UIFontDescriptor.TraitKey.weight: weight
+                    ]
+                ]
+            )
+                .withDesign(design) else {
             preconditionFailure("Could not find a matching font")
         }
         self.init(descriptor: descriptor, size: 0)
