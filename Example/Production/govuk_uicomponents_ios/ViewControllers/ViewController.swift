@@ -1,3 +1,4 @@
+// swiftlint:disable function_body_length
 import UIComponents
 import UIKit
 
@@ -39,6 +40,27 @@ class ViewController: UIViewController {
         let button3 = GOVUKButton(.secondary)
         button3.viewModel = button3VM
 
+        let label = UILabel()
+        label.text = "Caption2 label"
+        label.font = UIFont.govUK.caption2
+
+        let label1 = UILabel()
+        label1.text = "Caption2 label italic"
+        label1.font = UIFont.govUK.caption2Italic
+
+        let label2 = UILabel()
+        label2.text = "Caption2 label bold and italic"
+        label2.font = UIFont.govUK.caption2SemiboldItalic
+
+        let label3 = UILabel()
+        label3.text = "Caption2 label bold"
+        label3.font = UIFont.govUK.caption2Semibold
+
+        stack.addArrangedSubview(label)
+        stack.addArrangedSubview(label1)
+        stack.addArrangedSubview(label2)
+        stack.addArrangedSubview(label3)
+
         stack.addArrangedSubview(button)
         stack.addArrangedSubview(button2)
         stack.addArrangedSubview(button3)
@@ -63,3 +85,4 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(swiftUIVC, animated: true)
     }
 }
+// swiftlint:enable function_body_length
