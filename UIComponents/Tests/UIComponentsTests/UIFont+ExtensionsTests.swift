@@ -1,14 +1,14 @@
 import XCTest
 
-final class FontExtensionTests: XCTestCase {
+final class UIFontExtensionsTests: XCTestCase {
     // MARK: LARGE TITLE
-    func test_largeTitle() {
+    func test_largeTitle_hasCorrectSizeAndFont() {
         let font = UIFont.govUK.largeTitle
         XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
         assertFontSize(font: font, size: 34)
     }
 
-    func test_largeTitleBold() {
+    func test_largeTitleBold_hasCorrectSizeAndFont() {
         let font = UIFont.govUK.largeTitleBold
         XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
         assertFontSize(font: font, size: 34)
