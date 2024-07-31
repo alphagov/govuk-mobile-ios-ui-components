@@ -1,8 +1,8 @@
 import UIKit
 
 extension UIFont {
-    public static var govUK: GOVUKFontBuilder {
-        GOVUKFontBuilder()
+    public static var govUK: GOVUKUIFontBuilder {
+        GOVUKUIFontBuilder()
     }
 }
 
@@ -34,7 +34,7 @@ extension UIFont {
     }
 }
 
-public struct GOVUKFontBuilder {
+public struct GOVUKUIFontBuilder {
     public let largeTitle = UIFont(style: .largeTitle, weight: .regular)
     public let largeTitleBold = UIFont(style: .largeTitle, weight: .bold)
 

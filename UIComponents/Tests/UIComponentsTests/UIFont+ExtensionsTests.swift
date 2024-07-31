@@ -1,6 +1,6 @@
 import XCTest
 
-final class UIFontExtensionsTests: XCTestCase {
+final class FontExtensionsTests: XCTestCase {
     // MARK: LARGE TITLE
     func test_largeTitle_hasCorrectSizeAndFont() {
         let font = UIFont.govUK.largeTitle
