@@ -16,8 +16,8 @@ public struct GOVUKFontBuilder {
     public let title2: Font = .title2
     public let title2Bold: Font = .title2.weight(.bold)
 
-    public let title3: Font = .title2
-    public let title2Semibold: Font = .title2.weight(.semibold)
+    public let title3: Font = .title3
+    public let title3Semibold: Font = .title3.weight(.semibold)
 
     public let headlineSemibold: Font = .headline.weight(.semibold)
     public let headlineSemiboldItalic: Font = .headline.weight(.semibold).italic()
@@ -44,8 +44,8 @@ public struct GOVUKFontBuilder {
 
     public let caption1: Font = .caption
     public let caption1Italic: Font = .caption.italic()
-    public let caption1Semibold: Font = .caption.weight(.semibold)
-    public let caption1SemiboldItalic: Font = .caption.weight(.semibold).italic()
+    public let caption1Medium: Font = .caption.weight(.medium)
+    public let caption1MediumItalic: Font = .caption.weight(.medium).italic()
 
     public let caption2: Font = .caption2
     public let caption2Italic: Font = .caption2.italic()
