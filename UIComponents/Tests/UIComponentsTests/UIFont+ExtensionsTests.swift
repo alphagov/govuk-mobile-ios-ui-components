@@ -132,6 +132,27 @@ final class UIFontExtensionsTests: XCTestCase {
         assertFontSize(font: font, size: 15)
     }
 
+    // MARK: FOOTNOTE
+    func test_footnote_hasCorrectSizeAndFont() {
+        let font = UIFont.govUK.footnote
+        XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
+        assertFontSize(font: font, size: 12)
+        assertFontWeight(font: font, weight: .regular)
+    }
+
+    func test_footnoteItalic_hasCorrectSizeAndFont() {
+        let font = UIFont.govUK.footnoteItalic
+        XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
+        assertFontSize(font: font, size: 12)
+    }
+
+    func test_footnoteSemibold_hasCorrectSizeAndFont() {
+        let font = UIFont.govUK.footnoteSemibold
+        XCTAssertEqual(font.familyName, ".AppleSystemUIFont")
+        assertFontSize(font: font, size: 12)
+        assertFontWeight(font: font, weight: .semibold)
+    }
+
     // MARK: CAPTION 1
     func test_caption1Medium_hasCorrectSizeAndFont() {
         let font = UIFont.govUK.caption1Medium
