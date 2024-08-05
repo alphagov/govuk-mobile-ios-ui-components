@@ -14,4 +14,16 @@ final class GOVUKColors_StrokesTests: XCTestCase {
 
         XCTAssertEqual(result.darkMode, .grey500)
     }
+
+    func test_pageControlInactive_light_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.pageControlInactive
+
+        XCTAssertEqual(result.lightMode, .grey500)
+    }
+
+    func test_pageControlInactive_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.pageControlInactive
+
+        XCTAssertEqual(result.darkMode, .grey300)
+    }
 }
