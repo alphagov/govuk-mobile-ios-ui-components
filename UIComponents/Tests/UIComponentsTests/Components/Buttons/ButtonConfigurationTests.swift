@@ -11,7 +11,7 @@ final class ButtonConfigurationTests: XCTestCase {
         XCTAssertEqual(sut.titleColorHighlighted, nil)
         XCTAssertEqual(sut.titleColorFocused,
                        UIColor.govUK.text.buttonPrimaryFocussed)
-        XCTAssertEqual(sut.titleFont, UIFont.bodySemiBold)
+        XCTAssertEqual(sut.titleFont, UIFont.govUK.bodySemibold)
         XCTAssertEqual(sut.backgroundColorNormal,
                        UIColor.govUK.fills.surfaceButtonPrimary)
         XCTAssertEqual(sut.backgroundColorHighlighted,
@@ -44,7 +44,7 @@ final class ButtonConfigurationTests: XCTestCase {
         XCTAssertEqual(sut.titleColorHighlighted,
                        UIColor.govUK.text.buttonSecondaryHighlight)
         XCTAssertEqual(sut.titleColorFocused, UIColor.govUK.text.buttonSecondaryFocussed)
-        XCTAssertEqual(sut.titleFont, .body)
+        XCTAssertEqual(sut.titleFont, UIFont.govUK.body)
         XCTAssertEqual(sut.backgroundColorNormal, .clear)
         XCTAssertEqual(sut.backgroundColorHighlighted, .clear)
         XCTAssertEqual(sut.backgroundColorFocused,
@@ -68,7 +68,7 @@ final class ButtonConfigurationTests: XCTestCase {
 
     func test_backgroundColorFor_highlighted_returnsExpectedColor() {
         let sut = GOVUKButton.ButtonConfiguration(
-            titleFont: .body,
+            titleFont: UIFont.govUK.body,
             backgroundColorNormal: .red,
             backgroundColorHighlighted: .blue,
             backgroundColorFocused: .green,
@@ -80,7 +80,7 @@ final class ButtonConfigurationTests: XCTestCase {
 
     func test_backgroundColorFor_focussed_returnsExpectedColor() {
         let sut = GOVUKButton.ButtonConfiguration(
-            titleFont: .body,
+            titleFont: UIFont.govUK.body,
             backgroundColorNormal: .red,
             backgroundColorHighlighted: .blue,
             backgroundColorFocused: .green,

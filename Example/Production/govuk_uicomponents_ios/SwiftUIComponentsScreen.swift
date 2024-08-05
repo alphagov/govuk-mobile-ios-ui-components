@@ -8,6 +8,26 @@ public struct SwiftUIComponentsScreen: View {
         VStack(spacing: 16) {
             Text("SwiftUI screen")
             Spacer()
+            VStack(alignment: .leading, spacing: 8) {
+                Text("title1")
+                    .font(Font.govUK.title1)
+                Text("title1 bold")
+                    .font(Font.govUK.title1Bold)
+                Text("headline semibold")
+                    .font(Font.govUK.headlineSemibold)
+                Text("headline semibold italic")
+                    .font(Font.govUK.headlineSemiboldItalic)
+                Text("body")
+                    .font(Font.govUK.body)
+                Text("body italic")
+                    .font(Font.govUK.bodyItalic)
+                Text("body semibold")
+                    .font(Font.govUK.bodySemibold)
+                Text("body semibold italic ")
+                    .font(Font.govUK.bodySemiboldItalic)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+
             SwiftUIButton(.primary, viewModel: viewModel.button2)
 
             SwiftUIButton(.mockConfig, viewModel: viewModel.button1)
