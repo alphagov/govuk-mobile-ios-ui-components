@@ -9,5 +9,12 @@ extension GOVUKColors {
                 dark: .grey500
             )
         }()
+
+        public static let pageControlInactive: UIColor = {
+            .init(
+                light: .grey500,
+                dark: .grey300
+            )
+        }()
     }
 }
