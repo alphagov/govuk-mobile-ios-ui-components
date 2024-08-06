@@ -3,7 +3,7 @@ import Foundation
 extension GOVUKButton {
     public struct ButtonViewModel {
         public let localisedTitle: String
-        public let action: () async throws -> Void
+        public let action: () -> Void
 
         public init(localisedTitle: String,
                     action: @escaping () -> Void) {

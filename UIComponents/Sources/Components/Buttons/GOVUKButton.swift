@@ -50,18 +50,10 @@ final public class GOVUKButton: UIButton {
         configureBackgroundColor()
     }
 
-    private func addNewAction(_ action: @escaping () async throws -> Void) {
-        // future ticket - add loading state handling
+    private func addNewAction(_ action: @escaping () -> Void) {
         let action = UIAction(
             handler: { _ in
-                Task {
-                    do {
-                        try await action()
-                    } catch {
-                        // handle errors
-                    }
-                    // stop loading state
-                }
+                action()
             }
         )
         addAction(action, for: .touchUpInside)
