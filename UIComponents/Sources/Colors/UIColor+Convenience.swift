@@ -12,9 +12,11 @@ extension UIColor {
     static let yellow: UIColor = #colorLiteral(red: 1, green: 0.8666666667, blue: 0, alpha: 1)
 
     static let grey900: UIColor = #colorLiteral(red: 0.1019607843, green: 0.1019607843, blue: 0.1019607843, alpha: 1)
+    static let grey850: UIColor = #colorLiteral(red: 0.1490196078, green: 0.1490196078, blue: 0.1490196078, alpha: 1)
     static let grey800: UIColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
     static let grey700: UIColor = #colorLiteral(red: 0.3019607843, green: 0.3019607843, blue: 0.3019607843, alpha: 1)
     static let grey600: UIColor = #colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
+    static let grey550: UIColor = #colorLiteral(red: 0.462745098, green: 0.462745098, blue: 0.5019607843, alpha: 1)
     static let grey500: UIColor = #colorLiteral(red: 0.5019607843, green: 0.5019607843, blue: 0.5019607843, alpha: 1)
     static let grey400: UIColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
     static let grey300: UIColor = #colorLiteral(red: 0.6980392157, green: 0.6980392157, blue: 0.6980392157, alpha: 1)
