@@ -50,4 +50,28 @@ final class GOVUKColors_FillsTests: XCTestCase {
 
         XCTAssertEqual(result.darkMode, .blue2)
     }
+
+    func test_surfaceModal_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceModal
+
+        XCTAssertEqual(result.lightMode, .white)
+    }
+
+    func test_surfaceModal_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceModal
+
+        XCTAssertEqual(result.darkMode, .grey850)
+    }
+
+    func test_surfaceSearchbox_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceSearchBox
+
+        XCTAssertEqual(result.lightMode, .grey550.withAlphaComponent(0.12))
+    }
+
+    func test_surfaceSearchbox_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceSearchBox
+
+        XCTAssertEqual(result.darkMode, .grey550.withAlphaComponent(0.24))
+    }
 }

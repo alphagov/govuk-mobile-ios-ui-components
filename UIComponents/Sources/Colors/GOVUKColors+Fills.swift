@@ -53,5 +53,19 @@ extension GOVUKColors {
         public static let surfaceButtonSecondaryFocussed: UIColor = {
             .yellow
         }()
+
+        public static let surfaceModal: UIColor = {
+            .init(
+                light: .white,
+                dark: .grey850
+            )
+        }()
+
+        public static let surfaceSearchBox: UIColor = {
+            .init(
+                light: .grey550.withAlphaComponent(0.12),
+                dark: .grey550.withAlphaComponent(0.24)
+            )
+        }()
     }
 }
