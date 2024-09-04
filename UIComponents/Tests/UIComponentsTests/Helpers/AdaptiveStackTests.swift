@@ -3,26 +3,10 @@ import XCTest
 import SwiftUI
 
 final class AdaptiveStackTests: XCTestCase {
-    private var sut: AdaptiveStack<EmptyView>!
 
-    override func setUp() {
-        super.setUp()
-    }
-
-    override func tearDown() {
-        super.tearDown()
-        sut = nil
-    }
-}
-
-extension AdaptiveStackTests {
-    
-    func test_init_adaptiveStack_createsConditionalContent() {
-        XCTAssertNil(sut)
+    func test_body_returnsConditionalContentInOrder() {
         
-        sut = AdaptiveStack<EmptyView>(content: {})
-        
-        XCTAssertNotNil(sut)
+        let sut = AdaptiveStack<EmptyView>(content: {})
         
         let reflection = Mirror(reflecting: sut.body)
         
