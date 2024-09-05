@@ -5,7 +5,7 @@ public struct AdaptiveStack<Content: View>: View {
     let horizontalAlignment: HorizontalAlignment
     let verticalAlignment: VerticalAlignment
     let content: () -> Content
-    
+
     public init(horizontalAlignment: HorizontalAlignment = .center,
                 verticalAlignment: VerticalAlignment = . center,
                 @ViewBuilder content: @escaping () -> Content) {
@@ -13,7 +13,7 @@ public struct AdaptiveStack<Content: View>: View {
         self.verticalAlignment = verticalAlignment
         self.content = content
     }
-    
+
     public var body: some View {
         Group {
             if verticalSizeClass == .compact {
