@@ -66,6 +66,36 @@ final class ButtonConfigurationTests: XCTestCase {
         )
     }
 
+    func test_compact_returnsExpectedConfiguration() {
+        let sut = GOVUKButton.ButtonConfiguration.compact
+
+        XCTAssertEqual(sut.titleColorNormal,
+                       UIColor.govUK.text.buttonCompact)
+        XCTAssertEqual(sut.titleColorHighlighted,
+                       UIColor.govUK.text.buttonCompactHighlight)
+        XCTAssertEqual(sut.titleColorFocused, UIColor.govUK.text.buttonCompactFocussed)
+        XCTAssertEqual(sut.titleFont, UIFont.govUK.body)
+        XCTAssertEqual(sut.backgroundColorNormal, UIColor.govUK.fills.surfaceButtonCompact)
+        XCTAssertEqual(sut.backgroundColorHighlighted, UIColor.govUK.fills.surfaceButtonCompactHighlight)
+        XCTAssertEqual(sut.backgroundColorFocused,
+                       UIColor.govUK.fills.surfaceButtonCompactFocussed)
+
+        let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
+        XCTAssertEqual(accessibilityNormal, sut.backgroundColorNormal)
+
+        let accessibilityHighlighted = sut.accessibilityButtonShapesColor(for: .highlighted)
+        XCTAssertEqual(
+            accessibilityHighlighted,
+            sut.backgroundColorHighlighted
+        )
+
+        let accessibilityFocussed = sut.accessibilityButtonShapesColor(for: .focused)
+        XCTAssertEqual(
+            accessibilityFocussed,
+            sut.backgroundColorFocused
+        )
+    }
+
     func test_backgroundColorFor_highlighted_returnsExpectedColor() {
         let sut = GOVUKButton.ButtonConfiguration(
             titleFont: UIFont.govUK.body,
