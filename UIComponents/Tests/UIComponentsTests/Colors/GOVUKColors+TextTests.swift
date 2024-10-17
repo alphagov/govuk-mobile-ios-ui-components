@@ -1,110 +1,128 @@
-import XCTest
+import Foundation
+import UIKit
+import Testing
 
 @testable import UIComponents
 
-final class GOVUKColors_TextTests: XCTestCase {
-    func test_primary_returnsExpectedResult() {
+@Suite
+struct GOVUKColors_TextTests {
+    @Test
+    func primary_returnsExpectedResult() {
         let result = UIColor.govUK.text.primary
 
-        XCTAssertEqual(result.lightMode, .black)
-        XCTAssertEqual(result.darkMode, .white)
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .white)
     }
 
-    func test_secondaryreturnsExpectedResult() {
+    @Test
+    func secondaryreturnsExpectedResult() {
         let result = UIColor.govUK.text.secondary
 
-        XCTAssertEqual(result.lightMode, .grey700)
-        XCTAssertEqual(result.darkMode, .grey300)
+        #expect(result.lightMode == .grey700)
+        #expect(result.darkMode == .grey300)
     }
 
-    func test_link_returnsExpectedResult() {
+    @Test
+    func link_returnsExpectedResult() {
         let result = UIColor.govUK.text.link
 
-        XCTAssertEqual(result.lightMode, .blue1)
-        XCTAssertEqual(result.darkMode, .blue2)
+        #expect(result.lightMode == .blue1)
+        #expect(result.darkMode == .blue2)
     }
 
-    func test_buttonPrimary_returnsExpectedResult() {
+    @Test
+    func buttonPrimary_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonPrimary
 
-        XCTAssertEqual(result.lightMode, .white)
-        XCTAssertEqual(result.darkMode, .black)
+        #expect(result.lightMode == .white)
+        #expect(result.darkMode == .black)
     }
 
-    func test_buttonPrimaryFocussed_returnsExpectedResult() {
+    @Test
+    func buttonPrimaryFocussed_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonPrimaryFocussed
 
-        XCTAssertEqual(result.lightMode, .black)
-        XCTAssertEqual(result.darkMode, .black)
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .black)
     }
 
-    func test_buttonPrimaryDisabled_returnsExpectedResult() {
+    @Test
+    func buttonPrimaryDisabled_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonPrimaryDisabled
 
-        XCTAssertEqual(result.lightMode, .grey600)
-        XCTAssertEqual(result.darkMode, .black)
+        #expect(result.lightMode == .grey600)
+        #expect(result.darkMode == .black)
     }
 
-    func test_buttonSecondary_returnsExpectedResult() {
+    @Test
+    func buttonSecondary_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondary
 
-        XCTAssertEqual(result.lightMode, .blue1)
-        XCTAssertEqual(result.darkMode, .blue2)
+        #expect(result.lightMode == .blue1)
+        #expect(result.darkMode == .blue2)
     }
 
-    func test_buttonSecondaryHighlight_returnsExpectedResult() {
+    @Test
+    func buttonSecondaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondaryHighlight
 
-        XCTAssertEqual(result.lightMode, .blue5)
-        XCTAssertEqual(result.darkMode, .blue6)
+        #expect(result.lightMode == .blue5)
+        #expect(result.darkMode == .blue6)
     }
 
-    func test_buttonSecondaryFocussed_returnsExpectedResult() {
+    @Test
+    func buttonSecondaryFocussed_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondaryFocussed
 
-        XCTAssertEqual(result.lightMode, .black)
-        XCTAssertEqual(result.darkMode, .black)
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .black)
     }
 
-    func test_buttonSecondaryDisabled_returnsExpectedResult() {
+    @Test
+    func buttonSecondaryDisabled_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondaryDisabled
 
-        XCTAssertEqual(result.lightMode, .grey700)
-        XCTAssertEqual(result.darkMode, .grey300)
+        #expect(result.lightMode == .grey700)
+        #expect(result.darkMode == .grey300)
     }
 
-    func test_buttonCompact_returnsExpectedResult() {
+    @Test
+    func buttonCompact_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonCompact
 
-        XCTAssertEqual(result.lightMode, .blue1)
-        XCTAssertEqual(result.darkMode, .blue2)
+        #expect(result.lightMode == .blue1)
+        #expect(result.darkMode == .blue2)
     }
 
-    func test_buttonCompactHighlight_returnsExpectedResult() {
+    @Test
+    func buttonCompactHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonCompactHighlight
 
-        XCTAssertEqual(result.lightMode, .blue5)
-        XCTAssertEqual(result.darkMode, .blue6)
+        #expect(result.lightMode == .blue5)
+        #expect(result.darkMode == .blue6)
     }
 
-    func test_buttonCompactFocussed_returnsExpectedResult() {
+    @Test
+    func buttonCompactFocussed_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonCompactFocussed
 
-        XCTAssertEqual(result.lightMode, .black)
-        XCTAssertEqual(result.darkMode, .black)
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .black)
     }
 
-    func test_buttonCompactDisabled_returnsExpectedResult() {
+    @Test
+    func buttonCompactDisabled_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonCompactDisabled
 
-        XCTAssertEqual(result.lightMode, .grey600)
-        XCTAssertEqual(result.darkMode, .black)
+        #expect(result.lightMode == .grey600)
+        #expect(result.darkMode == .black)
     }
 
-    func test_trailingIcon_returnsExpectedResult() {
+    @Test
+    func trailingIcon_returnsExpectedResult() {
         let result = UIColor.govUK.text.trailingIcon
 
-        XCTAssertEqual(result.lightMode, .grey300)
-        XCTAssertEqual(result.darkMode, .grey500)
+        #expect(result.lightMode == .grey300)
+        #expect(result.darkMode == .grey500)
     }
 }
