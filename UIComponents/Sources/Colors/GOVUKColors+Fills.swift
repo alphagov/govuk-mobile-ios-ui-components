@@ -42,6 +42,13 @@ extension GOVUKColors {
             .yellow1
         }()
 
+        public static let surfaceButtonPrimaryDisabled: UIColor = {
+            .init(
+                light: .grey100,
+                dark: .grey400
+            )
+        }()
+
         public static let surfaceButtonSecondary: UIColor = {
             .clear
         }()

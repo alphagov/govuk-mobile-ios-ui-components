@@ -11,6 +11,7 @@ final class ButtonConfigurationTests: XCTestCase {
         XCTAssertEqual(sut.titleColorHighlighted, nil)
         XCTAssertEqual(sut.titleColorFocused,
                        UIColor.govUK.text.buttonPrimaryFocussed)
+        XCTAssertEqual(sut.titleColorDisabled, UIColor.govUK.text.buttonPrimaryDisabled)
         XCTAssertEqual(sut.titleFont, UIFont.govUK.bodySemibold)
         XCTAssertEqual(sut.backgroundColorNormal,
                        UIColor.govUK.fills.surfaceButtonPrimary)
@@ -18,6 +19,11 @@ final class ButtonConfigurationTests: XCTestCase {
                        UIColor.govUK.fills.surfaceButtonPrimaryHighlight)
         XCTAssertEqual(sut.backgroundColorFocused,
                        UIColor.govUK.fills.surfaceButtonPrimaryFocussed)
+        XCTAssertEqual(sut.backgroundColorDisabled,
+                       UIColor.govUK.fills.surfaceButtonPrimaryDisabled)
+
+        XCTAssertEqual(sut.borderColor, .clear)
+
         XCTAssertEqual(sut.cornerRadius, 22)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
@@ -44,11 +50,17 @@ final class ButtonConfigurationTests: XCTestCase {
         XCTAssertEqual(sut.titleColorHighlighted,
                        UIColor.govUK.text.buttonSecondaryHighlight)
         XCTAssertEqual(sut.titleColorFocused, UIColor.govUK.text.buttonSecondaryFocussed)
+        XCTAssertEqual(sut.titleColorDisabled, UIColor.govUK.text.buttonSecondaryDisabled)
         XCTAssertEqual(sut.titleFont, UIFont.govUK.body)
         XCTAssertEqual(sut.backgroundColorNormal, .clear)
         XCTAssertEqual(sut.backgroundColorHighlighted, .clear)
         XCTAssertEqual(sut.backgroundColorFocused,
                        UIColor.govUK.fills.surfaceButtonSecondaryFocussed)
+        XCTAssertEqual(sut.backgroundColorDisabled, .clear)
+
+        XCTAssertEqual(sut.borderColor, .clear)
+
+        XCTAssertEqual(sut.cornerRadius, 4)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
         XCTAssertEqual(accessibilityNormal, sut.accessibilityButtonShapesColor)
@@ -74,11 +86,19 @@ final class ButtonConfigurationTests: XCTestCase {
         XCTAssertEqual(sut.titleColorHighlighted,
                        UIColor.govUK.text.buttonCompactHighlight)
         XCTAssertEqual(sut.titleColorFocused, UIColor.govUK.text.buttonCompactFocussed)
+        XCTAssertEqual(sut.titleColorDisabled, UIColor.govUK.text.buttonCompactDisabled)
         XCTAssertEqual(sut.titleFont, UIFont.govUK.body)
         XCTAssertEqual(sut.backgroundColorNormal, UIColor.govUK.fills.surfaceButtonCompact)
         XCTAssertEqual(sut.backgroundColorHighlighted, UIColor.govUK.fills.surfaceButtonCompactHighlight)
         XCTAssertEqual(sut.backgroundColorFocused,
                        UIColor.govUK.fills.surfaceButtonCompactFocussed)
+        XCTAssertEqual(sut.backgroundColorDisabled,
+                       UIColor.govUK.fills.surfaceButtonCompactDisabled)
+
+        XCTAssertEqual(sut.borderColor,
+                       UIColor.govUK.strokes.listDivider)
+
+        XCTAssertEqual(sut.cornerRadius, 22)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
         XCTAssertEqual(accessibilityNormal, sut.backgroundColorNormal)

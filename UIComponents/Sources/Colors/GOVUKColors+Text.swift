@@ -38,6 +38,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let buttonPrimaryDisabled: UIColor = {
+            .init(
+                light: .grey600,
+                dark: .black
+            )
+        }()
+
         public static let buttonSecondary: UIColor = {
             .init(
                 light: .blue1,
@@ -56,6 +63,13 @@ extension GOVUKColors {
             .init(
                 light: .black,
                 dark: .black
+            )
+        }()
+
+        public static let buttonSecondaryDisabled: UIColor = {
+            .init(
+                light: .grey700,
+                dark: .grey300
             )
         }()
 
