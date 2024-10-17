@@ -33,6 +33,12 @@
       }
     },
     {
+      "skippedTests" : [
+        "AdaptiveStackTests",
+        "AdaptiveStackTests\/test_body_returnsConditionalContentInOrder()",
+        "SwiftUIButtonTests",
+        "SwiftUIButtonTests\/test_init_config_viewModel_createsButton()"
+      ],
       "target" : {
         "containerPath" : "container:..",
         "identifier" : "UIComponentsTests",

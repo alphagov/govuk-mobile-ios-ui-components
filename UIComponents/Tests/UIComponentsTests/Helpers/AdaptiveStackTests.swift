@@ -5,7 +5,7 @@ import SwiftUI
 final class AdaptiveStackTests: XCTestCase {
 
     func test_body_returnsConditionalContentInOrder() {
-        
+
         let sut = AdaptiveStack<EmptyView>(content: {})
         
         let reflection = Mirror(reflecting: sut.body)
