@@ -37,7 +37,7 @@ extension GOVUKButton.ButtonConfiguration {
             titleColorFocused: UIColor.govUK.text.buttonCompactFocussed,
             titleColorDisabled: UIColor.govUK.text.buttonCompactDisabled,
             titleFont: UIFont.govUK.body,
-            backgroundColorNormal: UIColor.govUK.fills.surfaceCard,
+            backgroundColorNormal: UIColor.govUK.fills.surfaceButtonCompact,
             backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonCompactHighlight,
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonCompactFocussed,
             backgroundColorDisabled: UIColor.govUK.fills.surfaceButtonCompactDisabled,

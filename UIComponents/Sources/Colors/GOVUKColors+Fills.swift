@@ -39,7 +39,7 @@ extension GOVUKColors {
         }()
 
         public static let surfaceButtonPrimaryFocussed: UIColor = {
-            .yellow
+            .yellow1
         }()
 
         public static let surfaceButtonSecondary: UIColor = {
@@ -51,11 +51,14 @@ extension GOVUKColors {
         }()
 
         public static let surfaceButtonSecondaryFocussed: UIColor = {
-            .yellow
+            .yellow1
         }()
 
-        public static let surfaceButtonCompactFocussed: UIColor = {
-            .yellow
+        public static let surfaceButtonCompact: UIColor = {
+            .init(
+                light: .white,
+                dark: .grey800
+            )
         }()
 
         public static let surfaceButtonCompactHighlight: UIColor = {
@@ -63,6 +66,10 @@ extension GOVUKColors {
                 light: .blue7,
                 dark: .blue8
             )
+        }()
+
+        public static let surfaceButtonCompactFocussed: UIColor = {
+            .yellow1
         }()
 
         public static let surfaceButtonCompactDisabled: UIColor = {
