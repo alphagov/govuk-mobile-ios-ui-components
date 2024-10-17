@@ -8,4 +8,8 @@ public struct GOVUKButtonBuilder {
     public var secondary: GOVUKButton {
         GOVUKButton(.secondary)
     }
+
+    public var compact: GOVUKButton {
+        GOVUKButton(.compact)
+    }
 }

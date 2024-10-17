@@ -40,6 +40,16 @@ class ViewController: UIViewController {
         let button3 = GOVUKButton(.secondary)
         button3.viewModel = button3VM
 
+        let button4VM = GOVUKButton.ButtonViewModel(
+            localisedTitle: "compact",
+            action: { [weak self] in
+                self?.pushSwiftUIView()
+            }
+        )
+
+        let button4 = GOVUKButton(.compact)
+        button4.viewModel = button4VM
+
         let label = UILabel()
         label.text = "Caption2 label"
         label.font = UIFont.govUK.caption2
@@ -92,6 +102,7 @@ class ViewController: UIViewController {
         stack.addArrangedSubview(button)
         stack.addArrangedSubview(button2)
         stack.addArrangedSubview(button3)
+        stack.addArrangedSubview(button4)
 
         view.addSubview(stack)
 

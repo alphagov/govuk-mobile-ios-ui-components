@@ -88,12 +88,14 @@ final public class GOVUKButton: UIButton {
         super.accessibilityElementDidLoseFocus()
         setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
         configureBackgroundColor(state: .normal)
+        configureBorderColor(state: .normal)
     }
 
     public override func accessibilityElementDidBecomeFocused() {
         super.accessibilityElementDidBecomeFocused()
         setTitleColor(buttonConfiguration.titleColorFocused, for: .normal)
         configureBackgroundColor(state: .focused)
+        configureBorderColor(state: .focused)
     }
 
     public override func layoutSubviews() {
@@ -103,6 +105,12 @@ final public class GOVUKButton: UIButton {
         titleLabel?.preferredMaxLayoutWidth = width
 
         updateConstraints()
+    }
+
+    public override var isEnabled: Bool {
+        didSet {
+            buttonConfigurationUpdate()
+        }
     }
 
     private func viewModelUpdate() {
@@ -119,6 +127,7 @@ final public class GOVUKButton: UIButton {
         configureAlignment()
         configureInsets()
         configureCornerRadius()
+        configureBorderColor()
     }
 
     private func configureFonts() {
@@ -126,6 +135,7 @@ final public class GOVUKButton: UIButton {
         setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
         setTitleColor(buttonConfiguration.titleColorHighlighted, for: .highlighted)
         setTitleColor(buttonConfiguration.titleColorFocused, for: .focused)
+        setTitleColor(buttonConfiguration.titleColorDisabled, for: .disabled)
     }
 
     private func configureBackgroundColor(state: UIControl.State? = nil) {
@@ -133,7 +143,9 @@ final public class GOVUKButton: UIButton {
 
         let color: UIColor
 
-        if localState == .focused {
+        if localState == .disabled {
+            color = buttonConfiguration.backgroundColorDisabled
+        } else if localState == .focused {
             color = buttonConfiguration.backgroundColorFocused
         } else {
             color = UIAccessibility.buttonShapesEnabled ?
@@ -156,6 +168,17 @@ final public class GOVUKButton: UIButton {
     private func configureCornerRadius() {
         layer.cornerRadius = buttonConfiguration.cornerRadius
         layer.cornerCurve = .continuous
+    }
+
+
+    private func configureBorderColor(state: UIControl.State? = nil) {
+        layer.borderWidth = 0.5
+        let localState = state ?? self.state
+        if localState == .highlighted || localState == .normal {
+            layer.borderColor = buttonConfiguration.borderColor.cgColor
+        } else {
+            layer.borderColor = UIColor.clear.cgColor
+        }
     }
 
     private func configureButtonShapesStyle() {
