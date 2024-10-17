@@ -54,6 +54,14 @@ extension GOVUKColors {
             .yellow
         }()
 
+        public static let surfaceButtonCompactFocussed: UIColor = {
+            .yellow
+        }()
+
+        public static let surfaceButtonCompactHighlight: UIColor = {
+            .clear
+        }()
+
         public static let surfaceModal: UIColor = {
             .init(
                 light: .white,

@@ -17,6 +17,8 @@ extension GOVUKButton {
         let backgroundColorFocused: UIColor
         let cornerRadius: CGFloat
 
+        let borderColor: UIColor
+
         let accessibilityButtonShapesColor: UIColor
 
         public init(titleColorNormal: UIColor? = nil,
@@ -30,7 +32,9 @@ extension GOVUKButton {
                     backgroundColorNormal: UIColor,
                     backgroundColorHighlighted: UIColor,
                     backgroundColorFocused: UIColor,
+                    backgroundColorDisabled: UIColor,
                     cornerRadius: CGFloat = 4,
+                    borderColor: UIColor = .clear,
                     accessibilityButtonShapesColor: UIColor) {
             self.titleColorNormal = titleColorNormal
             self.titleColorHighlighted = titleColorHighlighted
@@ -43,6 +47,7 @@ extension GOVUKButton {
             self.backgroundColorNormal = backgroundColorNormal
             self.backgroundColorHighlighted = backgroundColorHighlighted
             self.backgroundColorFocused = backgroundColorFocused
+            self.borderColor = borderColor
             self.cornerRadius = cornerRadius
             self.accessibilityButtonShapesColor = accessibilityButtonShapesColor
         }
@@ -71,8 +76,6 @@ extension GOVUKButton.ButtonConfiguration {
             cornerRadius: 5,
             accessibilityButtonShapesColor: .grey100
         )
-
-        print(config.titleFont.fontDescriptor.symbolicTraits)
         return config
     }
 }

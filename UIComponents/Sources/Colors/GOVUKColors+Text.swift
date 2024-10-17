@@ -59,6 +59,27 @@ extension GOVUKColors {
             )
         }()
 
+        public static let buttonCompact: UIColor = {
+            .init(
+                light: .blue1,
+                dark: .blue2
+            )
+        }()
+
+        public static let buttonCompactHighlight: UIColor = {
+            .init(
+                light: .blue5,
+                dark: .blue6
+            )
+        }()
+
+        public static let buttonCompactFocussed: UIColor = {
+            .init(
+                light: .black,
+                dark: .black
+            )
+        }()
+
         public static let trailingIcon: UIColor = {
             .init(
                 light: .grey300,

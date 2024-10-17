@@ -27,4 +27,19 @@ extension GOVUKButton.ButtonConfiguration {
             accessibilityButtonShapesColor: UIColor.grey100
         )
     }
+
+    public static var compact: GOVUKButton.ButtonConfiguration {
+        .init(
+            titleColorNormal: UIColor.govUK.text.buttonCompact,
+            titleColorHighlighted: UIColor.govUK.text.buttonCompactHighlight,
+            titleColorFocused: UIColor.govUK.text.buttonCompactFocussed,
+            titleFont: UIFont.govUK.body,
+            backgroundColorNormal: UIColor.govUK.fills.surfaceCard,
+            backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonCompactHighlight,
+            backgroundColorFocused: UIColor.govUK.fills.surfaceButtonCompactFocussed,
+            cornerRadius: 22,
+            borderColor: UIColor.govUK.strokes.listDivider,
+            accessibilityButtonShapesColor: UIColor.grey100
+        )
+    }
 }
