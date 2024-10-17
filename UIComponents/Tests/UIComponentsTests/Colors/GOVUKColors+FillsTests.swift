@@ -59,6 +59,13 @@ final class GOVUKColors_FillsTests: XCTestCase {
         XCTAssertEqual(result, UIColor.yellow1)
     }
 
+    func test_surfaceButtonPrimaryDisabled_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceButtonPrimaryDisabled
+
+        XCTAssertEqual(result.lightMode, .grey100)
+        XCTAssertEqual(result.darkMode, .grey400)
+    }
+
     func test_surfaceButtonSecondary_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonSecondary
 
