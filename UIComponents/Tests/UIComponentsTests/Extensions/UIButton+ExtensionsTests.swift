@@ -1,45 +1,43 @@
 import Foundation
-@testable import  UIComponents
-import XCTest
+import UIKit
+import Testing
 
-final class UIButtonExtensionsTests: XCTestCase {
+@testable import UIComponents
+
+@Suite
+@MainActor
+final class UIButtonExtensionsTests: NSObject {
     var sut: UIButton!
     var action: UIAction!
 
-    override func setUp() {
-        super.setUp()
-        sut = UIButton()
-        action = UIAction(handler: { _ in })
+    override init() {
+        self.sut = UIButton()
+        self.action = UIAction(handler: { _ in })
+        super.init()
     }
 
-    override func tearDown() {
-        super.tearDown()
-        sut = nil
-        action = nil
+    @Test
+    func removeAllActions_withUIAction_removesAction() {
+        #expect(sut.allControlEvents.isEmpty)
+        sut.addAction(action, for: .touchUpInside)
+        #expect(!sut.allControlEvents.isEmpty)
+
+        sut.removeAllActions()
+        #expect(sut.allControlEvents.isEmpty)
     }
+
+    @Test
+    func removeAllActions_withTargetAction_removesAction() {
+        #expect(sut.allControlEvents.isEmpty)
+        sut.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        #expect(!sut.allControlEvents.isEmpty)
+
+        sut.removeAllActions()
+        #expect(sut.allControlEvents.isEmpty)
+    }
+
 
     @objc func buttonAction() {
         // no implementation
-    }
-}
-
-extension UIButtonExtensionsTests {
-
-    func test_removeAllActions_withUIAction_removesAction() {
-        XCTAssertTrue(sut.allControlEvents.isEmpty)
-        sut.addAction(action, for: .touchUpInside)
-        XCTAssertTrue(!sut.allControlEvents.isEmpty)
-
-        sut.removeAllActions()
-        XCTAssertTrue(sut.allControlEvents.isEmpty)
-    }
-
-    func test_removeAllActions_withTargetAction_removesAction() {
-        XCTAssertTrue(sut.allControlEvents.isEmpty)
-        sut.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        XCTAssertTrue(!sut.allControlEvents.isEmpty)
-
-        sut.removeAllActions()
-        XCTAssertTrue(sut.allControlEvents.isEmpty)
     }
 }
