@@ -214,7 +214,6 @@ final class UIFontExtensionsTests: XCTestCase {
                           weight: UIFont.Weight,
                           file: StaticString = #filePath,
                           line: UInt = #line ) {
-        let attributes = font.fontDescriptor.fontAttributes
         let traits = font.fontDescriptor.fontAttributes[.traits] as? [UIFontDescriptor.TraitKey: Any]
         let fontWeight = traits?[.weight] as? UIFont.Weight
         XCTAssertEqual(fontWeight, weight, file: file, line: line)

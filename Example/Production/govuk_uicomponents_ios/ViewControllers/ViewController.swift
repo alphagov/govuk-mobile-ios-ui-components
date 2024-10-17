@@ -49,7 +49,6 @@ class ViewController: UIViewController {
 
         let button4 = GOVUKButton(.compact)
         button4.viewModel = button4VM
-        button4.isEnabled = false
 
         let label = UILabel()
         label.text = "Caption2 label"

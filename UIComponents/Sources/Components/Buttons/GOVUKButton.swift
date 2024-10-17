@@ -107,6 +107,12 @@ final public class GOVUKButton: UIButton {
         updateConstraints()
     }
 
+    public override var isEnabled: Bool {
+        didSet {
+            buttonConfigurationUpdate()
+        }
+    }
+
     private func viewModelUpdate() {
         setTitle(viewModel?.localisedTitle, for: .normal)
         removeAllActions()
@@ -129,6 +135,7 @@ final public class GOVUKButton: UIButton {
         setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
         setTitleColor(buttonConfiguration.titleColorHighlighted, for: .highlighted)
         setTitleColor(buttonConfiguration.titleColorFocused, for: .focused)
+        setTitleColor(buttonConfiguration.titleColorDisabled, for: .disabled)
     }
 
     private func configureBackgroundColor(state: UIControl.State? = nil) {
@@ -136,7 +143,9 @@ final public class GOVUKButton: UIButton {
 
         let color: UIColor
 
-        if localState == .focused {
+        if localState == .disabled {
+            color = buttonConfiguration.backgroundColorDisabled
+        } else if localState == .focused {
             color = buttonConfiguration.backgroundColorFocused
         } else {
             color = UIAccessibility.buttonShapesEnabled ?

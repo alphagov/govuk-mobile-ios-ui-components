@@ -72,6 +72,7 @@ final class ButtonConfigurationTests: XCTestCase {
             backgroundColorNormal: .red,
             backgroundColorHighlighted: .blue,
             backgroundColorFocused: .green,
+            backgroundColorDisabled: .clear,
             accessibilityButtonShapesColor: .purple
         )
         let result = sut.backgroundColor(for: [.highlighted, .focused])
@@ -84,6 +85,7 @@ final class ButtonConfigurationTests: XCTestCase {
             backgroundColorNormal: .red,
             backgroundColorHighlighted: .blue,
             backgroundColorFocused: .green,
+            backgroundColorDisabled: .clear,
             accessibilityButtonShapesColor: .purple
         )
         let result = sut.backgroundColor(for: [.focused])

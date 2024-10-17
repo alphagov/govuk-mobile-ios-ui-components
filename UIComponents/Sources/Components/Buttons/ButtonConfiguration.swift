@@ -5,6 +5,7 @@ extension GOVUKButton {
         let titleColorNormal: UIColor?
         let titleColorHighlighted: UIColor?
         let titleColorFocused: UIColor?
+        let titleColorDisabled: UIColor?
 
         let titleFont: UIFont
         let textAlignment: NSTextAlignment
@@ -15,6 +16,7 @@ extension GOVUKButton {
         let backgroundColorNormal: UIColor
         let backgroundColorHighlighted: UIColor
         let backgroundColorFocused: UIColor
+        let backgroundColorDisabled: UIColor
         let cornerRadius: CGFloat
 
         let borderColor: UIColor
@@ -24,6 +26,7 @@ extension GOVUKButton {
         public init(titleColorNormal: UIColor? = nil,
                     titleColorHighlighted: UIColor? = nil,
                     titleColorFocused: UIColor? = nil,
+                    titleColorDisabled: UIColor? = nil,
                     titleFont: UIFont,
                     textAlignment: NSTextAlignment = .center,
                     contentHorizontalAlignment: UIControl.ContentHorizontalAlignment = .center,
@@ -39,6 +42,7 @@ extension GOVUKButton {
             self.titleColorNormal = titleColorNormal
             self.titleColorHighlighted = titleColorHighlighted
             self.titleColorFocused = titleColorFocused
+            self.titleColorDisabled = titleColorDisabled
             self.titleFont = titleFont
             self.textAlignment = textAlignment
             self.contentHorizontalAlignment = contentHorizontalAlignment
@@ -47,6 +51,7 @@ extension GOVUKButton {
             self.backgroundColorNormal = backgroundColorNormal
             self.backgroundColorHighlighted = backgroundColorHighlighted
             self.backgroundColorFocused = backgroundColorFocused
+            self.backgroundColorDisabled = backgroundColorDisabled
             self.borderColor = borderColor
             self.cornerRadius = cornerRadius
             self.accessibilityButtonShapesColor = accessibilityButtonShapesColor
@@ -73,6 +78,7 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorNormal: .green,
             backgroundColorHighlighted: .green.withAlphaComponent(0.7),
             backgroundColorFocused: .cyan,
+            backgroundColorDisabled: .blue,
             cornerRadius: 5,
             accessibilityButtonShapesColor: .grey100
         )

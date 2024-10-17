@@ -80,6 +80,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let buttonCompactDisabled: UIColor = {
+            .init(
+                light: .grey600,
+                dark: .black
+            )
+        }()
+
         public static let trailingIcon: UIColor = {
             .init(
                 light: .grey300,

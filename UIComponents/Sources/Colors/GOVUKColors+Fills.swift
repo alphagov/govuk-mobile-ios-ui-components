@@ -59,7 +59,17 @@ extension GOVUKColors {
         }()
 
         public static let surfaceButtonCompactHighlight: UIColor = {
-            .clear
+            .init(
+                light: .blue7,
+                dark: .blue8
+            )
+        }()
+
+        public static let surfaceButtonCompactDisabled: UIColor = {
+            .init(
+                light: .grey100,
+                dark: .grey400
+            )
         }()
 
         public static let surfaceModal: UIColor = {

@@ -29,7 +29,7 @@ extension SwiftUIButtonTests {
         XCTAssertNotNil(sut)
         let reflection = Mirror(reflecting: sut.body)
 
-        let wrapped = reflection.children .first(where: { label, value in
+        let wrapped = reflection.children.first(where: { label, value in
             value is UIComponents.SwiftUIWrappedButton
         })
 
