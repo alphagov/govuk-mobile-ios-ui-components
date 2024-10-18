@@ -70,6 +70,7 @@ extension GOVUKButton {
 
 #if DEBUG
 extension GOVUKButton.ButtonConfiguration {
+    @MainActor
     public static var mockConfig: Self {
         let config = GOVUKButton.ButtonConfiguration(
             titleColorNormal: .magenta,
