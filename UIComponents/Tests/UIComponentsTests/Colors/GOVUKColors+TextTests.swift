@@ -5,6 +5,7 @@ import Testing
 @testable import UIComponents
 
 @Suite
+@MainActor
 struct GOVUKColors_TextTests {
     @Test
     func primary_returnsExpectedResult() {

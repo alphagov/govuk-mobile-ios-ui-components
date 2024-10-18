@@ -5,6 +5,7 @@ import Testing
 @testable import UIComponents
 
 @Suite
+@MainActor
 struct GOVUKButtonTests {
     let sut: GOVUKButton
     let configuration: GOVUKButton.ButtonConfiguration

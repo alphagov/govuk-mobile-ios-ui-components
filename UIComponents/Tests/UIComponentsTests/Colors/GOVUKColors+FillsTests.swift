@@ -5,6 +5,7 @@ import Testing
 @testable import UIComponents
 
 @Suite
+@MainActor
 struct GOVUKColors_FillsTests {
     @Test
     func surfaceFixedContainer_light_returnsExpectedResult() {

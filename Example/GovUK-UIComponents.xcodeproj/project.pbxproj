@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,10 @@
 		5D02786B2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */; };
 		5D02786D2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */; };
 		5D71C0DA2C2AD02F00E25DA5 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5D71C0D92C2AD02F00E25DA5 /* UIComponents */; };
-		9681C3142C3FE2020094661E /* SwiftUIComponentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C3132C3FE2020094661E /* SwiftUIComponentsScreen.swift */; };
+		5DB0C0772CC2486F00C4E010 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */; };
+		5DD6F2FE2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F2FD2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift */; };
+		5DD6F3002CC28298005BC5D3 /* ButtonStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F2FF2CC28298005BC5D3 /* ButtonStateViewController.swift */; };
+		5DD6F30F2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F30E2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift */; };
 		9681C3162C402CC20094661E /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C3152C402CC20094661E /* HostingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,13 @@
 			remoteGlobalIDString = 5D0278452C2AA90900F2A4EB;
 			remoteInfo = "GovUK-UIComponents";
 		};
+		5DB0C0702CC247F200C4E010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D02783E2C2AA90900F2A4EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D0278452C2AA90900F2A4EB;
+			remoteInfo = govuk_uicomponents_ios;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +60,16 @@
 		5D0278662C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govuk_uicomponents_ios_ui_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUK_UIComponentsUITests.swift; sourceTree = "<group>"; };
 		5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUK_UIComponentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9681C3132C3FE2020094661E /* SwiftUIComponentsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftUIComponentsScreen.swift; path = Production/govuk_uicomponents_ios/SwiftUIComponentsScreen.swift; sourceTree = SOURCE_ROOT; };
+		5DB0C06C2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govuk_uicomponents_ios_snapshot_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD6F2FD2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIComponentsScreen.swift; sourceTree = "<group>"; };
+		5DD6F2FF2CC28298005BC5D3 /* ButtonStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateViewController.swift; sourceTree = "<group>"; };
+		5DD6F30E2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIButtonStateView.swift; sourceTree = "<group>"; };
 		9681C3152C402CC20094661E /* HostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = govuk_uicomponents_ios_snapshot_tests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5D0278432C2AA90900F2A4EB /* Frameworks */ = {
@@ -77,6 +94,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DB0C0692CC247F200C4E010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB0C0772CC2486F00C4E010 /* iOSSnapshotTestCase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +121,7 @@
 				5D0278462C2AA90900F2A4EB /* govuk_uicomponents_ios.app */,
 				5D02785C2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests.xctest */,
 				5D0278662C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests.xctest */,
+				5DB0C06C2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +164,7 @@
 		5D7240F62C2AAC6400B2D70A /* govuk_uicomponents_ios */ = {
 			isa = PBXGroup;
 			children = (
+				5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */,
 				5D0278692C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests */,
 				5D02785F2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests */,
 			);
@@ -190,8 +217,10 @@
 		5DA285F52C2ABCED00C1B88D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5DD6F2FD2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift */,
+				5DD6F30E2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift */,
 				5D02784D2C2AA90900F2A4EB /* ViewController.swift */,
-				9681C3132C3FE2020094661E /* SwiftUIComponentsScreen.swift */,
+				5DD6F2FF2CC28298005BC5D3 /* ButtonStateViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -256,6 +285,30 @@
 			productReference = 5D0278662C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5DB0C06B2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DB0C0742CC247F200C4E010 /* Build configuration list for PBXNativeTarget "govuk_uicomponents_ios_snapshot_tests" */;
+			buildPhases = (
+				5DB0C0682CC247F200C4E010 /* Sources */,
+				5DB0C0692CC247F200C4E010 /* Frameworks */,
+				5DB0C06A2CC247F200C4E010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DB0C0712CC247F200C4E010 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */,
+			);
+			name = govuk_uicomponents_ios_snapshot_tests;
+			packageProductDependencies = (
+				5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */,
+			);
+			productName = govuk_uicomponents_ios_snapshot_tests;
+			productReference = 5DB0C06C2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -263,7 +316,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					5D0278452C2AA90900F2A4EB = {
@@ -277,6 +330,10 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 5D0278452C2AA90900F2A4EB;
 					};
+					5DB0C06B2CC247F200C4E010 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 5D0278452C2AA90900F2A4EB;
+					};
 				};
 			};
 			buildConfigurationList = 5D0278412C2AA90900F2A4EB /* Build configuration list for PBXProject "GovUK-UIComponents" */;
@@ -288,6 +345,9 @@
 				Base,
 			);
 			mainGroup = 5D02783D2C2AA90900F2A4EB;
+			packageReferences = (
+				5DB0C0752CC2486F00C4E010 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+			);
 			productRefGroup = 5D0278472C2AA90900F2A4EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,6 +355,7 @@
 				5D0278452C2AA90900F2A4EB /* govuk_uicomponents_ios */,
 				5D02785B2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests */,
 				5D0278652C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests */,
+				5DB0C06B2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,6 +378,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5D0278642C2AA91000F2A4EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB0C06A2CC247F200C4E010 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -353,7 +421,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D02784E2C2AA90900F2A4EB /* ViewController.swift in Sources */,
-				9681C3142C3FE2020094661E /* SwiftUIComponentsScreen.swift in Sources */,
+				5DD6F2FE2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift in Sources */,
+				5DD6F30F2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift in Sources */,
+				5DD6F3002CC28298005BC5D3 /* ButtonStateViewController.swift in Sources */,
 				5D02784A2C2AA90900F2A4EB /* AppDelegate.swift in Sources */,
 				9681C3162C402CC20094661E /* HostingViewController.swift in Sources */,
 				5D02784C2C2AA90900F2A4EB /* SceneDelegate.swift in Sources */,
@@ -377,6 +447,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5DB0C0682CC247F200C4E010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -389,6 +466,11 @@
 			isa = PBXTargetDependency;
 			target = 5D0278452C2AA90900F2A4EB /* govuk_uicomponents_ios */;
 			targetProxy = 5D0278672C2AA91000F2A4EB /* PBXContainerItemProxy */;
+		};
+		5DB0C0712CC247F200C4E010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D0278452C2AA90900F2A4EB /* govuk_uicomponents_ios */;
+			targetProxy = 5DB0C0702CC247F200C4E010 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -538,7 +620,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,7 +649,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,6 +735,44 @@
 			};
 			name = Release;
 		};
+		5DB0C0722CC247F200C4E010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8W395F695;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.gov.govuk-uicomponents-ios-snapshot-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/govuk_uicomponents_ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/govuk_uicomponents_ios";
+			};
+			name = Debug;
+		};
+		5DB0C0732CC247F200C4E010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N8W395F695;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.gov.govuk-uicomponents-ios-snapshot-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/govuk_uicomponents_ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/govuk_uicomponents_ios";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -692,12 +812,37 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5DB0C0742CC247F200C4E010 /* Build configuration list for PBXNativeTarget "govuk_uicomponents_ios_snapshot_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB0C0722CC247F200C4E010 /* Debug */,
+				5DB0C0732CC247F200C4E010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DB0C0752CC2486F00C4E010 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/ios-snapshot-test-case";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		5D71C0D92C2AD02F00E25DA5 /* UIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIComponents;
+		};
+		5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB0C0752CC2486F00C4E010 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = iOSSnapshotTestCase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

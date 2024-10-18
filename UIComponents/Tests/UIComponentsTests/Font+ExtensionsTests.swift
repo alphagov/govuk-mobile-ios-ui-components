@@ -3,6 +3,7 @@ import SwiftUI
 import Testing
 
 @Suite
+@MainActor
 struct FontExtensionsTests {
 
     // MARK: LARGE TITLE

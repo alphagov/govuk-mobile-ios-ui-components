@@ -57,6 +57,17 @@
                ReferencedContainer = "container:GovUK-UIComponents.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5DB0C06B2CC247F200C4E010"
+               BuildableName = "govuk_uicomponents_ios_snapshot_tests.xctest"
+               BlueprintName = "govuk_uicomponents_ios_snapshot_tests"
+               ReferencedContainer = "container:GovUK-UIComponents.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

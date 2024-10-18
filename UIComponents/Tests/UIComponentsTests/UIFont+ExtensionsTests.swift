@@ -5,6 +5,7 @@ import Testing
 @testable import UIComponents
 
 @Suite
+@MainActor
 struct UIFontExtensionsTests {
     // MARK: LARGE TITLE
     @Test

@@ -5,6 +5,7 @@ import Testing
 @testable import UIComponents
 
 @Suite
+@MainActor
 struct GOVUKColors_StrokesTests {
     @Test
     func listDivider_returnsExpectedResult() {
