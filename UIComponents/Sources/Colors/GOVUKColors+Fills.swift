@@ -49,6 +49,20 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceCardSelected: UIColor = {
+            .init(
+                light: .blue7,
+                dark: .blue8
+            )
+        }()
+
+        public static let surfaceButtonPrimaryDefault: UIColor = {
+            .init(
+                light: .blue1,
+                dark: .blue2
+            )
+        }()
+
         public static let surfaceButtonSecondary: UIColor = {
             .clear
         }()
