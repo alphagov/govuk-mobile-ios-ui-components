@@ -12,9 +12,6 @@
 		5D02784E2C2AA90900F2A4EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02784D2C2AA90900F2A4EB /* ViewController.swift */; };
 		5D0278532C2AA90F00F2A4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0278522C2AA90F00F2A4EB /* Assets.xcassets */; };
 		5D0278562C2AA90F00F2A4EB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5D0278552C2AA90F00F2A4EB /* Base */; };
-		5D0278612C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0278602C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift */; };
-		5D02786B2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */; };
-		5D02786D2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */; };
 		5D71C0DA2C2AD02F00E25DA5 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5D71C0D92C2AD02F00E25DA5 /* UIComponents */; };
 		5DB0C0772CC2486F00C4E010 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */; };
 		5DD6F2FE2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F2FD2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift */; };
@@ -56,10 +53,7 @@
 		5D0278552C2AA90F00F2A4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D0278572C2AA90F00F2A4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D02785C2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govuk_uicomponents_ios_unit_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D0278602C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUK_UIComponentsTests.swift; sourceTree = "<group>"; };
 		5D0278662C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govuk_uicomponents_ios_ui_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUK_UIComponentsUITests.swift; sourceTree = "<group>"; };
-		5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GovUK_UIComponentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5DB0C06C2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govuk_uicomponents_ios_snapshot_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD6F2FD2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIComponentsScreen.swift; sourceTree = "<group>"; };
 		5DD6F2FF2CC28298005BC5D3 /* ButtonStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateViewController.swift; sourceTree = "<group>"; };
@@ -68,23 +62,33 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		5DFBF3022CD0E84D00961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+		5DFBF3412CD0E8F900961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.GOVUKButtonSnapshotTests/test_compact_rendersCorrectly@3x.png",
-				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.GOVUKButtonSnapshotTests/test_primary_rendersCorrectly@3x.png",
-				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.GOVUKButtonSnapshotTests/test_secondary_rendersCorrectly@3x.png",
-				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_compact_swiftui_rendersCorrectly@3x.png",
-				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_primary_rendersCorrectly@3x.png",
-				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_primary_swiftui_rendersCorrectly@3x.png",
-				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_secondary_swiftui_rendersCorrectly@3x.png",
+				govuk_uicomponents_ios/govuk_uicomponents_ios_unit_tests/GovUK_UIComponentsTests.swift,
+			);
+			target = 5D02785B2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests */;
+		};
+		5DFBF3422CD0E8F900961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				govuk_uicomponents_ios/govuk_uicomponents_ios_ui_tests/GovUK_UIComponentsUITests.swift,
+				govuk_uicomponents_ios/govuk_uicomponents_ios_ui_tests/GovUK_UIComponentsUITestsLaunchTests.swift,
+			);
+			target = 5D0278652C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests */;
+		};
+		5DFBF3432CD0E8F900961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/GOVUKButtonSnapshotTests.swift,
+				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/SwiftUIButtonSnapshotTests.swift,
 			);
 			target = 5DB0C06B2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5DFBF3022CD0E84D00961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = govuk_uicomponents_ios_snapshot_tests; sourceTree = "<group>"; };
+		5DFBF33B2CD0E8F900961CD3 /* Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5DFBF3412CD0E8F900961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 5DFBF3422CD0E8F900961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 5DFBF3432CD0E8F900961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Tests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5D7240F82C2AAD2C00B2D70A /* Production */,
-				5D7240F72C2AAC6400B2D70A /* Tests */,
+				5DFBF33B2CD0E8F900961CD3 /* Tests */,
 				5D0278472C2AA90900F2A4EB /* Products */,
 				5D71C0D82C2AD02F00E25DA5 /* Frameworks */,
 			);
@@ -153,46 +157,11 @@
 			path = govuk_uicomponents_ios;
 			sourceTree = "<group>";
 		};
-		5D02785F2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests */ = {
-			isa = PBXGroup;
-			children = (
-				5D0278602C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift */,
-			);
-			path = govuk_uicomponents_ios_unit_tests;
-			sourceTree = "<group>";
-		};
-		5D0278692C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests */ = {
-			isa = PBXGroup;
-			children = (
-				5D02786A2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift */,
-				5D02786C2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift */,
-			);
-			path = govuk_uicomponents_ios_ui_tests;
-			sourceTree = "<group>";
-		};
 		5D71C0D82C2AD02F00E25DA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5D7240F62C2AAC6400B2D70A /* govuk_uicomponents_ios */ = {
-			isa = PBXGroup;
-			children = (
-				5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */,
-				5D0278692C2AA91000F2A4EB /* govuk_uicomponents_ios_ui_tests */,
-				5D02785F2C2AA91000F2A4EB /* govuk_uicomponents_ios_unit_tests */,
-			);
-			path = govuk_uicomponents_ios;
-			sourceTree = "<group>";
-		};
-		5D7240F72C2AAC6400B2D70A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5D7240F62C2AAC6400B2D70A /* govuk_uicomponents_ios */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		5D7240F82C2AAD2C00B2D70A /* Production */ = {
@@ -313,9 +282,6 @@
 			);
 			dependencies = (
 				5DB0C0712CC247F200C4E010 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */,
 			);
 			name = govuk_uicomponents_ios_snapshot_tests;
 			packageProductDependencies = (
@@ -450,7 +416,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D0278612C2AA91000F2A4EB /* GovUK_UIComponentsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,8 +423,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D02786B2C2AA91000F2A4EB /* GovUK_UIComponentsUITests.swift in Sources */,
-				5D02786D2C2AA91000F2A4EB /* GovUK_UIComponentsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
