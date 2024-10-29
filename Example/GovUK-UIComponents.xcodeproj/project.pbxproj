@@ -67,8 +67,24 @@
 		9681C3152C402CC20094661E /* HostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5DFBF3022CD0E84D00961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.GOVUKButtonSnapshotTests/test_compact_rendersCorrectly@3x.png",
+				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.GOVUKButtonSnapshotTests/test_primary_rendersCorrectly@3x.png",
+				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.GOVUKButtonSnapshotTests/test_secondary_rendersCorrectly@3x.png",
+				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_compact_swiftui_rendersCorrectly@3x.png",
+				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_primary_rendersCorrectly@3x.png",
+				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_primary_swiftui_rendersCorrectly@3x.png",
+				"ReferenceImages_64/govuk_uicomponents_ios_snapshot_tests.SwiftUIButtonSnapshotTests/test_secondary_swiftui_rendersCorrectly@3x.png",
+			);
+			target = 5DB0C06B2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = govuk_uicomponents_ios_snapshot_tests; sourceTree = "<group>"; };
+		5DB0C06D2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5DFBF3022CD0E84D00961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = govuk_uicomponents_ios_snapshot_tests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
