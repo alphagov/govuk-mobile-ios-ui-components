@@ -1,122 +1,137 @@
-import XCTest
+import Foundation
+import UIKit
+import Testing
 
 @testable import UIComponents
 
-final class ButtonConfigurationTests: XCTestCase {
-    func test_primary_returnsExpectedConfiguration() {
+@Suite
+struct ButtonConfigurationTests {
+    @Test
+    func primary_returnsExpectedConfiguration() {
         let sut = GOVUKButton.ButtonConfiguration.primary
 
-        XCTAssertEqual(sut.titleColorNormal,
-                       UIColor.govUK.text.buttonPrimary)
-        XCTAssertEqual(sut.titleColorHighlighted, nil)
-        XCTAssertEqual(sut.titleColorFocused,
-                       UIColor.govUK.text.buttonPrimaryFocussed)
-        XCTAssertEqual(sut.titleColorDisabled, UIColor.govUK.text.buttonPrimaryDisabled)
-        XCTAssertEqual(sut.titleFont, UIFont.govUK.bodySemibold)
-        XCTAssertEqual(sut.backgroundColorNormal,
-                       UIColor.govUK.fills.surfaceButtonPrimary)
-        XCTAssertEqual(sut.backgroundColorHighlighted,
-                       UIColor.govUK.fills.surfaceButtonPrimaryHighlight)
-        XCTAssertEqual(sut.backgroundColorFocused,
-                       UIColor.govUK.fills.surfaceButtonPrimaryFocussed)
-        XCTAssertEqual(sut.backgroundColorDisabled,
-                       UIColor.govUK.fills.surfaceButtonPrimaryDisabled)
+        #expect(sut.titleColorNormal ==
+                UIColor.govUK.text.buttonPrimary)
+        #expect(sut.titleColorHighlighted == nil)
+        #expect(sut.titleColorFocused ==
+                UIColor.govUK.text.buttonPrimaryFocussed)
+        #expect(sut.titleColorDisabled ==
+                UIColor.govUK.text.buttonPrimaryDisabled)
+        #expect(sut.titleFont ==
+                UIFont.govUK.bodySemibold)
+        #expect(sut.backgroundColorNormal ==
+                UIColor.govUK.fills.surfaceButtonPrimary)
+        #expect(sut.backgroundColorHighlighted ==
+                UIColor.govUK.fills.surfaceButtonPrimaryHighlight)
+        #expect(sut.backgroundColorFocused ==
+                UIColor.govUK.fills.surfaceButtonPrimaryFocussed)
+        #expect(sut.backgroundColorDisabled ==
+                UIColor.govUK.fills.surfaceButtonPrimaryDisabled)
 
-        XCTAssertEqual(sut.borderColor, .clear)
+        #expect(sut.borderColor == .clear)
 
-        XCTAssertEqual(sut.cornerRadius, 22)
+        #expect(sut.cornerRadius == 22)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
-        XCTAssertEqual(accessibilityNormal, sut.backgroundColorNormal)
+        #expect(accessibilityNormal == sut.backgroundColorNormal)
 
         let accessibilityHighlighted = sut.accessibilityButtonShapesColor(for: .highlighted)
-        XCTAssertEqual(
-            accessibilityHighlighted,
+        #expect(
+            accessibilityHighlighted ==
             sut.backgroundColorHighlighted
         )
 
         let accessibilityFocussed = sut.accessibilityButtonShapesColor(for: .focused)
-        XCTAssertEqual(
-            accessibilityFocussed,
+        #expect(
+            accessibilityFocussed ==
             sut.backgroundColorFocused
         )
     }
 
-    func test_secondary_returnsExpectedConfiguration() {
+    @Test
+    func secondary_returnsExpectedConfiguration() {
         let sut = GOVUKButton.ButtonConfiguration.secondary
 
-        XCTAssertEqual(sut.titleColorNormal,
-                       UIColor.govUK.text.buttonSecondary)
-        XCTAssertEqual(sut.titleColorHighlighted,
-                       UIColor.govUK.text.buttonSecondaryHighlight)
-        XCTAssertEqual(sut.titleColorFocused, UIColor.govUK.text.buttonSecondaryFocussed)
-        XCTAssertEqual(sut.titleColorDisabled, UIColor.govUK.text.buttonSecondaryDisabled)
-        XCTAssertEqual(sut.titleFont, UIFont.govUK.body)
-        XCTAssertEqual(sut.backgroundColorNormal, .clear)
-        XCTAssertEqual(sut.backgroundColorHighlighted, .clear)
-        XCTAssertEqual(sut.backgroundColorFocused,
-                       UIColor.govUK.fills.surfaceButtonSecondaryFocussed)
-        XCTAssertEqual(sut.backgroundColorDisabled, .clear)
+        #expect(sut.titleColorNormal ==
+                UIColor.govUK.text.buttonSecondary)
+        #expect(sut.titleColorHighlighted ==
+                UIColor.govUK.text.buttonSecondaryHighlight)
+        #expect(sut.titleColorFocused ==
+                UIColor.govUK.text.buttonSecondaryFocussed)
+        #expect(sut.titleColorDisabled ==
+                UIColor.govUK.text.buttonSecondaryDisabled)
+        #expect(sut.titleFont == UIFont.govUK.body)
+        #expect(sut.backgroundColorNormal == .clear)
+        #expect(sut.backgroundColorHighlighted == .clear)
+        #expect(sut.backgroundColorFocused ==
+                UIColor.govUK.fills.surfaceButtonSecondaryFocussed)
+        #expect(sut.backgroundColorDisabled == .clear)
 
-        XCTAssertEqual(sut.borderColor, .clear)
+        #expect(sut.borderColor == .clear)
 
-        XCTAssertEqual(sut.cornerRadius, 4)
+        #expect(sut.cornerRadius == 4)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
-        XCTAssertEqual(accessibilityNormal, sut.accessibilityButtonShapesColor)
+        #expect(accessibilityNormal == sut.accessibilityButtonShapesColor)
 
         let accessibilityHighlighted = sut.accessibilityButtonShapesColor(for: .highlighted)
-        XCTAssertEqual(
-            accessibilityHighlighted,
+        #expect(
+            accessibilityHighlighted ==
             sut.accessibilityButtonShapesColor.withAlphaComponent(0.7)
         )
 
         let accessibilityFocussed = sut.accessibilityButtonShapesColor(for: .focused)
-        XCTAssertEqual(
-            accessibilityFocussed,
+        #expect(
+            accessibilityFocussed ==
             sut.accessibilityButtonShapesColor
         )
     }
 
-    func test_compact_returnsExpectedConfiguration() {
+    @Test
+    func compact_returnsExpectedConfiguration() {
         let sut = GOVUKButton.ButtonConfiguration.compact
 
-        XCTAssertEqual(sut.titleColorNormal,
-                       UIColor.govUK.text.buttonCompact)
-        XCTAssertEqual(sut.titleColorHighlighted,
-                       UIColor.govUK.text.buttonCompactHighlight)
-        XCTAssertEqual(sut.titleColorFocused, UIColor.govUK.text.buttonCompactFocussed)
-        XCTAssertEqual(sut.titleColorDisabled, UIColor.govUK.text.buttonCompactDisabled)
-        XCTAssertEqual(sut.titleFont, UIFont.govUK.body)
-        XCTAssertEqual(sut.backgroundColorNormal, UIColor.govUK.fills.surfaceButtonCompact)
-        XCTAssertEqual(sut.backgroundColorHighlighted, UIColor.govUK.fills.surfaceButtonCompactHighlight)
-        XCTAssertEqual(sut.backgroundColorFocused,
-                       UIColor.govUK.fills.surfaceButtonCompactFocussed)
-        XCTAssertEqual(sut.backgroundColorDisabled,
-                       UIColor.govUK.fills.surfaceButtonCompactDisabled)
+        #expect(sut.titleColorNormal ==
+                UIColor.govUK.text.buttonCompact)
+        #expect(sut.titleColorHighlighted ==
+                UIColor.govUK.text.buttonCompactHighlight)
+        #expect(sut.titleColorFocused ==
+                UIColor.govUK.text.buttonCompactFocussed)
+        #expect(sut.titleColorDisabled ==
+                UIColor.govUK.text.buttonCompactDisabled)
+        #expect(sut.titleFont == UIFont.govUK.body)
+        #expect(sut.backgroundColorNormal ==
+                UIColor.govUK.fills.surfaceButtonCompact)
+        #expect(sut.backgroundColorHighlighted ==
+                UIColor.govUK.fills.surfaceButtonCompactHighlight)
+        #expect(sut.backgroundColorFocused ==
+                UIColor.govUK.fills.surfaceButtonCompactFocussed)
+        #expect(sut.backgroundColorDisabled ==
+                UIColor.govUK.fills.surfaceButtonCompactDisabled)
 
-        XCTAssertEqual(sut.borderColor,
-                       UIColor.govUK.strokes.listDivider)
+        #expect(sut.borderColor ==
+                UIColor.govUK.strokes.listDivider)
 
-        XCTAssertEqual(sut.cornerRadius, 22)
+        #expect(sut.cornerRadius == 22)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
-        XCTAssertEqual(accessibilityNormal, sut.backgroundColorNormal)
+        #expect(accessibilityNormal == sut.backgroundColorNormal)
 
         let accessibilityHighlighted = sut.accessibilityButtonShapesColor(for: .highlighted)
-        XCTAssertEqual(
-            accessibilityHighlighted,
+        #expect(
+            accessibilityHighlighted ==
             sut.backgroundColorHighlighted
         )
 
         let accessibilityFocussed = sut.accessibilityButtonShapesColor(for: .focused)
-        XCTAssertEqual(
-            accessibilityFocussed,
+        #expect(
+            accessibilityFocussed ==
             sut.backgroundColorFocused
         )
     }
 
-    func test_backgroundColorFor_highlighted_returnsExpectedColor() {
+    @Test
+    func backgroundColorFor_highlighted_returnsExpectedColor() {
         let sut = GOVUKButton.ButtonConfiguration(
             titleFont: UIFont.govUK.body,
             backgroundColorNormal: .red,
@@ -126,10 +141,11 @@ final class ButtonConfigurationTests: XCTestCase {
             accessibilityButtonShapesColor: .purple
         )
         let result = sut.backgroundColor(for: [.highlighted, .focused])
-        XCTAssertEqual(result, .blue)
+        #expect(result == .blue)
     }
 
-    func test_backgroundColorFor_focussed_returnsExpectedColor() {
+    @Test
+    func backgroundColorFor_focussed_returnsExpectedColor() {
         let sut = GOVUKButton.ButtonConfiguration(
             titleFont: UIFont.govUK.body,
             backgroundColorNormal: .red,
@@ -139,6 +155,7 @@ final class ButtonConfigurationTests: XCTestCase {
             accessibilityButtonShapesColor: .purple
         )
         let result = sut.backgroundColor(for: [.focused])
-        XCTAssertEqual(result, .green)
+        #expect(result == .green)
     }
 }
+

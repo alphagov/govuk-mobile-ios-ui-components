@@ -1,152 +1,190 @@
-import XCTest
+import Foundation
 import SwiftUI
+import Testing
 
-final class FontExtensionsTests: XCTestCase {
+@Suite
+@MainActor
+struct FontExtensionsTests {
+
     // MARK: LARGE TITLE
-    func test_largeTitle_exists() {
-        XCTAssertNotNil(Font.govUK.largeTitle)
+    @Test
+    func largeTitle_exists() {
+        #expect(Font.govUK.largeTitle != nil)
     }
 
-    func test_largeTitleBold_exists() {
-        XCTAssertNotNil(Font.govUK.largeTitleBold)
+    @Test
+    func largeTitleBold_exists() {
+        #expect(Font.govUK.largeTitleBold != nil)
     }
 
     // MARK: TITLE 1
-    func test_title1_exists() {
-        XCTAssertNotNil(Font.govUK.title1)
+    @Test
+    func title1_exists() {
+        #expect(Font.govUK.title1 != nil)
     }
 
-    func test_title1Bold_exists() {
-        XCTAssertNotNil(Font.govUK.title1Bold)
+    @Test
+    func title1Bold_exists() {
+        #expect(Font.govUK.title1Bold != nil)
     }
 
     // MARK: TITLE 2
-    func test_title2_exists() {
-        XCTAssertNotNil(Font.govUK.title2)
+    @Test
+    func title2_exists() {
+        #expect(Font.govUK.title2 != nil)
     }
 
-    func test_title2Bold_exists() {
-        XCTAssertNotNil(Font.govUK.title2Bold)
+    @Test
+    func title2Bold_exists() {
+        #expect(Font.govUK.title2Bold != nil)
     }
 
     // MARK: TITLE 3
-    func test_title3_exists() {
-        XCTAssertNotNil(Font.govUK.title3)
+    @Test
+    func title3_exists() {
+        #expect(Font.govUK.title3 != nil)
     }
 
-    func test_title3Semibold_exists() {
-        XCTAssertNotNil(Font.govUK.title3Semibold)
+    @Test
+    func title3Semibold_exists() {
+        #expect(Font.govUK.title3Semibold != nil)
     }
 
     // MARK: HEADLINE
-    func test_headlineSemibold_exists() {
-        XCTAssertNotNil(Font.govUK.headlineSemibold)
+    @Test
+    func headlineSemibold_exists() {
+        #expect(Font.govUK.headlineSemibold != nil)
     }
 
-    func test_headlineSemiboldItalic_exists() {
-        XCTAssertNotNil(Font.govUK.headlineSemiboldItalic)
+    @Test
+    func headlineSemiboldItalic_exists() {
+        #expect(Font.govUK.headlineSemiboldItalic != nil)
     }
 
     // MARK: BODY
-    func test_body_exists() {
-        XCTAssertNotNil(Font.govUK.body)
+    @Test
+    func body_exists() {
+        #expect(Font.govUK.body != nil)
     }
 
-    func test_bodyItalic_exists() {
-        XCTAssertNotNil(Font.govUK.bodyItalic)
+    @Test
+    func bodyItalic_exists() {
+        #expect(Font.govUK.bodyItalic != nil)
     }
 
-    func test_bodySemibold_exists() {
-        XCTAssertNotNil(Font.govUK.bodySemibold)
+    @Test
+    func bodySemibold_exists() {
+        #expect(Font.govUK.bodySemibold != nil)
     }
 
-    func test_bodySemiboldItalic_exists() {
-        XCTAssertNotNil(Font.govUK.bodySemiboldItalic)
+    @Test
+    func bodySemiboldItalic_exists() {
+        #expect(Font.govUK.bodySemiboldItalic != nil)
     }
 
     // MARK: CALLOUT
-    func test_callout_exists() {
-        XCTAssertNotNil(Font.govUK.callout)
+    @Test
+    func callout_exists() {
+        #expect(Font.govUK.callout != nil)
     }
 
-    func test_calloutItalic_exists() {
-        XCTAssertNotNil(Font.govUK.calloutItalic)
+    @Test
+    func calloutItalic_exists() {
+        #expect(Font.govUK.calloutItalic != nil)
     }
 
-    func test_calloutSemibold_exists() {
-        XCTAssertNotNil(Font.govUK.calloutSemibold)
+    @Test
+    func calloutSemibold_exists() {
+        #expect(Font.govUK.calloutSemibold != nil)
     }
 
-    func test_calloutSemiboldItalic_exists() {
-        XCTAssertNotNil(Font.govUK.calloutSemibold)
+    @Test
+    func calloutSemiboldItalic_exists() {
+        #expect(Font.govUK.calloutSemibold != nil)
     }
 
     // MARK: SUBHEADLINE
-    func test_subheadline_exists() {
-        XCTAssertNotNil(Font.govUK.subheadline)
+    @Test
+    func subheadline_exists() {
+        #expect(Font.govUK.subheadline != nil)
     }
 
-    func test_subheadlineItalic_exists() {
-        XCTAssertNotNil(Font.govUK.subheadlineItalic)
+    @Test
+    func subheadlineItalic_exists() {
+        #expect(Font.govUK.subheadlineItalic != nil)
     }
 
-    func test_subheadlineSemibold_exists() {
-        XCTAssertNotNil(Font.govUK.subheadlineSemibold)
+    @Test
+    func subheadlineSemibold_exists() {
+        #expect(Font.govUK.subheadlineSemibold != nil)
     }
 
-    func test_subheadlineSemiboldItalic_exists() {
-        XCTAssertNotNil(Font.govUK.subheadlineSemiboldItalic)
+    @Test
+    func subheadlineSemiboldItalic_exists() {
+        #expect(Font.govUK.subheadlineSemiboldItalic != nil)
     }
 
     // MARK: FOOTNOTE
-    func test_footnote_exists() {
-        XCTAssertNotNil(Font.govUK.footnote)
+    @Test
+    func footnote_exists() {
+        #expect(Font.govUK.footnote != nil)
     }
 
-    func test_footnoteItalic_exists() {
-        XCTAssertNotNil(Font.govUK.footnoteItalic)
+    @Test
+    func footnoteItalic_exists() {
+        #expect(Font.govUK.footnoteItalic != nil)
     }
 
-    func test_footnoteSemibold_exists() {
-        XCTAssertNotNil(Font.govUK.footnoteSemibold)
+    @Test
+    func footnoteSemibold_exists() {
+        #expect(Font.govUK.footnoteSemibold != nil)
     }
 
-    func test_footnoteSemiboldItalic_exists() {
-        XCTAssertNotNil(Font.govUK.footnoteSemiboldItalic)
+    @Test
+    func footnoteSemiboldItalic_exists() {
+        #expect(Font.govUK.footnoteSemiboldItalic != nil)
     }
 
     // MARK: CAPTION 1
-    func test_caption1_exists() {
-        XCTAssertNotNil(Font.govUK.caption1)
+    @Test
+    func caption1_exists() {
+        #expect(Font.govUK.caption1 != nil)
     }
 
-    func test_caption1Italic_exists() {
-        XCTAssertNotNil(Font.govUK.caption1Italic)
+    @Test
+    func caption1Italic_exists() {
+        #expect(Font.govUK.caption1Italic != nil)
     }
     
-    func test_caption1Medium_exists() {
-        XCTAssertNotNil(Font.govUK.caption1Medium)
+    @Test
+    func caption1Medium_exists() {
+        #expect(Font.govUK.caption1Medium != nil)
     }
 
-    func test_caption1MediumItalic_exists() {
-        XCTAssertNotNil(Font.govUK.caption1MediumItalic)
+    @Test
+    func caption1MediumItalic_exists() {
+        #expect(Font.govUK.caption1MediumItalic != nil)
     }
 
     // MARK: CAPTION 2
-    func test_caption2_exists() {
-        XCTAssertNotNil(Font.govUK.caption2)
+    @Test
+    func caption2_exists() {
+        #expect(Font.govUK.caption2 != nil)
     }
 
-    func test_caption2Italic_exists() {
-        XCTAssertNotNil(Font.govUK.caption2Italic)
+    @Test
+    func caption2Italic_exists() {
+        #expect(Font.govUK.caption2Italic != nil)
     }
 
-    func test_caption2Semibold_exists() {
-        XCTAssertNotNil(Font.govUK.caption2Semibold)
+    @Test
+    func caption2Semibold_exists() {
+        #expect(Font.govUK.caption2Semibold != nil)
     }
 
-    func test_caption2SemiboldItalic_exists() {
-        XCTAssertNotNil(Font.govUK.caption2SemiboldItalic)
+    @Test
+    func caption2SemiboldItalic_exists() {
+        #expect(Font.govUK.caption2SemiboldItalic != nil)
     }
 }
 
