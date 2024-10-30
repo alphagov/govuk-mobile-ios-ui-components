@@ -8,12 +8,6 @@ import iOSSnapshotTestCase
 
 @MainActor
 class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
-    override func setUp() {
-        super.setUp()
-
-        // Enable or disable the record mode
-        self.recordMode = false // Set this to `false` after recording
-    }
 
     func test_primary_rendersCorrectly() {
         let viewController = ButtonStateViewController(
