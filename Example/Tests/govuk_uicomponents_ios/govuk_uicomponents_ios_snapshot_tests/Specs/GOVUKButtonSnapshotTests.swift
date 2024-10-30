@@ -64,6 +64,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let button = GOVUKButton(.primary)
         button.setTitle("primary", for: .normal)
         button.isHighlighted = true
+
         button.frame.size = CGSize(width: 200, height: 47)
 
         FBSnapshotVerifyView(button)
@@ -73,6 +74,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let button = GOVUKButton(.primary)
         button.setTitle("primary", for: .normal)
         button.isEnabled = false
+
         button.frame.size = CGSize(width: 200, height: 47)
 
         FBSnapshotVerifyView(button)
@@ -91,6 +93,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let button = GOVUKButton(.secondary)
         button.setTitle("secondary", for: .normal)
         button.isHighlighted = true
+
         button.frame.size = CGSize(width: 200, height: 47)
 
         FBSnapshotVerifyView(button)
@@ -100,6 +103,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let button = GOVUKButton(.secondary)
         button.setTitle("secondary", for: .normal)
         button.isEnabled = false
+
         button.frame.size = CGSize(width: 200, height: 47)
 
         FBSnapshotVerifyView(button)
@@ -118,6 +122,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let button = GOVUKButton(.compact)
         button.setTitle("compact", for: .normal)
         button.isHighlighted = true
+
         button.frame.size = CGSize(width: 200, height: 47)
 
         FBSnapshotVerifyView(button)
@@ -127,6 +132,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let button = GOVUKButton(.compact)
         button.setTitle("compact", for: .normal)
         button.isEnabled = false
+
         button.frame.size = CGSize(width: 200, height: 47)
 
         FBSnapshotVerifyView(button)
