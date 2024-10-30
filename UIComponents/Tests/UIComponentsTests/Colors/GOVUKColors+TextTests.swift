@@ -120,6 +120,14 @@ struct GOVUKColors_TextTests {
     }
 
     @Test
+    func buttonSuccess_returnsExpectedResult() {
+        let result = UIColor.govUK.Text.buttonSuccess
+
+        #expect(result.lightMode == .green1)
+        #expect(result.darkMode == .green2)
+    }
+
+    @Test
     func trailingIcon_returnsExpectedResult() {
         let result = UIColor.govUK.text.trailingIcon
 
