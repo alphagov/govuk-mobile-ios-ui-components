@@ -9,6 +9,11 @@ import iOSSnapshotTestCase
 @MainActor
 class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
+    override func setUp() {
+        super.setUp()
+        self.recordMode = false
+    }
+
     func test_primary_rendersCorrectly() {
         let viewController = ButtonStateViewController(
             viewModel: .init(title: "Primary", config: .primary, width: 200)
