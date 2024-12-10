@@ -38,7 +38,7 @@ jobs:
 
           sonar-scanner \
             -Dsonar.token=$SONAR_TOKEN \
-            -Dsonar.coverageReportPaths="test_output/sonarqube-generic-coverage.xml" \
+            -Dsonar.coverageReportPaths="build_output/sonarqube-generic-coverage.xml" \
             -Dsonar.projectVersion=$(./Scripts/app_version.sh) \
             -Dsonar.qualitygate.wait=true
         env:
