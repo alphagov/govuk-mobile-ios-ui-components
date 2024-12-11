@@ -2,7 +2,7 @@
 default: &DEFAULTS
   app: &APP_DEFAULTS
     scheme: GovUK-UIComponents
-    output_directory: build_output
+    output_directory: test_output
     workspace: GovUK-UIComponents.xcworkspace
     project: Example/GovUK-UIComponents.xcodeproj
     test_plan: UIComponents

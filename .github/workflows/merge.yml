@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - feature/*
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -28,5 +29,5 @@ jobs:
       - name: Save Artifacts
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # pin@v4.3.3
         with:
-          name: build-output
-          path: build_output
+          name: test-output
+          path: test_output
