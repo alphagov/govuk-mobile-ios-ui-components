@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - develop
-      - feature/*
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -20,14 +19,3 @@ jobs:
     needs: unit-test
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  save-artifacts:
-    name: Save Artifacts
-    needs: sonar-scan
-    runs-on: macos-15
-
-    steps:
-      - name: Save Artifacts
-        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # pin@v4.3.3
-        with:
-          name: test-output
-          path: test_output
