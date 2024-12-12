@@ -37,6 +37,10 @@ class Configuration
     setting(:scan, :devices)
   end
 
+  def scan_output_directory
+      setting(:scan, :output_directory)
+  end
+
   private
 
   attr_reader :lane_name, :yaml
