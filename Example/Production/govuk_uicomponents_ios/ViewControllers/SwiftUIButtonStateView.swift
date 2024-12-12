@@ -1,7 +1,6 @@
 import SwiftUI
 import UIComponents
 
-@available(iOS, introduced: 15.0)
 struct SwiftUIButtonStateView: View {
     let viewModel: ButtonStateViewModel
     @FocusState private var isButtonFocussed: Bool
