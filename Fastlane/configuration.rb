@@ -38,7 +38,7 @@ class Configuration
   end
 
   def scan_output_directory
-      setting(:scan, :output_directory)
+    setting(:scan, :output_directory)
   end
 
   private
