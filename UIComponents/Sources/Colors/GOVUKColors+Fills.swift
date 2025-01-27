@@ -106,5 +106,12 @@ extension GOVUKColors {
                 dark: .grey550.withAlphaComponent(0.24)
             )
         }()
+
+        public static let surfaceHomeHeaderBackground: UIColor = {
+            .init(
+                light: .blue1,
+                dark: .black
+            )
+        }()
     }
 }

@@ -173,4 +173,18 @@ struct GOVUKColors_FillsTests {
 
         #expect(result.darkMode == .grey550.withAlphaComponent(0.24))
     }
+
+    @Test
+    func surfaceHomeHeaderBackground_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceHomeHeaderBackground
+
+        #expect(result.lightMode == .blue1)
+    }
+
+    @Test
+    func surfaceHomeHeaderBackground_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceHomeHeaderBackground
+
+        #expect(result.darkMode == .black)
+    }
 }
