@@ -4,7 +4,7 @@ import UIKit
 extension UIColor {
     static let blue1: UIColor = #colorLiteral(red: 0.1137254902, green: 0.4392156863, blue: 0.7215686275, alpha: 1)
     static let blue2: UIColor = #colorLiteral(red: 0.1450980392, green: 0.6039215686, blue: 1, alpha: 1)
-    static let blue3: UIColor = #colorLiteral(red: 0, green: 0.8196078431, blue: 1, alpha: 1)
+    static let blue3: UIColor = #colorLiteral(red: 0, green: 1, blue: 0.8784313725, alpha: 1)
     static let blue4: UIColor = #colorLiteral(red: 0.2705882353, green: 0.9490196078, blue: 0.9921568627, alpha: 1)
     static let blue5: UIColor = #colorLiteral(red: 0, green: 0.1882352941, blue: 0.4705882353, alpha: 1)
     static let blue6: UIColor = #colorLiteral(red: 0.4784313725, green: 0.7607843137, blue: 1, alpha: 1)
