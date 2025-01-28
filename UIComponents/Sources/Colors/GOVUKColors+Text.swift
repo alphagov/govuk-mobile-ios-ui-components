@@ -54,15 +54,15 @@ extension GOVUKColors {
 
         public static let buttonSecondary: UIColor = {
             .init(
-                light: .blue1,
-                dark: .blue2
+                light: .green1,
+                dark: .green2
             )
         }()
 
         public static let buttonSecondaryHighlight: UIColor = {
             .init(
-                light: .blue5,
-                dark: .blue6
+                light: .green3,
+                dark: .green4
             )
         }()
 

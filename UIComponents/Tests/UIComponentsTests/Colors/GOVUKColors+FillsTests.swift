@@ -67,16 +67,16 @@ struct GOVUKColors_FillsTests {
     func surfaceButtonPrimary_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonPrimary
 
-        #expect(result.lightMode == .blue1)
-        #expect(result.darkMode == .blue2)
+        #expect(result.lightMode == .green1)
+        #expect(result.darkMode == .green2)
     }
 
     @Test
     func surfaceButtonPrimaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonPrimaryHighlight
 
-        #expect(result.lightMode == .blue5)
-        #expect(result.darkMode == .blue6)
+        #expect(result.lightMode == .green3)
+        #expect(result.darkMode == .green4)
     }
 
     @Test
