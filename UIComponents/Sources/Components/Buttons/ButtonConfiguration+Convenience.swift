@@ -12,7 +12,7 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonPrimaryHighlight,
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonPrimaryFocussed,
             backgroundColorDisabled: UIColor.govUK.fills.surfaceButtonPrimaryDisabled,
-            cornerRadius: 22,
+            cornerRadius: 15,
             accessibilityButtonShapesColor: UIColor.grey100
         )
     }
@@ -43,7 +43,7 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonCompactHighlight,
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonCompactFocussed,
             backgroundColorDisabled: UIColor.govUK.fills.surfaceButtonCompactDisabled,
-            cornerRadius: 22,
+            cornerRadius: 15,
             borderColor: UIColor.govUK.strokes.listDivider,
             accessibilityButtonShapesColor: UIColor.grey100
         )

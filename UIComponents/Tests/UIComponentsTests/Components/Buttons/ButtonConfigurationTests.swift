@@ -30,7 +30,7 @@ struct ButtonConfigurationTests {
 
         #expect(sut.borderColor == .clear)
 
-        #expect(sut.cornerRadius == 22)
+        #expect(sut.cornerRadius == 15)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
         #expect(accessibilityNormal == sut.backgroundColorNormal)
@@ -112,7 +112,7 @@ struct ButtonConfigurationTests {
         #expect(sut.borderColor ==
                 UIColor.govUK.strokes.listDivider)
 
-        #expect(sut.cornerRadius == 22)
+        #expect(sut.cornerRadius == 15)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
         #expect(accessibilityNormal == sut.backgroundColorNormal)
