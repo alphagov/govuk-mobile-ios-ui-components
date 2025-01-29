@@ -59,16 +59,16 @@ struct GOVUKColors_TextTests {
     func buttonSecondary_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondary
 
-        #expect(result.lightMode == .green1)
-        #expect(result.darkMode == .green2)
+        #expect(result.lightMode == .blue1)
+        #expect(result.darkMode == .blue2)
     }
 
     @Test
     func buttonSecondaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondaryHighlight
 
-        #expect(result.lightMode == .green3)
-        #expect(result.darkMode == .green4)
+        #expect(result.lightMode == .blue5)
+        #expect(result.darkMode == .blue6)
     }
 
     @Test
