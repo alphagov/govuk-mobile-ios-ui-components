@@ -113,5 +113,12 @@ extension GOVUKColors {
                 dark: .black
             )
         }()
+
+        public static let surfaceToggleSelected: UIColor = {
+            .init(
+                light: .blue1,
+                dark: .blue2
+            )
+        }()
     }
 }
