@@ -187,4 +187,18 @@ struct GOVUKColors_FillsTests {
 
         #expect(result.darkMode == .black)
     }
+
+    @Test
+    func surfaceToggleSelected_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceToggleSelected
+
+        #expect(result.lightMode == .blue1)
+    }
+
+    @Test
+    func surfaceToggleSelected_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceToggleSelected
+
+        #expect(result.darkMode == .blue2)
+    }
 }
