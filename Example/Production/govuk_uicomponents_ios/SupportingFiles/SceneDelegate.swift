@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder,
 
         guard let window else { return }
 
-        let viewController = ViewController()
+        let viewController = TestSelectionViewController()
         let navController = UINavigationController(rootViewController: viewController)
 
         window.rootViewController = navController
