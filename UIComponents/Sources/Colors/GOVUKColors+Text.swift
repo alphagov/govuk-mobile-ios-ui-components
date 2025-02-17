@@ -19,15 +19,15 @@ extension GOVUKColors {
 
         public static let link: UIColor = {
             .init(
-                light: .blue1,
-                dark: .blue2
+                light: .primaryBlue,
+                dark: .accentBlue
             )
         }()
 
         public static let buttonSuccess: UIColor = {
             .init(
-                light: .green1,
-                dark: .green2
+                light: .primaryGreen,
+                dark: .accentGreen
             )
         }()
 
@@ -54,15 +54,15 @@ extension GOVUKColors {
 
         public static let buttonSecondary: UIColor = {
             .init(
-                light: .blue1,
-                dark: .blue2
+                light: .primaryBlue,
+                dark: .accentBlue
             )
         }()
 
         public static let buttonSecondaryHighlight: UIColor = {
             .init(
-                light: .blue5,
-                dark: .blue6
+                light: .blueDarker50,
+                dark: .blueLighter25
             )
         }()
 
@@ -82,15 +82,15 @@ extension GOVUKColors {
 
         public static let buttonCompact: UIColor = {
             .init(
-                light: .blue1,
-                dark: .blue2
+                light: .primaryBlue,
+                dark: .accentBlue
             )
         }()
 
         public static let buttonCompactHighlight: UIColor = {
             .init(
-                light: .blue5,
-                dark: .blue6
+                light: .blueDarker50,
+                dark: .blueLighter25
             )
         }()
 
