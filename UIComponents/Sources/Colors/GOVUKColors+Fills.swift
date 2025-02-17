@@ -12,15 +12,22 @@ extension GOVUKColors {
 
         public static let surfaceBackground: UIColor = {
             .init(
-                light: .grey50,
+                light: .white,
                 dark: .black
             )
         }()
 
-        public static let surfaceCard: UIColor = {
+        public static let surfaceCardDefault: UIColor = {
             .init(
                 light: .white,
                 dark: .grey800
+            )
+        }()
+
+        public static let surfaceCardBlue: UIColor = {
+            .init(
+                light: .blueLighter95,
+                dark: .blueDarker50
             )
         }()
 

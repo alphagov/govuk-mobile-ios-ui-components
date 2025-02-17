@@ -25,7 +25,7 @@ struct GOVUKColors_FillsTests {
     func surfaceBackground_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceBackground
 
-        #expect(result.lightMode == .grey50)
+        #expect(result.lightMode == .white)
     }
 
     @Test
@@ -37,14 +37,28 @@ struct GOVUKColors_FillsTests {
 
     @Test
     func surfaceCard_light_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceCard
+        let result = UIColor.govUK.fills.surfaceCardDefault
 
         #expect(result.lightMode == .white)
     }
 
     @Test
     func surfaceCard_dark_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceCard
+        let result = UIColor.govUK.fills.surfaceCardDefault
+
+        #expect(result.darkMode == .grey800)
+    }
+
+    @Test
+    func surfaceCardBlue_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardDefault
+
+        #expect(result.lightMode == .white)
+    }
+
+    @Test
+    func surfaceCardBlue_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardDefault
 
         #expect(result.darkMode == .grey800)
     }
