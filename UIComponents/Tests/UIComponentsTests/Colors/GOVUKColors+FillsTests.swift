@@ -192,13 +192,13 @@ struct GOVUKColors_FillsTests {
     func surfaceToggleSelected_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceToggleSelected
 
-        #expect(result.lightMode == .primaryBlue)
+        #expect(result.lightMode == .primaryGreen)
     }
 
     @Test
     func surfaceToggleSelected_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceToggleSelected
 
-        #expect(result.darkMode == .accentBlue)
+        #expect(result.darkMode == .primaryGreen)
     }
 }
