@@ -27,8 +27,8 @@ struct GOVUKColors_TextTests {
     func link_returnsExpectedResult() {
         let result = UIColor.govUK.text.link
 
-        #expect(result.lightMode == .blue1)
-        #expect(result.darkMode == .blue2)
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .accentBlue)
     }
 
     @Test
@@ -59,16 +59,16 @@ struct GOVUKColors_TextTests {
     func buttonSecondary_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondary
 
-        #expect(result.lightMode == .blue1)
-        #expect(result.darkMode == .blue2)
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .accentBlue)
     }
 
     @Test
     func buttonSecondaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondaryHighlight
 
-        #expect(result.lightMode == .blue5)
-        #expect(result.darkMode == .blue6)
+        #expect(result.lightMode == .blueDarker50)
+        #expect(result.darkMode == .blueLighter25)
     }
 
     @Test
@@ -91,16 +91,16 @@ struct GOVUKColors_TextTests {
     func buttonCompact_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonCompact
 
-        #expect(result.lightMode == .blue1)
-        #expect(result.darkMode == .blue2)
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .accentBlue)
     }
 
     @Test
     func buttonCompactHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonCompactHighlight
 
-        #expect(result.lightMode == .blue5)
-        #expect(result.darkMode == .blue6)
+        #expect(result.lightMode == .blueDarker50)
+        #expect(result.darkMode == .blueLighter25)
     }
 
     @Test
@@ -123,8 +123,8 @@ struct GOVUKColors_TextTests {
     func buttonSuccess_returnsExpectedResult() {
         let result = UIColor.govUK.Text.buttonSuccess
 
-        #expect(result.lightMode == .green1)
-        #expect(result.darkMode == .green2)
+        #expect(result.lightMode == .primaryGreen)
+        #expect(result.darkMode == .accentGreen)
     }
 
     @Test

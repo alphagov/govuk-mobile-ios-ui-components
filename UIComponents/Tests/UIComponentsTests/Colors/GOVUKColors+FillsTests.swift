@@ -53,37 +53,37 @@ struct GOVUKColors_FillsTests {
     func surfaceCardSelected_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardSelected
 
-        #expect(result.lightMode == .blue7)
+        #expect(result.lightMode == .greenLighter95)
     }
 
     @Test
     func surfaceCardSelected_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardSelected
 
-        #expect(result.darkMode == .blue8)
+        #expect(result.darkMode == .greenDarker50)
     }
 
     @Test
     func surfaceButtonPrimary_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonPrimary
 
-        #expect(result.lightMode == .green1)
-        #expect(result.darkMode == .green2)
+        #expect(result.lightMode == .primaryGreen)
+        #expect(result.darkMode == .accentGreen)
     }
 
     @Test
     func surfaceButtonPrimaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonPrimaryHighlight
 
-        #expect(result.lightMode == .green3)
-        #expect(result.darkMode == .green4)
+        #expect(result.lightMode == .greenDarker25)
+        #expect(result.darkMode == .greenLighter25)
     }
 
     @Test
     func surfaceButtonPrimaryFocussed_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonPrimaryFocussed
 
-        #expect(result == UIColor.yellow1)
+        #expect(result == UIColor.primaryYellow)
     }
 
     @Test
@@ -112,30 +112,30 @@ struct GOVUKColors_FillsTests {
     func surfaceButtonSecondaryFocussed_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonSecondaryFocussed
 
-        #expect(result == UIColor.yellow1)
+        #expect(result == UIColor.primaryYellow)
     }
 
     @Test
     func surfaceButtonCompact_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonCompact
 
-        #expect(result.lightMode == .white)
-        #expect(result.darkMode == .grey800)
+        #expect(result.lightMode == .blueLighter95)
+        #expect(result.darkMode == .blueDarker80)
     }
 
     @Test
     func surfaceButtonCompactHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonCompactHighlight
 
-        #expect(result.lightMode == .blue7)
-        #expect(result.darkMode == .blue8)
+        #expect(result.lightMode == .blueLighter95)
+        #expect(result.darkMode == .blueDarker80)
     }
 
     @Test
     func surfaceButtonCompactFocussed_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonCompactFocussed
 
-        #expect(result == UIColor.yellow1)
+        #expect(result == UIColor.primaryYellow)
     }
 
     @Test
@@ -178,7 +178,7 @@ struct GOVUKColors_FillsTests {
     func surfaceHomeHeaderBackground_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceHomeHeaderBackground
 
-        #expect(result.lightMode == .blue1)
+        #expect(result.lightMode == .primaryBlue)
     }
 
     @Test
@@ -192,13 +192,13 @@ struct GOVUKColors_FillsTests {
     func surfaceToggleSelected_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceToggleSelected
 
-        #expect(result.lightMode == .blue1)
+        #expect(result.lightMode == .primaryBlue)
     }
 
     @Test
     func surfaceToggleSelected_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceToggleSelected
 
-        #expect(result.darkMode == .blue2)
+        #expect(result.darkMode == .accentBlue)
     }
 }

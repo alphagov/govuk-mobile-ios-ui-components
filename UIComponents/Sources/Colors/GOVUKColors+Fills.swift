@@ -26,27 +26,27 @@ extension GOVUKColors {
 
         public static let surfaceCardSelected: UIColor = {
             .init(
-                light: .blue7,
-                dark: .blue8
+                light: .greenLighter95,
+                dark: .greenDarker50
             )
         }()
 
         public static let surfaceButtonPrimary: UIColor = {
             .init(
-                light: .green1,
-                dark: .green2
+                light: .primaryGreen,
+                dark: .accentGreen
             )
         }()
 
         public static let surfaceButtonPrimaryHighlight: UIColor = {
             .init(
-                light: .green3,
-                dark: .green4
+                light: .greenDarker25,
+                dark: .greenLighter25
             )
         }()
 
         public static let surfaceButtonPrimaryFocussed: UIColor = {
-            .yellow1
+            .primaryYellow
         }()
 
         public static let surfaceButtonPrimaryDisabled: UIColor = {
@@ -65,25 +65,25 @@ extension GOVUKColors {
         }()
 
         public static let surfaceButtonSecondaryFocussed: UIColor = {
-            .yellow1
+            .primaryYellow
         }()
 
         public static let surfaceButtonCompact: UIColor = {
             .init(
-                light: .white,
-                dark: .grey800
+                light: .blueLighter95,
+                dark: .blueDarker80
             )
         }()
 
         public static let surfaceButtonCompactHighlight: UIColor = {
             .init(
-                light: .blue7,
-                dark: .blue8
+                light: .blueLighter95,
+                dark: .blueDarker80
             )
         }()
 
         public static let surfaceButtonCompactFocussed: UIColor = {
-            .yellow1
+            .primaryYellow
         }()
 
         public static let surfaceButtonCompactDisabled: UIColor = {
@@ -109,15 +109,15 @@ extension GOVUKColors {
 
         public static let surfaceHomeHeaderBackground: UIColor = {
             .init(
-                light: .blue1,
+                light: .primaryBlue,
                 dark: .black
             )
         }()
 
         public static let surfaceToggleSelected: UIColor = {
             .init(
-                light: .blue1,
-                dark: .blue2
+                light: .primaryBlue,
+                dark: .accentBlue
             )
         }()
     }
