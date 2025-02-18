@@ -18,6 +18,13 @@
 		5DD6F3002CC28298005BC5D3 /* ButtonStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F2FF2CC28298005BC5D3 /* ButtonStateViewController.swift */; };
 		5DD6F30F2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F30E2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift */; };
 		9681C3162C402CC20094661E /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9681C3152C402CC20094661E /* HostingViewController.swift */; };
+		B0FAEDFD2D53794200A1D486 /* TestSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAEDEB2D525DA000A1D486 /* TestSelectionViewController.swift */; };
+		B0FAEDFE2D53794900A1D486 /* ButtonTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAEDE72D525DA000A1D486 /* ButtonTestingViewController.swift */; };
+		B0FAEDFF2D53795100A1D486 /* FontTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAEDE92D525DA000A1D486 /* FontTestingViewController.swift */; };
+		B0FAEE012D53B8E800A1D486 /* FillsColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAEE002D53B8E800A1D486 /* FillsColoursViewController.swift */; };
+		B0FAF1CD2D5CA19800A1D486 /* ColourSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAF1CC2D5CA19800A1D486 /* ColourSelectionViewController.swift */; };
+		B0FAF1CF2D5CA43800A1D486 /* StrokesColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAF1CE2D5CA43800A1D486 /* StrokesColoursViewController.swift */; };
+		B0FAF1D12D5CA7AD00A1D486 /* TextColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FAF1D02D5CA7AD00A1D486 /* TextColoursViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +66,13 @@
 		5DD6F2FF2CC28298005BC5D3 /* ButtonStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateViewController.swift; sourceTree = "<group>"; };
 		5DD6F30E2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIButtonStateView.swift; sourceTree = "<group>"; };
 		9681C3152C402CC20094661E /* HostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
+		B0FAEDE72D525DA000A1D486 /* ButtonTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTestingViewController.swift; sourceTree = "<group>"; };
+		B0FAEDE92D525DA000A1D486 /* FontTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTestingViewController.swift; sourceTree = "<group>"; };
+		B0FAEDEB2D525DA000A1D486 /* TestSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSelectionViewController.swift; sourceTree = "<group>"; };
+		B0FAEE002D53B8E800A1D486 /* FillsColoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillsColoursViewController.swift; sourceTree = "<group>"; };
+		B0FAF1CC2D5CA19800A1D486 /* ColourSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourSelectionViewController.swift; sourceTree = "<group>"; };
+		B0FAF1CE2D5CA43800A1D486 /* StrokesColoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokesColoursViewController.swift; sourceTree = "<group>"; };
+		B0FAF1D02D5CA7AD00A1D486 /* TextColoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColoursViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -81,6 +95,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/GOVUKButtonSnapshotTests.swift,
+				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/GOVUKUIComponentsSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/SwiftUIButtonSnapshotTests.swift,
 			);
 			target = 5DB0C06B2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */;
@@ -206,6 +221,13 @@
 				5DD6F30E2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift */,
 				5D02784D2C2AA90900F2A4EB /* ViewController.swift */,
 				5DD6F2FF2CC28298005BC5D3 /* ButtonStateViewController.swift */,
+				B0FAEDE72D525DA000A1D486 /* ButtonTestingViewController.swift */,
+				B0FAEDE92D525DA000A1D486 /* FontTestingViewController.swift */,
+				B0FAEDEB2D525DA000A1D486 /* TestSelectionViewController.swift */,
+				B0FAF1CC2D5CA19800A1D486 /* ColourSelectionViewController.swift */,
+				B0FAF1CE2D5CA43800A1D486 /* StrokesColoursViewController.swift */,
+				B0FAEE002D53B8E800A1D486 /* FillsColoursViewController.swift */,
+				B0FAF1D02D5CA7AD00A1D486 /* TextColoursViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -402,13 +424,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FAEE012D53B8E800A1D486 /* FillsColoursViewController.swift in Sources */,
+				B0FAF1D12D5CA7AD00A1D486 /* TextColoursViewController.swift in Sources */,
+				B0FAEDFF2D53795100A1D486 /* FontTestingViewController.swift in Sources */,
 				5D02784E2C2AA90900F2A4EB /* ViewController.swift in Sources */,
 				5DD6F2FE2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift in Sources */,
 				5DD6F30F2CC28F2B005BC5D3 /* SwiftUIButtonStateView.swift in Sources */,
+				B0FAEDFD2D53794200A1D486 /* TestSelectionViewController.swift in Sources */,
 				5DD6F3002CC28298005BC5D3 /* ButtonStateViewController.swift in Sources */,
+				B0FAF1CD2D5CA19800A1D486 /* ColourSelectionViewController.swift in Sources */,
+				B0FAF1CF2D5CA43800A1D486 /* StrokesColoursViewController.swift in Sources */,
 				5D02784A2C2AA90900F2A4EB /* AppDelegate.swift in Sources */,
 				9681C3162C402CC20094661E /* HostingViewController.swift in Sources */,
 				5D02784C2C2AA90900F2A4EB /* SceneDelegate.swift in Sources */,
+				B0FAEDFE2D53794900A1D486 /* ButtonTestingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
