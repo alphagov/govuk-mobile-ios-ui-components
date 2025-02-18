@@ -5,7 +5,9 @@ class FillsColoursViewController: UIViewController {
     let colors: [(name: String, color: UIColor)] = [
         ("Surface Fixed Container", .govUK.fills.surfaceFixedContainer),
         ("Surface Background", .govUK.fills.surfaceBackground),
-        ("Surface Card", .govUK.fills.surfaceCardDefault),
+        ("Surface List", .govUK.fills.surfaceList),
+        ("Surface Card Default", .govUK.fills.surfaceCardDefault),
+        ("Surface Card Blue", .govUK.fills.surfaceCardBlue),
         ("Surface Card Selected", .govUK.fills.surfaceCardSelected),
         ("Surface Button Primary", .govUK.fills.surfaceButtonPrimary),
         ("Surface Button Primary Highlight", .govUK.fills.surfaceButtonPrimaryHighlight),
