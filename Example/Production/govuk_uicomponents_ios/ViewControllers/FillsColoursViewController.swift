@@ -80,7 +80,7 @@ class FillsColoursViewController: UIViewController {
         containerView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            containerView.heightAnchor.constraint(equalToConstant: 30),
+            containerView.heightAnchor.constraint(equalToConstant: 25),
 
             label.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
