@@ -4,7 +4,9 @@ import UIComponents
 class StrokesColoursViewController: UIViewController {
     let colors: [(name: String, color: UIColor)] = [
         ("List Divider", .govUK.strokes.listDivider),
-        ("Page Control Inactive", .govUK.strokes.pageControlInactive)
+        ("Page Control Inactive", .govUK.strokes.pageControlInactive),
+        ("Card Blue", .govUK.strokes.cardBlue),
+        ("Card Selected", .govUK.strokes.cardSelected)
     ]
 
     override func viewDidLoad() {

@@ -17,7 +17,7 @@ class GOVUKUIComponentsSnapshotTests: FBSnapshotTestCase {
         let viewController = ButtonTestingViewController(
         )
         let nav = UINavigationController(rootViewController: viewController)
-        nav.navigationBar.prefersLargeTitles = true
+        nav.navigationBar.prefersLargeTitles = false
 
         let window = UIApplication.shared.windows.first
         window?.rootViewController = nav
