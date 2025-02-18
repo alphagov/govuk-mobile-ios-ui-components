@@ -131,7 +131,7 @@ struct GOVUKColors_TextTests {
     func trailingIcon_returnsExpectedResult() {
         let result = UIColor.govUK.text.trailingIcon
 
-        #expect(result.lightMode == .grey300)
-        #expect(result.darkMode == .grey500)
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .blueLighter95)
     }
 }

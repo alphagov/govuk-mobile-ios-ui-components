@@ -110,8 +110,8 @@ extension GOVUKColors {
 
         public static let trailingIcon: UIColor = {
             .init(
-                light: .grey300,
-                dark: .grey500
+                light: .primaryBlue,
+                dark: .blueLighter95
             )
         }()
     }
