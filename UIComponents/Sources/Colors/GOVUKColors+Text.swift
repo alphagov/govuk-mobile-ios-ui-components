@@ -24,6 +24,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let linkHeader: UIColor = {
+            .init(
+                light: .white,
+                dark: .accentBlue
+            )
+        }()
+
         public static let buttonSuccess: UIColor = {
             .init(
                 light: .primaryGreen,
