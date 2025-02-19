@@ -199,7 +199,7 @@ struct GOVUKColors_FillsTests {
     func surfaceHomeHeaderBackground_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceHomeHeaderBackground
 
-        #expect(result.darkMode == .black)
+        #expect(result.darkMode == .blueDarker50)
     }
 
     @Test

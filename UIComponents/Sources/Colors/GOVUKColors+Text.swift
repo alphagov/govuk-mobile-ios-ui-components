@@ -108,6 +108,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let header: UIColor = {
+            .init(
+                light: .white,
+                dark: .white
+            )
+        }()
+
         public static let trailingIcon: UIColor = {
             .init(
                 light: .primaryBlue,
