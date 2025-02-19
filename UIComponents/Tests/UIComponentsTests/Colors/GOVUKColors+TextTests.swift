@@ -120,19 +120,27 @@ struct GOVUKColors_TextTests {
     }
 
     @Test
-    func header_returnsExpectedResult() {
-        let result = UIColor.govUK.text.header
-
-        #expect(result.lightMode == .white)
-        #expect(result.darkMode == .white)
-    }
-
-    @Test
     func buttonSuccess_returnsExpectedResult() {
         let result = UIColor.govUK.Text.buttonSuccess
 
         #expect(result.lightMode == .primaryGreen)
         #expect(result.darkMode == .accentGreen)
+    }
+
+    @Test
+    func linkHeader_returnsExpectedResult() {
+        let result = UIColor.govUK.text.linkHeader
+
+        #expect(result.lightMode == .white)
+        #expect(result.darkMode == .accentBlue)
+    }
+
+    @Test
+    func header_returnsExpectedResult() {
+        let result = UIColor.govUK.text.header
+
+        #expect(result.lightMode == .white)
+        #expect(result.darkMode == .white)
     }
 
     @Test
