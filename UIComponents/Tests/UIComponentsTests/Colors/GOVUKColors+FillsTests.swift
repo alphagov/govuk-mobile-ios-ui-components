@@ -215,4 +215,32 @@ struct GOVUKColors_FillsTests {
 
         #expect(result.darkMode == .primaryGreen)
     }
+
+    @Test
+    func surfaceList_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceList
+
+        #expect(result.lightMode == .blueLighter95)
+    }
+
+    @Test
+    func surfaceList_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceList
+
+        #expect(result.darkMode == .blueDarker80)
+    }
+
+    @Test
+    func surfaceListHeading_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListHeading
+
+        #expect(result.lightMode == .blueLighter95)
+    }
+
+    @Test
+    func surfaceListHeading_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListHeading
+
+        #expect(result.darkMode == .blueDarker50)
+    }
 }
