@@ -120,6 +120,14 @@ struct GOVUKColors_TextTests {
     }
 
     @Test
+    func buttonDestructive_returnsExpectedResult() {
+        let result = UIColor.govUK.text.buttonDestructive
+
+        #expect(result.lightMode == .primaryRed)
+        #expect(result.darkMode == .accentRed)
+    }
+
+    @Test
     func buttonSuccess_returnsExpectedResult() {
         let result = UIColor.govUK.Text.buttonSuccess
 

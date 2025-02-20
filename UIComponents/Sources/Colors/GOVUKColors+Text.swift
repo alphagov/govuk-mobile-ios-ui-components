@@ -115,6 +115,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let buttonDestructive: UIColor = {
+            .init(
+                light: .primaryRed,
+                dark: .accentRed
+            )
+        }()
+
         public static let header: UIColor = {
             .init(
                 light: .white,
