@@ -19,7 +19,8 @@ extension GOVUKButton {
         let backgroundColorDisabled: UIColor
         let cornerRadius: CGFloat
 
-        let borderColor: UIColor
+        let borderColorNormal: UIColor
+        let borderColorHighlighted: UIColor
 
         let accessibilityButtonShapesColor: UIColor
 
@@ -37,7 +38,8 @@ extension GOVUKButton {
                     backgroundColorFocused: UIColor,
                     backgroundColorDisabled: UIColor,
                     cornerRadius: CGFloat = 4,
-                    borderColor: UIColor = .clear,
+                    borderColorNormal: UIColor = .clear,
+                    borderColorHighlighted: UIColor = .clear,
                     accessibilityButtonShapesColor: UIColor) {
             self.titleColorNormal = titleColorNormal
             self.titleColorHighlighted = titleColorHighlighted
@@ -52,7 +54,8 @@ extension GOVUKButton {
             self.backgroundColorHighlighted = backgroundColorHighlighted
             self.backgroundColorFocused = backgroundColorFocused
             self.backgroundColorDisabled = backgroundColorDisabled
-            self.borderColor = borderColor
+            self.borderColorNormal = borderColorNormal
+            self.borderColorHighlighted = borderColorHighlighted
             self.cornerRadius = cornerRadius
             self.accessibilityButtonShapesColor = accessibilityButtonShapesColor
         }

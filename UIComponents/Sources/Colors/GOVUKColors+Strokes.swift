@@ -30,5 +30,12 @@ extension GOVUKColors {
                 dark: .accentGreen
             )
         }()
+
+        public static let buttonCompactHighlight: UIColor = {
+            .init(
+                light: .blueLighter25,
+                dark: .blueDarker25
+            )
+        }()
     }
 }

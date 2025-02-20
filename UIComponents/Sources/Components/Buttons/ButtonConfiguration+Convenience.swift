@@ -44,7 +44,8 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonCompactFocussed,
             backgroundColorDisabled: UIColor.govUK.fills.surfaceButtonCompactDisabled,
             cornerRadius: 15,
-            borderColor: UIColor.govUK.strokes.listDivider,
+            borderColorNormal: UIColor.govUK.strokes.cardBlue,
+            borderColorHighlighted: UIColor.govUK.strokes.buttonCompactHighlight,
             accessibilityButtonShapesColor: UIColor.grey100
         )
     }

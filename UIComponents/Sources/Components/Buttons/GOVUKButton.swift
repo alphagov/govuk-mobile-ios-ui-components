@@ -62,6 +62,7 @@ final public class GOVUKButton: UIButton {
     override public var isHighlighted: Bool {
         didSet {
             configureBackgroundColor()
+            configureBorderColor()
         }
     }
 
@@ -174,9 +175,12 @@ final public class GOVUKButton: UIButton {
     private func configureBorderColor(state: UIControl.State? = nil) {
         layer.borderWidth = 0.5
         let localState = state ?? self.state
-        if localState == .highlighted || localState == .normal {
-            layer.borderColor = buttonConfiguration.borderColor.cgColor
-        } else {
+        switch localState {
+        case .normal:
+            layer.borderColor = buttonConfiguration.borderColorNormal.cgColor
+        case .highlighted:
+            layer.borderColor = buttonConfiguration.borderColorHighlighted.cgColor
+        default:
             layer.borderColor = UIColor.clear.cgColor
         }
     }
