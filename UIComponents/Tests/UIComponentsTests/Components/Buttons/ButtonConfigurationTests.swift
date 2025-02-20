@@ -28,7 +28,7 @@ struct ButtonConfigurationTests {
         #expect(sut.backgroundColorDisabled ==
                 UIColor.govUK.fills.surfaceButtonPrimaryDisabled)
 
-        #expect(sut.borderColor == .clear)
+        #expect(sut.borderColorNormal == .clear)
 
         #expect(sut.cornerRadius == 15)
 
@@ -67,7 +67,7 @@ struct ButtonConfigurationTests {
                 UIColor.govUK.fills.surfaceButtonSecondaryFocussed)
         #expect(sut.backgroundColorDisabled == .clear)
 
-        #expect(sut.borderColor == .clear)
+        #expect(sut.borderColorNormal == .clear)
 
         #expect(sut.cornerRadius == 4)
 
@@ -109,8 +109,10 @@ struct ButtonConfigurationTests {
         #expect(sut.backgroundColorDisabled ==
                 UIColor.govUK.fills.surfaceButtonCompactDisabled)
 
-        #expect(sut.borderColor ==
-                UIColor.govUK.strokes.listDivider)
+        #expect(sut.borderColorNormal ==
+                UIColor.govUK.strokes.cardBlue)
+        #expect(sut.borderColorHighlighted ==
+                UIColor.govUK.strokes.buttonCompactHighlight)
 
         #expect(sut.cornerRadius == 15)
 
