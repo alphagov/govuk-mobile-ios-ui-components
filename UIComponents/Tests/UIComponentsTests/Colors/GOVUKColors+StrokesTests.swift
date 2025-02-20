@@ -22,4 +22,28 @@ struct GOVUKColors_StrokesTests {
         #expect(result.lightMode == .grey500)
         #expect(result.darkMode == .grey300)
     }
+
+    @Test
+    func cardBlue_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.cardBlue
+
+        #expect(result.lightMode == .blueLighter50)
+        #expect(result.darkMode == .primaryBlue)
+    }
+
+    @Test
+    func cardSelected_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.cardSelected
+
+        #expect(result.lightMode == .primaryGreen)
+        #expect(result.darkMode == .accentGreen)
+    }
+
+    @Test
+    func buttonCompactHighlight_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonCompactHighlight
+
+        #expect(result.lightMode == .blueLighter25)
+        #expect(result.darkMode == .blueDarker25)
+    }
 }
