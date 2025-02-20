@@ -134,5 +134,12 @@ extension GOVUKColors {
                 dark: .blueDarker80
             )
         }()
+
+        public static let surfaceListHeading: UIColor = {
+            .init(
+                light: .blueLighter95,
+                dark: .blueDarker50
+            )
+        }()
     }
 }
