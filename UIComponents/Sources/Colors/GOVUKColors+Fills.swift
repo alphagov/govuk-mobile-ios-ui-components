@@ -31,6 +31,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceCardGreen: UIColor = {
+            .init(
+                light: .greenLighter50,
+                dark: .greenDarker50
+            )
+        }()
+
         public static let surfaceCardSelected: UIColor = {
             .init(
                 light: .greenLighter95,
