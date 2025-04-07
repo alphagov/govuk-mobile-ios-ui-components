@@ -24,6 +24,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let cardGreen: UIColor = {
+            .init(
+                light: .greenLighter50,
+                dark: .greenDarker50
+            )
+        }()
+
         public static let cardSelected: UIColor = {
             .init(
                 light: .primaryGreen,

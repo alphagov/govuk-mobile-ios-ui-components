@@ -32,6 +32,20 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
+    func cardGreen_light_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.cardGreen
+
+        #expect(result.lightMode == .greenLighter50)
+    }
+
+    @Test
+    func cardGreen_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.cardGreen
+
+        #expect(result.darkMode == .greenDarker50)
+    }
+
+    @Test
     func cardSelected_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardSelected
 
