@@ -64,20 +64,6 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
-    func surfaceCardGreen_light_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceCardGreen
-
-        #expect(result.lightMode == .greenLighter50)
-    }
-
-    @Test
-    func surfaceCardGreen_dark_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceCardGreen
-
-        #expect(result.darkMode == .greenDarker50)
-    }
-
-    @Test
     func surfaceCardSelected_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardSelected
 
