@@ -11,8 +11,8 @@ struct GOVUKColors_StrokesTests {
     func listDivider_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.listDivider
 
-        #expect(result.lightMode == .blueLighter50)
-        #expect(result.darkMode == .blueDarker25)
+        #expect(result.lightMode == .grey300)
+        #expect(result.darkMode == .grey500)
     }
 
     @Test

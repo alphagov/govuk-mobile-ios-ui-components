@@ -5,8 +5,8 @@ extension GOVUKColors {
     public struct Strokes {
         public static let listDivider: UIColor = {
             .init(
-                light: .blueLighter50,
-                dark: .blueDarker25
+                light: .grey300,
+                dark: .grey500
             )
         }()
 
