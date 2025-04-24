@@ -57,7 +57,6 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
     }
 
     func test_destructive_rendersCorrectly() {
-        recordMode = true
         let viewController = ButtonStateViewController(
             viewModel: .init(title: "Destructive", config: .destructive, width: 150)
         )
