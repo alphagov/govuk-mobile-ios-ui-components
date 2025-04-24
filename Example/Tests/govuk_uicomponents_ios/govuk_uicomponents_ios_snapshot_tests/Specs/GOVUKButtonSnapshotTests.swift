@@ -57,8 +57,9 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
     }
 
     func test_destructive_rendersCorrectly() {
+        recordMode = true
         let viewController = ButtonStateViewController(
-            viewModel: .init(title: "Destructive", config: .destructive, width: 120)
+            viewModel: .init(title: "Destructive", config: .destructive, width: 150)
         )
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
