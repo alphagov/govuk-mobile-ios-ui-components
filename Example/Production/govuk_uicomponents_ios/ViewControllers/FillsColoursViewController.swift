@@ -20,6 +20,8 @@ class FillsColoursViewController: UIViewController {
         ("Surface Button Compact Highlight", .govUK.fills.surfaceButtonCompactHighlight),
         ("Surface Button Compact Focussed", .govUK.fills.surfaceButtonCompactFocussed),
         ("Surface Button Compact Disabled", .govUK.fills.surfaceButtonCompactDisabled),
+        ("Surface Button Destructive", .govUK.fills.surfaceButtonDestructive),
+        ("Surface Button Destructive Highlight", .govUK.fills.surfaceButtonDestructiveHighlight),
         ("Surface Modal", .govUK.fills.surfaceModal),
         ("Surface Search Box", .govUK.fills.surfaceSearchBox),
         ("Surface Home Header Background", .govUK.fills.surfaceHomeHeaderBackground),

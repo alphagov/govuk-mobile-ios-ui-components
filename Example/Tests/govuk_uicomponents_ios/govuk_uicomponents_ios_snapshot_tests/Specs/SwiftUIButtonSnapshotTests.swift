@@ -60,4 +60,21 @@ final class SwiftUIButtonSnapshotTests: FBSnapshotTestCase {
 
         FBSnapshotVerifyView(nav.view)
     }
+
+    func test_destructive_swiftui_rendersCorrectly() {
+        let view = SwiftUIButtonStateView(
+            viewModel: .init(title: "Destructive", config: .destructive, width: 140)
+        )
+        let hosting = UIHostingController(rootView: view)
+        let nav = UINavigationController(rootViewController: hosting)
+        nav.navigationBar.prefersLargeTitles = true
+
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScenes = scenes.first as? UIWindowScene
+        let window = windowScenes?.windows.first
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+
+        FBSnapshotVerifyView(nav.view)
+    }
 }
