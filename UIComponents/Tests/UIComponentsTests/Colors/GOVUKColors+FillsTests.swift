@@ -161,6 +161,22 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
+    func surfaceButtonDestructive_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceButtonDestructive
+
+        #expect(result.lightMode == .primaryRed)
+        #expect(result.darkMode == .accentRed)
+    }
+
+    @Test
+    func surfaceButtonDestructiveHighlight_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceButtonDestructiveHighlight
+
+        #expect(result.lightMode == .redDarker25)
+        #expect(result.darkMode == .primaryRed)
+    }
+
+    @Test
     func surfaceModal_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceModal
 

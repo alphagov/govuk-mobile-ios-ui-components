@@ -133,6 +133,48 @@ struct ButtonConfigurationTests {
     }
 
     @Test
+    func destructive_returnsExpectedConfiguration() {
+        let sut = GOVUKButton.ButtonConfiguration.destructive
+
+        #expect(sut.titleColorNormal ==
+                UIColor.govUK.text.buttonPrimary)
+        #expect(sut.titleColorHighlighted == nil)
+        #expect(sut.titleColorFocused ==
+                UIColor.govUK.text.buttonPrimaryFocussed)
+        #expect(sut.titleColorDisabled ==
+                UIColor.govUK.text.buttonPrimaryDisabled)
+        #expect(sut.titleFont ==
+                UIFont.govUK.bodySemibold)
+        #expect(sut.backgroundColorNormal ==
+                UIColor.govUK.fills.surfaceButtonDestructive)
+        #expect(sut.backgroundColorHighlighted ==
+                UIColor.govUK.fills.surfaceButtonDestructiveHighlight)
+        #expect(sut.backgroundColorFocused ==
+                UIColor.govUK.fills.surfaceButtonPrimaryFocussed)
+        #expect(sut.backgroundColorDisabled ==
+                UIColor.govUK.fills.surfaceButtonPrimaryDisabled)
+
+        #expect(sut.borderColorNormal == .clear)
+
+        #expect(sut.cornerRadius == 15)
+
+        let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
+        #expect(accessibilityNormal == sut.backgroundColorNormal)
+
+        let accessibilityHighlighted = sut.accessibilityButtonShapesColor(for: .highlighted)
+        #expect(
+            accessibilityHighlighted ==
+            sut.backgroundColorHighlighted
+        )
+
+        let accessibilityFocussed = sut.accessibilityButtonShapesColor(for: .focused)
+        #expect(
+            accessibilityFocussed ==
+            sut.backgroundColorFocused
+        )
+    }
+
+    @Test
     func backgroundColorFor_highlighted_returnsExpectedColor() {
         let sut = GOVUKButton.ButtonConfiguration(
             titleFont: UIFont.govUK.body,

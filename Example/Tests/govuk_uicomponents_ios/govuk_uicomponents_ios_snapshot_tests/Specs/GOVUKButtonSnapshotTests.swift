@@ -56,6 +56,20 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(nav.view)
     }
 
+    func test_destructive_rendersCorrectly() {
+        let viewController = ButtonStateViewController(
+            viewModel: .init(title: "Destructive", config: .destructive, width: 150)
+        )
+        let nav = UINavigationController(rootViewController: viewController)
+        nav.navigationBar.prefersLargeTitles = true
+
+        let window = UIApplication.shared.windows.first
+        window?.rootViewController = nav
+        window?.makeKeyAndVisible()
+
+        FBSnapshotVerifyView(nav.view)
+    }
+
     func test_primary_button_default() {
         let button = GOVUKButton(.primary)
         button.setTitle("primary", for: .normal)
@@ -142,4 +156,34 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         FBSnapshotVerifyView(button)
     }
+
+    func test_destructive_button_default() {
+        let button = GOVUKButton(.destructive)
+        button.setTitle("destructive", for: .normal)
+
+        button.frame.size = CGSize(width: 200, height: 47)
+
+        FBSnapshotVerifyView(button)
+    }
+
+    func test_destructive_button_highlighted() {
+        let button = GOVUKButton(.destructive)
+        button.setTitle("destructive", for: .normal)
+        button.isHighlighted = true
+
+        button.frame.size = CGSize(width: 200, height: 47)
+
+        FBSnapshotVerifyView(button)
+    }
+
+    func test_destructive_button_disabled() {
+        let button = GOVUKButton(.destructive)
+        button.setTitle("destructive", for: .normal)
+        button.isEnabled = false
+
+        button.frame.size = CGSize(width: 200, height: 47)
+
+        FBSnapshotVerifyView(button)
+    }
+
 }

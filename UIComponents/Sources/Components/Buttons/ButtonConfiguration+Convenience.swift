@@ -49,4 +49,20 @@ extension GOVUKButton.ButtonConfiguration {
             accessibilityButtonShapesColor: UIColor.grey100
         )
     }
+
+    public static var destructive: GOVUKButton.ButtonConfiguration {
+        .init(
+            titleColorNormal: UIColor.govUK.text.buttonPrimary,
+            titleColorHighlighted: nil,
+            titleColorFocused: UIColor.govUK.text.buttonPrimaryFocussed,
+            titleColorDisabled: UIColor.govUK.text.buttonPrimaryDisabled,
+            titleFont: UIFont.govUK.bodySemibold,
+            backgroundColorNormal: UIColor.govUK.fills.surfaceButtonDestructive,
+            backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonDestructiveHighlight,
+            backgroundColorFocused: UIColor.govUK.fills.surfaceButtonPrimaryFocussed,
+            backgroundColorDisabled: UIColor.govUK.fills.surfaceButtonPrimaryDisabled,
+            cornerRadius: 15,
+            accessibilityButtonShapesColor: UIColor.grey100
+        )
+    }
 }

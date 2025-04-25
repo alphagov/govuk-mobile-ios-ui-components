@@ -100,6 +100,20 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceButtonDestructive: UIColor = {
+            .init(
+                light: .primaryRed,
+                dark: .accentRed
+            )
+        }()
+
+        public static let surfaceButtonDestructiveHighlight: UIColor = {
+            .init(
+                light: .redDarker25,
+                dark: .primaryRed
+            )
+        }()
+
         public static let surfaceModal: UIColor = {
             .init(
                 light: .white,

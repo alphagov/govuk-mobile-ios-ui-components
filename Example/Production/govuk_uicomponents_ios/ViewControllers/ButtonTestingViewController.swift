@@ -23,9 +23,13 @@ class ButtonTestingViewController: UIViewController {
         let compactButton = GOVUKButton(.compact)
         compactButton.setTitle("Compact", for: .normal)
 
+        let destructiveButton = GOVUKButton(.destructive)
+        destructiveButton.setTitle("Destructive", for: .normal)
+
         stackView.addArrangedSubview(primaryButton)
         stackView.addArrangedSubview(secondaryButton)
         stackView.addArrangedSubview(compactButton)
+        stackView.addArrangedSubview(destructiveButton)
         view.addSubview(stackView)
 
         NSLayoutConstraint.activate([
