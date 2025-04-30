@@ -31,6 +31,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let error: UIColor = {
+            .init(
+                light: .primaryRed,
+                dark: .accentRed
+            )
+        }()
+
         public static let cardSelected: UIColor = {
             .init(
                 light: .primaryGreen,
