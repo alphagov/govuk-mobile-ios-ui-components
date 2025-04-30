@@ -46,6 +46,14 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
+    func error_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.error
+        
+        #expect(result.lightMode == .primaryRed)
+        #expect(result.darkMode == .accentRed)
+    }
+
+    @Test
     func cardSelected_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardSelected
 
