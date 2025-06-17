@@ -51,5 +51,19 @@ extension GOVUKColors {
                 dark: .blueDarker25
             )
         }()
+
+        public static let chatAnswer: UIColor = {
+            .init(
+                light: .clear,
+                dark: .blueDarker25
+            )
+        }()
+
+        public static let chatQuestion: UIColor = {
+            .init(
+                light: .clear,
+                dark: .grey300
+            )
+        }()
     }
 }
