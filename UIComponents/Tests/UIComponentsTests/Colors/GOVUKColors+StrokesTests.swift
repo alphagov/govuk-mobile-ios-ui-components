@@ -68,4 +68,20 @@ struct GOVUKColors_StrokesTests {
         #expect(result.lightMode == .blueLighter25)
         #expect(result.darkMode == .blueDarker25)
     }
+
+    @Test
+    func chatAnswer_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatAnswer
+
+        #expect(result.lightMode == .clear)
+        #expect(result.darkMode == .blueDarker25)
+    }
+
+    @Test
+    func chatQuestion_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatQuestion
+
+        #expect(result.lightMode == .clear)
+        #expect(result.darkMode == .grey300)
+    }
 }
