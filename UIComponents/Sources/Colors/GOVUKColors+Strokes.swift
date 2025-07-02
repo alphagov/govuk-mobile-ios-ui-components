@@ -65,5 +65,12 @@ extension GOVUKColors {
                 dark: .grey300
             )
         }()
+
+        public static let chatDivider: UIColor = {
+            .init(
+                light: .blueLighter80,
+                dark: .blueDarker25
+            )
+        }()
     }
 }
