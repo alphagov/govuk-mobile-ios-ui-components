@@ -24,21 +24,21 @@ extension GOVUKColors {
             )
         }()
 
-        public static let buttonPrimaryDestructiveDefault: UIColor = {
+        public static let buttonDestructiveDefault: UIColor = {
             .init(
                 light: .redDarker50,
                 dark: .primaryRed
             )
         }()
 
-        public static let buttonPrimaryDestructiveFocused: UIColor = {
+        public static let buttonFocused: UIColor = {
             .init(
-                light: .redDarker50,
-                dark: .primaryRed
+                light: .black,
+                dark: .yellowDarker50
             )
         }()
 
-        public static let buttonPrimaryDestructiveHighlight: UIColor = {
+        public static let buttonDestructiveHighlight: UIColor = {
             .init(
                 light: .redDarker80,
                 dark: .redDarker50
