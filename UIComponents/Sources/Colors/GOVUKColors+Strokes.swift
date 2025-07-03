@@ -31,6 +31,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let buttonPrimaryDestructiveFocused: UIColor = {
+            .init(
+                light: .redDarker50,
+                dark: .primaryRed
+            )
+        }()
+
         public static let buttonPrimaryDestructiveHighlight: UIColor = {
             .init(
                 light: .redDarker80,
