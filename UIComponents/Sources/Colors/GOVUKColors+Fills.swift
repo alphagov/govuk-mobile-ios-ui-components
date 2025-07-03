@@ -173,7 +173,7 @@ extension GOVUKColors {
         public static let surfaceChatBackground: UIColor = {
             .init(
                 light: .blueLighter90,
-                dark:. blueDarker80
+                dark: .blueDarker80
             )
         }()
     }
