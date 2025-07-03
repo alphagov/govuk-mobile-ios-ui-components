@@ -16,8 +16,7 @@ extension GOVUKButton.ButtonConfiguration {
             accessibilityButtonShapesColor: UIColor.grey100,
             shadowColor: UIColor.govUK.strokes.buttonPrimaryDefault.cgColor,
             shadowHighLightedColor: UIColor.govUK.strokes.buttonPrimaryHighlight.cgColor,
-            shadowFocusedColor: UIColor.govUK.strokes.buttonFocused.cgColor,
-            shadowOpacity: 1
+            shadowFocusedColor: UIColor.govUK.strokes.buttonFocused.cgColor
         )
     }
 
@@ -77,8 +76,7 @@ extension GOVUKButton.ButtonConfiguration {
             accessibilityButtonShapesColor: UIColor.grey100,
             shadowColor: UIColor.govUK.Strokes.buttonDestructiveDefault.cgColor,
             shadowHighLightedColor: UIColor.govUK.Strokes.buttonDestructiveHighlight.cgColor,
-            shadowFocusedColor: UIColor.govUK.strokes.buttonFocused.cgColor,
-            shadowOpacity: 1
+            shadowFocusedColor: UIColor.govUK.strokes.buttonFocused.cgColor
         )
     }
 }

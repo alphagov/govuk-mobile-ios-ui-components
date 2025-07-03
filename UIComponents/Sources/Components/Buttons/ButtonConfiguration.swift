@@ -51,7 +51,7 @@ extension GOVUKButton {
                     shadowRadius: CGFloat = 0,
                     shadowHighLightedColor: CGColor,
                     shadowFocusedColor: CGColor,
-                    shadowOpacity: Float) {
+                    shadowOpacity: Float = 1) {
             self.titleColorNormal = titleColorNormal
             self.titleColorHighlighted = titleColorHighlighted
             self.titleColorFocused = titleColorFocused
