@@ -131,7 +131,7 @@ extension GOVUKColors {
         public static let surfaceHomeHeaderBackground: UIColor = {
             .init(
                 light: .primaryBlue,
-                dark: .blueDarker50
+                dark: .blueDarker70
             )
         }()
 
