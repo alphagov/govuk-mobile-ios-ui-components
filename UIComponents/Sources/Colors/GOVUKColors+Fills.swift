@@ -12,8 +12,8 @@ extension GOVUKColors {
 
         public static let surfaceBackground: UIColor = {
             .init(
-                light: .white,
-                dark: .black
+                light: .blueLighter90,
+                dark: .blueDarker80
             )
         }()
 

@@ -11,6 +11,7 @@ extension UIColor {
     static let blueLighter25: UIColor = #colorLiteral(red: 0.337254902, green: 0.5803921569, blue: 0.7921568627, alpha: 1)
     static let blueLighter50: UIColor = #colorLiteral(red: 0.5568627451, green: 0.7215686275, blue: 0.862745098, alpha: 1)
     static let blueLighter80: UIColor = #colorLiteral(red: 0.8235294118, green: 0.8862745098, blue: 0.9450980392, alpha: 1)
+    static let blueLighter90: UIColor = #colorLiteral(red: 0.9016088843, green: 0.9465462565, blue: 0.9758384824, alpha: 1)
     static let blueLighter95: UIColor = #colorLiteral(red: 0.9568627451, green: 0.9725490196, blue: 0.9843137255, alpha: 1)
     // Green
     static let greenDarker80: UIColor = #colorLiteral(red: 0.01176470588, green: 0.1058823529, blue: 0.07058823529, alpha: 1)
