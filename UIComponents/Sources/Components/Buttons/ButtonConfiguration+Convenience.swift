@@ -13,7 +13,10 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonPrimaryFocussed,
             backgroundColorDisabled: UIColor.govUK.fills.surfaceButtonPrimaryDisabled,
             cornerRadius: 15,
-            accessibilityButtonShapesColor: UIColor.grey100
+            accessibilityButtonShapesColor: UIColor.grey100,
+            shadowColor: UIColor.govUK.strokes.buttonPrimaryDefault.cgColor,
+            shadowHighLightedColor: UIColor.govUK.strokes.buttonPrimaryHighlight.cgColor,
+            shadowFocusedColor: UIColor.govUK.strokes.buttonFocused.cgColor
         )
     }
 
@@ -28,7 +31,11 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonSecondaryHighlight,
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonSecondaryFocussed,
             backgroundColorDisabled: .clear,
-            accessibilityButtonShapesColor: UIColor.grey100
+            accessibilityButtonShapesColor: UIColor.grey100,
+            shadowColor: UIColor.clear.cgColor,
+            shadowHighLightedColor: UIColor.clear.cgColor,
+            shadowFocusedColor: UIColor.clear.cgColor,
+            shadowOpacity: 0
         )
     }
 
@@ -46,7 +53,11 @@ extension GOVUKButton.ButtonConfiguration {
             cornerRadius: 15,
             borderColorNormal: UIColor.govUK.strokes.cardBlue,
             borderColorHighlighted: UIColor.govUK.strokes.buttonCompactHighlight,
-            accessibilityButtonShapesColor: UIColor.grey100
+            accessibilityButtonShapesColor: UIColor.grey100,
+            shadowColor: UIColor.clear.cgColor,
+            shadowHighLightedColor: UIColor.clear.cgColor,
+            shadowFocusedColor: UIColor.clear.cgColor,
+            shadowOpacity: 0
         )
     }
 
@@ -62,7 +73,10 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonPrimaryFocussed,
             backgroundColorDisabled: UIColor.govUK.fills.surfaceButtonPrimaryDisabled,
             cornerRadius: 15,
-            accessibilityButtonShapesColor: UIColor.grey100
+            accessibilityButtonShapesColor: UIColor.grey100,
+            shadowColor: UIColor.govUK.Strokes.buttonDestructiveDefault.cgColor,
+            shadowHighLightedColor: UIColor.govUK.Strokes.buttonDestructiveHighlight.cgColor,
+            shadowFocusedColor: UIColor.govUK.strokes.buttonFocused.cgColor
         )
     }
 }

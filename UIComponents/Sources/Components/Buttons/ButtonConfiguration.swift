@@ -24,6 +24,12 @@ extension GOVUKButton {
 
         let accessibilityButtonShapesColor: UIColor
 
+        let shadowColor: CGColor
+        let shadowRadius: CGFloat
+        let shadowOpacity: Float
+        let shadowHighLightedColor: CGColor
+        let shadowFocusedColor: CGColor
+
         public init(titleColorNormal: UIColor? = nil,
                     titleColorHighlighted: UIColor? = nil,
                     titleColorFocused: UIColor? = nil,
@@ -40,7 +46,12 @@ extension GOVUKButton {
                     cornerRadius: CGFloat = 4,
                     borderColorNormal: UIColor = .clear,
                     borderColorHighlighted: UIColor = .clear,
-                    accessibilityButtonShapesColor: UIColor) {
+                    accessibilityButtonShapesColor: UIColor,
+                    shadowColor: CGColor,
+                    shadowRadius: CGFloat = 0,
+                    shadowHighLightedColor: CGColor,
+                    shadowFocusedColor: CGColor,
+                    shadowOpacity: Float = 1) {
             self.titleColorNormal = titleColorNormal
             self.titleColorHighlighted = titleColorHighlighted
             self.titleColorFocused = titleColorFocused
@@ -58,6 +69,11 @@ extension GOVUKButton {
             self.borderColorHighlighted = borderColorHighlighted
             self.cornerRadius = cornerRadius
             self.accessibilityButtonShapesColor = accessibilityButtonShapesColor
+            self.shadowColor = shadowColor
+            self.shadowRadius = shadowRadius
+            self.shadowHighLightedColor = shadowHighLightedColor
+            self.shadowOpacity = shadowOpacity
+            self.shadowFocusedColor = shadowFocusedColor
         }
     }
 
@@ -84,7 +100,11 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorFocused: .cyan,
             backgroundColorDisabled: .blue,
             cornerRadius: 5,
-            accessibilityButtonShapesColor: .grey100
+            accessibilityButtonShapesColor: .grey100,
+            shadowColor: UIColor.black.cgColor,
+            shadowHighLightedColor: UIColor.black.cgColor,
+            shadowFocusedColor: UIColor.black.cgColor,
+            shadowOpacity: 1
         )
         return config
     }

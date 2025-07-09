@@ -17,6 +17,48 @@ extension GOVUKColors {
             )
         }()
 
+        public static let buttonPrimaryFocused: UIColor = {
+            .init(
+                light: .black,
+                dark: .yellowDarker50
+            )
+        }()
+
+        public static let buttonDestructiveDefault: UIColor = {
+            .init(
+                light: .redDarker50,
+                dark: .primaryRed
+            )
+        }()
+
+        public static let buttonFocused: UIColor = {
+            .init(
+                light: .black,
+                dark: .yellowDarker50
+            )
+        }()
+
+        public static let buttonDestructiveHighlight: UIColor = {
+            .init(
+                light: .redDarker80,
+                dark: .redDarker50
+            )
+        }()
+
+        public static let buttonPrimaryDefault: UIColor = {
+            .init(
+                light: .greenDarker50,
+                dark: .primaryGreen
+            )
+        }()
+
+        public static let buttonPrimaryHighlight: UIColor = {
+            .init(
+                light: .greenDarker80,
+                dark: .greenDarker50
+            )
+        }()
+
         public static let cardBlue: UIColor = {
             .init(
                 light: .blueLighter50,

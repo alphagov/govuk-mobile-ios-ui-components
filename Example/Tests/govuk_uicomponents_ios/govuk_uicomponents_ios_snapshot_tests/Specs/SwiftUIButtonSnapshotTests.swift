@@ -8,6 +8,12 @@ import iOSSnapshotTestCase
 
 @MainActor
 final class SwiftUIButtonSnapshotTests: FBSnapshotTestCase {
+
+    override func setUp() {
+        super.setUp()
+        self.recordMode = false
+    }
+
     func test_primary_swiftui_rendersCorrectly() {
         let view = SwiftUIButtonStateView(
             viewModel: .init(title: "Primary", config: .primary, width: 200)

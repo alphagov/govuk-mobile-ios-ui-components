@@ -38,7 +38,7 @@ final public class GOVUKButton: UIButton {
 
         viewModelUpdate()
         buttonConfigurationUpdate()
-
+        configureShadow()
         configureButtonShapesStyle()
         registerNotifications()
         configureCornerRadius()
@@ -48,6 +48,7 @@ final public class GOVUKButton: UIButton {
                                         with coordinator: UIFocusAnimationCoordinator) {
         super.didUpdateFocus(in: context, with: coordinator)
         configureBackgroundColor()
+        configureShadow()
     }
 
     private func addNewAction(_ action: @escaping () -> Void) {
@@ -63,6 +64,7 @@ final public class GOVUKButton: UIButton {
         didSet {
             configureBackgroundColor()
             configureBorderColor()
+            configureShadow()
         }
     }
 
@@ -90,6 +92,7 @@ final public class GOVUKButton: UIButton {
         setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
         configureBackgroundColor(state: .normal)
         configureBorderColor(state: .normal)
+        configureShadow(state: .normal)
     }
 
     public override func accessibilityElementDidBecomeFocused() {
@@ -97,6 +100,7 @@ final public class GOVUKButton: UIButton {
         setTitleColor(buttonConfiguration.titleColorFocused, for: .normal)
         configureBackgroundColor(state: .focused)
         configureBorderColor(state: .focused)
+        configureShadow(state: .focused)
     }
 
     public override func layoutSubviews() {
@@ -129,6 +133,28 @@ final public class GOVUKButton: UIButton {
         configureInsets()
         configureCornerRadius()
         configureBorderColor()
+        configureShadow()
+    }
+
+    private func configureShadow(state: UIControl.State? = nil) {
+        let localState = state ?? self.state
+        layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        layer.shadowRadius = buttonConfiguration.shadowRadius
+        switch localState {
+        case .normal:
+            layer.shadowOpacity = buttonConfiguration.shadowOpacity
+            layer.shadowColor = buttonConfiguration.shadowColor
+        case .highlighted:
+            layer.shadowOpacity = buttonConfiguration.shadowOpacity
+            layer.shadowColor = buttonConfiguration.shadowHighLightedColor
+        case .focused:
+            layer.shadowOpacity = buttonConfiguration.shadowOpacity
+            layer.shadowColor = buttonConfiguration.shadowFocusedColor
+        default:
+            layer.shadowColor = UIColor.clear.cgColor
+            layer.shadowOpacity = 0
+            layer.shadowRadius = 0
+        }
     }
 
     private func configureFonts() {
@@ -148,6 +174,7 @@ final public class GOVUKButton: UIButton {
             color = buttonConfiguration.backgroundColorDisabled
         } else if localState == .focused {
             color = buttonConfiguration.backgroundColorFocused
+            configureShadow()
         } else {
             color = UIAccessibility.buttonShapesEnabled ?
             buttonConfiguration.accessibilityButtonShapesColor(for: localState) :

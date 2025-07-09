@@ -84,4 +84,45 @@ struct GOVUKColors_StrokesTests {
         #expect(result.lightMode == .clear)
         #expect(result.darkMode == .grey300)
     }
+
+
+    @Test
+    func buttonPrimaryDefault_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonPrimaryDefault
+
+        #expect(result.lightMode == .greenDarker50)
+        #expect(result.darkMode == .primaryGreen)
+    }
+
+    @Test
+    func buttonPrimaryHighlight_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonPrimaryHighlight
+
+        #expect(result.lightMode == .greenDarker80)
+        #expect(result.darkMode == .greenDarker50)
+    }
+
+    @Test
+    func buttonFocused_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonFocused
+
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .yellowDarker50)
+    }
+
+    @Test
+    func buttonDestructiveDefault_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonDestructiveDefault
+
+        #expect(result.lightMode == .redDarker50)
+        #expect(result.darkMode == .primaryRed)
+    }
+
+    @Test
+    func buttonDestructiveHighlight_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonDestructiveHighlight
+
+        #expect(result.lightMode == .redDarker80)
+        #expect(result.darkMode == .redDarker50)
+    }
 }
