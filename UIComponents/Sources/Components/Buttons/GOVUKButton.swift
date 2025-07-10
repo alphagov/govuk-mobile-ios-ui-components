@@ -139,21 +139,22 @@ final public class GOVUKButton: UIButton {
     private func configureShadow(state: UIControl.State? = nil) {
         let localState = state ?? self.state
         layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
-        layer.shadowRadius = buttonConfiguration.shadowRadius
+        let shadowRadius = buttonConfiguration.shadowRadius ?? 0
+        let shadowOpacity = buttonConfiguration.shadowOpacity ?? 0
+        layer.shadowRadius = shadowRadius
         switch localState {
         case .normal:
-            layer.shadowOpacity = buttonConfiguration.shadowOpacity
+            layer.shadowOpacity = shadowOpacity
             layer.shadowColor = buttonConfiguration.shadowColor
         case .highlighted:
-            layer.shadowOpacity = buttonConfiguration.shadowOpacity
+            layer.shadowOpacity = shadowOpacity
             layer.shadowColor = buttonConfiguration.shadowHighLightedColor
         case .focused:
-            layer.shadowOpacity = buttonConfiguration.shadowOpacity
+            layer.shadowOpacity = shadowOpacity
             layer.shadowColor = buttonConfiguration.shadowFocusedColor
         default:
-            layer.shadowColor = UIColor.clear.cgColor
-            layer.shadowOpacity = 0
-            layer.shadowRadius = 0
+            layer.shadowOpacity = shadowOpacity
+            layer.shadowRadius = shadowRadius
         }
     }
 

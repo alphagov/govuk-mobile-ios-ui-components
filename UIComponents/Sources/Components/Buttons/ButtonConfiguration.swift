@@ -24,11 +24,11 @@ extension GOVUKButton {
 
         let accessibilityButtonShapesColor: UIColor
 
-        let shadowColor: CGColor
-        let shadowRadius: CGFloat
-        let shadowOpacity: Float
-        let shadowHighLightedColor: CGColor
-        let shadowFocusedColor: CGColor
+        let shadowColor: CGColor?
+        let shadowRadius: CGFloat?
+        let shadowOpacity: Float?
+        let shadowHighLightedColor: CGColor?
+        let shadowFocusedColor: CGColor?
 
         public init(titleColorNormal: UIColor? = nil,
                     titleColorHighlighted: UIColor? = nil,
@@ -47,11 +47,11 @@ extension GOVUKButton {
                     borderColorNormal: UIColor = .clear,
                     borderColorHighlighted: UIColor = .clear,
                     accessibilityButtonShapesColor: UIColor,
-                    shadowColor: CGColor,
-                    shadowRadius: CGFloat = 0,
-                    shadowHighLightedColor: CGColor,
-                    shadowFocusedColor: CGColor,
-                    shadowOpacity: Float = 1) {
+                    shadowColor: CGColor? = nil,
+                    shadowRadius: CGFloat? = nil,
+                    shadowHighLightedColor: CGColor? = nil,
+                    shadowFocusedColor: CGColor? = nil,
+                    shadowOpacity: Float? = nil) {
             self.titleColorNormal = titleColorNormal
             self.titleColorHighlighted = titleColorHighlighted
             self.titleColorFocused = titleColorFocused
@@ -100,11 +100,7 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorFocused: .cyan,
             backgroundColorDisabled: .blue,
             cornerRadius: 5,
-            accessibilityButtonShapesColor: .grey100,
-            shadowColor: UIColor.black.cgColor,
-            shadowHighLightedColor: UIColor.black.cgColor,
-            shadowFocusedColor: UIColor.black.cgColor,
-            shadowOpacity: 1
+            accessibilityButtonShapesColor: .grey100
         )
         return config
     }

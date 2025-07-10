@@ -73,12 +73,6 @@ struct ButtonConfigurationTests {
         #expect(sut.backgroundColorFocused ==
                 UIColor.govUK.fills.surfaceButtonSecondaryFocussed)
         #expect(sut.backgroundColorDisabled == .clear)
-
-        #expect(sut.shadowColor ==
-                UIColor.clear.cgColor)
-        #expect(sut.shadowHighLightedColor ==
-                UIColor.clear.cgColor)
-
         #expect(sut.borderColorNormal == .clear)
 
         #expect(sut.cornerRadius == 4)
@@ -202,10 +196,6 @@ struct ButtonConfigurationTests {
             backgroundColorFocused: .green,
             backgroundColorDisabled: .clear,
             accessibilityButtonShapesColor: .purple,
-            shadowColor: UIColor.black.cgColor,
-            shadowHighLightedColor: UIColor.black.cgColor,
-            shadowFocusedColor: UIColor.black.cgColor,
-            shadowOpacity: 1
         )
         let result = sut.backgroundColor(for: [.highlighted, .focused])
         #expect(result == .blue)
@@ -220,10 +210,6 @@ struct ButtonConfigurationTests {
             backgroundColorFocused: .green,
             backgroundColorDisabled: .clear,
             accessibilityButtonShapesColor: .purple,
-            shadowColor: UIColor.black.cgColor,
-            shadowHighLightedColor: UIColor.black.cgColor,
-            shadowFocusedColor: UIColor.black.cgColor,
-            shadowOpacity: 1
         )
         let result = sut.backgroundColor(for: [.focused])
         #expect(result == .green)
