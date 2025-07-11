@@ -138,7 +138,7 @@ final public class GOVUKButton: UIButton {
 
     private func configureShadow(state: UIControl.State? = nil) {
         let localState = state ?? self.state
-        layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
+        layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
         layer.shadowRadius = buttonConfiguration.shadowRadius
         switch localState {
         case .normal:
