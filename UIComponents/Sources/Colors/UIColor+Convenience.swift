@@ -4,6 +4,7 @@ import UIKit
 extension UIColor {
     // Blue
     static let blueDarker80: UIColor = #colorLiteral(red: 0.02352941176, green: 0.0862745098, blue: 0.1450980392, alpha: 1)
+    static let blueDarker70: UIColor = #colorLiteral(red: 0.03529411765, green: 0.1333333333, blue: 0.2156862745, alpha: 1)
     static let blueDarker50: UIColor = #colorLiteral(red: 0.05882352941, green: 0.2196078431, blue: 0.3607843137, alpha: 1)
     static let blueDarker25: UIColor = #colorLiteral(red: 0.0862745098, green: 0.3294117647, blue: 0.5411764706, alpha: 1)
     static let primaryBlue: UIColor = #colorLiteral(red: 0.1137254902, green: 0.4392156863, blue: 0.7215686275, alpha: 1)
