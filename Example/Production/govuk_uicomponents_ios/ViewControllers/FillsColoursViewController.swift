@@ -27,7 +27,7 @@ class FillsColoursViewController: UIViewController {
         ("Surface Home Header Background", .govUK.fills.surfaceHomeHeaderBackground),
         ("Surface Toggle Selected", .govUK.fills.surfaceToggleSelected),
         ("Surface Chat Question", .govUK.fills.surfaceChatQuestion),
-        ("Surface Chat Answer", .govUK.fills.surfaceChatAnswer)
+        ("Surface Chat Answer", .govUK.fills.surfaceChatBlue)
     ]
 
     override func viewDidLoad() {

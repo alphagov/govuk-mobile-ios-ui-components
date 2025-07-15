@@ -261,15 +261,15 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
-    func surfaceChatAnswer_light_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceChatAnswer
+    func surfaceChatBlue_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatBlue
 
         #expect(result.lightMode == .white)
     }
 
     @Test
-    func surfaceChatAnswer_dark_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceChatAnswer
+    func surfaceChatBlue_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatBlue
 
         #expect(result.darkMode == .blueDarker50)
     }
