@@ -127,10 +127,18 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
-    func chatTextBox_returnsExpectedResult() {
-        let result = UIColor.govUK.strokes.chatTextBox
+    func focusedChatTextBox_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.focusedChatTextBox
 
         #expect(result.lightMode == .primaryBlue)
         #expect(result.darkMode == .accentBlue)
+    }
+
+    @Test
+    func chatAction_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatAction
+
+        #expect(result.lightMode == .grey300)
+        #expect(result.darkMode == .blueDarker50)
     }
 }
