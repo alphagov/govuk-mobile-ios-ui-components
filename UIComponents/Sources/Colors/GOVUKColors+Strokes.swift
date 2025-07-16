@@ -125,7 +125,7 @@ extension GOVUKColors {
         public static let chatAction: UIColor = {
             .init(
                 light: .grey300,
-                dark: .blueDarker50
+                dark: .blueLighter25
             )
         }()
     }
