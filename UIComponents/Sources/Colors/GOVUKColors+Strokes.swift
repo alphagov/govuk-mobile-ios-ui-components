@@ -115,10 +115,17 @@ extension GOVUKColors {
             )
         }()
 
-        public static let chatTextBox: UIColor = {
+        public static let focusedChatTextBox: UIColor = {
             .init(
                 light: .primaryBlue,
                 dark: .accentBlue
+            )
+        }()
+
+        public static let chatAction: UIColor = {
+            .init(
+                light: .grey300,
+                dark: .blueDarker50
             )
         }()
     }
