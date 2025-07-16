@@ -139,6 +139,6 @@ struct GOVUKColors_StrokesTests {
         let result = UIColor.govUK.strokes.chatAction
 
         #expect(result.lightMode == .grey300)
-        #expect(result.darkMode == .blueDarker50)
+        #expect(result.darkMode == .blueLighter25)
     }
 }
