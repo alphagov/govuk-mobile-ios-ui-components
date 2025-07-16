@@ -8,7 +8,8 @@ class StrokesColoursViewController: UIViewController {
         ("Card Blue", .govUK.strokes.cardBlue),
         ("Card Selected", .govUK.strokes.cardSelected),
         ("Chat Question", .govUK.strokes.chatQuestion),
-        ("Chat Answer", .govUK.strokes.chatAnswer)
+        ("Chat Answer", .govUK.strokes.chatAnswer),
+        ("Chat Text Box", .govUK.strokes.chatTextBox)
     ]
 
     override func viewDidLoad() {

@@ -125,4 +125,12 @@ struct GOVUKColors_StrokesTests {
         #expect(result.lightMode == .redDarker80)
         #expect(result.darkMode == .redDarker50)
     }
+
+    @Test
+    func chatTextBox_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatTextBox
+
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .accentBlue)
+    }
 }

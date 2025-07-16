@@ -156,7 +156,7 @@ extension GOVUKColors {
             )
         }()
 
-        public static let surfaceChatAnswer: UIColor = {
+        public static let surfaceChatBlue: UIColor = {
             .init(
                 light: .white,
                 dark: .blueDarker50

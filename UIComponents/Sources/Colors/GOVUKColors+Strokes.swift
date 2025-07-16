@@ -114,5 +114,12 @@ extension GOVUKColors {
                 dark: .blueDarker25
             )
         }()
+
+        public static let chatTextBox: UIColor = {
+            .init(
+                light: .primaryBlue,
+                dark: .accentBlue
+            )
+        }()
     }
 }
