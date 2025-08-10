@@ -176,5 +176,12 @@ extension GOVUKColors {
                 dark: .blueDarker80
             )
         }()
+
+        public static let surfaceChatOnboardingListBackground: UIColor = {
+            .init(
+                light: .blueLighter90,
+                dark: .blueDarker70
+            )
+        }()
     }
 }
