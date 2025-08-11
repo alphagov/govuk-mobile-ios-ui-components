@@ -287,4 +287,32 @@ struct GOVUKColors_FillsTests {
 
         #expect(result.darkMode == .grey850)
     }
+
+    @Test
+    func surfaceChatBackground_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatBackground
+
+        #expect(result.lightMode == .blueLighter90)
+    }
+
+    @Test
+    func surfaceChatBackground_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatBackground
+
+        #expect(result.darkMode == .blueDarker80)
+    }
+
+    @Test
+    func surfaceChatOnboardingListBackground_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatOnboardingListBackground
+
+        #expect(result.lightMode == .blueLighter90)
+    }
+
+    @Test
+    func surfaceChatOnboardingListBackground_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatOnboardingListBackground
+
+        #expect(result.darkMode == .blueDarker70)
+    }
 }

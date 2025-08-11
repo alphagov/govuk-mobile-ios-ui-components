@@ -141,4 +141,12 @@ struct GOVUKColors_StrokesTests {
         #expect(result.lightMode == .grey300)
         #expect(result.darkMode == .blueLighter25)
     }
+
+    @Test
+    func chatOnboardingListDivider_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatOnboardingListDivider
+
+        #expect(result.lightMode == .blueLighter80)
+        #expect(result.darkMode == .blueDarker50)
+    }
 }

@@ -128,5 +128,12 @@ extension GOVUKColors {
                 dark: .blueLighter25
             )
         }()
+
+        public static let chatOnboardingListDivider: UIColor = {
+            .init(
+                light: .blueLighter80,
+                dark: .blueDarker50
+            )
+        }()
     }
 }
