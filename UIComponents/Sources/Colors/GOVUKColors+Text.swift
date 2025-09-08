@@ -135,12 +135,5 @@ extension GOVUKColors {
                 dark: .blueLighter95
             )
         }()
-
-        public static let chatBackground: UIColor = {
-            .init(
-                light: .grey700,
-                dark: .blueLighter25
-            )
-        }()
     }
 }

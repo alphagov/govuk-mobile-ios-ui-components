@@ -92,15 +92,6 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
-    func chatQuestion_returnsExpectedResult() {
-        let result = UIColor.govUK.strokes.chatQuestion
-
-        #expect(result.lightMode == .clear)
-        #expect(result.darkMode == .grey300)
-    }
-
-
-    @Test
     func buttonPrimaryDefault_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.buttonPrimaryDefault
 
