@@ -107,13 +107,6 @@ extension GOVUKColors {
             )
         }()
 
-        public static let chatQuestion: UIColor = {
-            .init(
-                light: .clear,
-                dark: .grey300
-            )
-        }()
-
         public static let chatDivider: UIColor = {
             .init(
                 light: .blueLighter80,
