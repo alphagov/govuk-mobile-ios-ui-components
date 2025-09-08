@@ -18,8 +18,7 @@ class TextColoursViewController: UIViewController {
         ("Button Compact Highlight", .govUK.text.buttonCompactHighlight),
         ("Button Compact Focussed", .govUK.text.buttonCompactFocussed),
         ("Button Compact Disabled", .govUK.text.buttonCompactDisabled),
-        ("Trailing Icon", .govUK.text.trailingIcon),
-        ("Chat Background", .govUK.text.chatBackground)
+        ("Trailing Icon", .govUK.text.trailingIcon)
     ]
 
     override func viewDidLoad() {

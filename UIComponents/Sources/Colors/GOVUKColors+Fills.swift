@@ -159,14 +159,14 @@ extension GOVUKColors {
         public static let surfaceChatBlue: UIColor = {
             .init(
                 light: .white,
-                dark: .blueDarker50
+                dark: .blueDarker80
             )
         }()
 
         public static let surfaceChatQuestion: UIColor = {
             .init(
-                light: .blueLighter80,
-                dark: .grey850
+                light: .white.withAlphaComponent(0.5),
+                dark: .blueDarker80.withAlphaComponent(0.5)
             )
         }()
 

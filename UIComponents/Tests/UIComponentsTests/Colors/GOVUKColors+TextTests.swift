@@ -158,12 +158,4 @@ struct GOVUKColors_TextTests {
         #expect(result.lightMode == .primaryBlue)
         #expect(result.darkMode == .blueLighter95)
     }
-
-    @Test
-    func chatBackground_returnsExpectedResult() {
-        let result = UIColor.govUK.text.chatBackground
-
-        #expect(result.lightMode == .grey700)
-        #expect(result.darkMode == .blueLighter25)
-    }
 }
