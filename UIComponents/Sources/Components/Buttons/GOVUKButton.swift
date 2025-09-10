@@ -89,10 +89,11 @@ final public class GOVUKButton: UIButton {
 
     public override func accessibilityElementDidLoseFocus() {
         super.accessibilityElementDidLoseFocus()
-        setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
-        configureBackgroundColor(state: .normal)
-        configureBorderColor(state: .normal)
-        configureShadow(state: .normal)
+        let state: UIControl.State = self.isEnabled ? .normal : .disabled
+        setTitleColor(buttonConfiguration.titleColorNormal, for: state)
+        configureBackgroundColor(state: state)
+        configureBorderColor(state: state)
+        configureShadow(state: state)
     }
 
     public override func accessibilityElementDidBecomeFocused() {
