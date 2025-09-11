@@ -56,7 +56,7 @@ struct GOVUKColors_StrokesTests {
     func cardDefault_dark_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardDefault
 
-        #expect(result.darkMode == .darkmodeBlue)
+        #expect(result.darkMode == .darkModeBlue)
     }
 
     @Test

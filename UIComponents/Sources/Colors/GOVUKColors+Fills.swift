@@ -38,6 +38,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceCardNonTappable: UIColor = {
+            .init(
+                light: .blueLighter80,
+                dark: .blueDarker75
+            )
+        }()
+
         public static let surfaceButtonPrimary: UIColor = {
             .init(
                 light: .primaryGreen,
