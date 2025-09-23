@@ -7,10 +7,10 @@ class StrokesColoursViewController: UIViewController {
         ("Page Control Inactive", .govUK.strokes.pageControlInactive),
         ("Card Blue", .govUK.strokes.cardBlue),
         ("Card Selected", .govUK.strokes.cardSelected),
-        ("Chat Question", .govUK.strokes.chatQuestion),
         ("Chat Answer", .govUK.strokes.chatAnswer),
         ("Focused Chat Text Box", .govUK.strokes.focusedChatTextBox),
-        ("Chat Action", .govUK.strokes.chatAction)
+        ("Chat Action", .govUK.strokes.chatAction),
+        ("Chat Onboarding List Divider", .govUK.strokes.chatOnboardingListDivider)
     ]
 
     override func viewDidLoad() {

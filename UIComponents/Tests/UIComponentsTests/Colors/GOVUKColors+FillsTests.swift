@@ -50,6 +50,20 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
+    func surfaceCard_nonTappable_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardNonTappable
+
+        #expect(result.lightMode == .blueLighter80)
+    }
+
+    @Test
+    func surfaceCard_nonTappable_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardNonTappable
+
+        #expect(result.darkMode == .blueDarker75)
+    }
+
+    @Test
     func surfaceCardBlue_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
@@ -271,20 +285,48 @@ struct GOVUKColors_FillsTests {
     func surfaceChatBlue_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceChatBlue
 
-        #expect(result.darkMode == .blueDarker50)
+        #expect(result.darkMode == .blueDarker80)
     }
 
     @Test
     func surfaceChatQuestion_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceChatQuestion
 
-        #expect(result.lightMode == .blueLighter80)
+        #expect(result.lightMode == .white.withAlphaComponent(0.5))
     }
 
     @Test
     func surfaceChatQuestion_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceChatQuestion
 
-        #expect(result.darkMode == .grey850)
+        #expect(result.darkMode == .blueDarker80.withAlphaComponent(0.5))
+    }
+
+    @Test
+    func surfaceChatBackground_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatBackground
+
+        #expect(result.lightMode == .blueLighter90)
+    }
+
+    @Test
+    func surfaceChatBackground_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatBackground
+
+        #expect(result.darkMode == .blueDarker80)
+    }
+
+    @Test
+    func surfaceChatOnboardingListBackground_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatOnboardingListBackground
+
+        #expect(result.lightMode == .blueLighter90)
+    }
+
+    @Test
+    func surfaceChatOnboardingListBackground_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatOnboardingListBackground
+
+        #expect(result.darkMode == .blueDarker70)
     }
 }

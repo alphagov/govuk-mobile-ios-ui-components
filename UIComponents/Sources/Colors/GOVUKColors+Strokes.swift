@@ -66,6 +66,12 @@ extension GOVUKColors {
             )
         }()
 
+        public static let cardDefault: UIColor = {
+            .init(light: .blueLighter80,
+                  dark: .darkModeBlue
+            )
+        }()
+
         public static let cardGreen: UIColor = {
             .init(
                 light: .greenLighter50,
@@ -101,13 +107,6 @@ extension GOVUKColors {
             )
         }()
 
-        public static let chatQuestion: UIColor = {
-            .init(
-                light: .clear,
-                dark: .grey300
-            )
-        }()
-
         public static let chatDivider: UIColor = {
             .init(
                 light: .blueLighter80,
@@ -126,6 +125,13 @@ extension GOVUKColors {
             .init(
                 light: .grey300,
                 dark: .blueLighter25
+            )
+        }()
+
+        public static let chatOnboardingListDivider: UIColor = {
+            .init(
+                light: .blueLighter80,
+                dark: .blueDarker50
             )
         }()
     }

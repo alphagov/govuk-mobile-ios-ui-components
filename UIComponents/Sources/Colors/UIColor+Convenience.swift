@@ -4,6 +4,7 @@ import UIKit
 extension UIColor {
     // Blue
     static let blueDarker80: UIColor = #colorLiteral(red: 0.02352941176, green: 0.0862745098, blue: 0.1450980392, alpha: 1)
+    static let blueDarker75: UIColor = #colorLiteral(red: 0.03921568627, green: 0.1529411765, blue: 0.2509803922, alpha: 1)
     static let blueDarker70: UIColor = #colorLiteral(red: 0.03529411765, green: 0.1333333333, blue: 0.2156862745, alpha: 1)
     static let blueDarker65: UIColor = #colorLiteral(red: 0.03921568627, green: 0.1529411765, blue: 0.2509803922, alpha: 1)
     static let blueDarker50: UIColor = #colorLiteral(red: 0.05882352941, green: 0.2196078431, blue: 0.3607843137, alpha: 1)
@@ -16,6 +17,7 @@ extension UIColor {
     static let blueLighter80: UIColor = #colorLiteral(red: 0.8235294118, green: 0.8862745098, blue: 0.9450980392, alpha: 1)
     static let blueLighter90: UIColor = #colorLiteral(red: 0.9098039216, green: 0.9450980392, blue: 0.9725490196, alpha: 1)
     static let blueLighter95: UIColor = #colorLiteral(red: 0.9568627451, green: 0.9725490196, blue: 0.9843137255, alpha: 1)
+    static let darkModeBlue: UIColor =  #colorLiteral(red: 0.1490196078, green: 0.2392156863, blue: 0.3294117647, alpha: 1)
     static let blueLighter100: UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     // Green
     static let greenDarker80: UIColor = #colorLiteral(red: 0.01176470588, green: 0.1058823529, blue: 0.07058823529, alpha: 1)

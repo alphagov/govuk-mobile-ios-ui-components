@@ -46,6 +46,20 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
+    func cardDefault_light_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.cardDefault
+
+        #expect(result.lightMode == .blueLighter80)
+    }
+
+    @Test
+    func cardDefault_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.cardDefault
+
+        #expect(result.darkMode == .darkModeBlue)
+    }
+
+    @Test
     func error_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.error
         
@@ -76,15 +90,6 @@ struct GOVUKColors_StrokesTests {
         #expect(result.lightMode == .clear)
         #expect(result.darkMode == .blueDarker25)
     }
-
-    @Test
-    func chatQuestion_returnsExpectedResult() {
-        let result = UIColor.govUK.strokes.chatQuestion
-
-        #expect(result.lightMode == .clear)
-        #expect(result.darkMode == .grey300)
-    }
-
 
     @Test
     func buttonPrimaryDefault_returnsExpectedResult() {
@@ -140,5 +145,13 @@ struct GOVUKColors_StrokesTests {
 
         #expect(result.lightMode == .grey300)
         #expect(result.darkMode == .blueLighter25)
+    }
+
+    @Test
+    func chatOnboardingListDivider_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatOnboardingListDivider
+
+        #expect(result.lightMode == .blueLighter80)
+        #expect(result.darkMode == .blueDarker50)
     }
 }

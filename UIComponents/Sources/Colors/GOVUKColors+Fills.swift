@@ -38,6 +38,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceCardNonTappable: UIColor = {
+            .init(
+                light: .blueLighter80,
+                dark: .blueDarker75
+            )
+        }()
+
         public static let surfaceButtonPrimary: UIColor = {
             .init(
                 light: .primaryGreen,
@@ -159,14 +166,14 @@ extension GOVUKColors {
         public static let surfaceChatBlue: UIColor = {
             .init(
                 light: .white,
-                dark: .blueDarker50
+                dark: .blueDarker80
             )
         }()
 
         public static let surfaceChatQuestion: UIColor = {
             .init(
-                light: .blueLighter80,
-                dark: .grey850
+                light: .white.withAlphaComponent(0.5),
+                dark: .blueDarker80.withAlphaComponent(0.5)
             )
         }()
 
@@ -174,6 +181,13 @@ extension GOVUKColors {
             .init(
                 light: .blueLighter90,
                 dark: .blueDarker80
+            )
+        }()
+
+        public static let surfaceChatOnboardingListBackground: UIColor = {
+            .init(
+                light: .blueLighter90,
+                dark: .blueDarker70
             )
         }()
     }
