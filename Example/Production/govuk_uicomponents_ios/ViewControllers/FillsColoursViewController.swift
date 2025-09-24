@@ -28,6 +28,7 @@ class FillsColoursViewController: UIViewController {
         ("Surface Toggle Selected", .govUK.fills.surfaceToggleSelected),
         ("Surface Chat Question", .govUK.fills.surfaceChatQuestion),
         ("Surface Chat Answer", .govUK.fills.surfaceChatBlue),
+        ("Surface Chat Action", .govUK.fills.surfaceChatAction),
         ("Surface Chat Background", .govUK.fills.surfaceChatBackground),
         ("Surface Chat Onboarding List Background", .govUK.fills.surfaceChatOnboardingListBackground)
     ]
