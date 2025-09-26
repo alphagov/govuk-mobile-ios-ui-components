@@ -135,5 +135,12 @@ extension GOVUKColors {
                 dark: .blueLighter95
             )
         }()
+
+        public static let chatTextArea: UIColor = {
+            .init(
+                light: .grey700,
+                dark: .white
+            )
+        }()
     }
 }

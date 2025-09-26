@@ -289,6 +289,20 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
+    func surfaceChatAction_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatAction
+
+        #expect(result.lightMode == .white)
+    }
+
+    @Test
+    func surfaceChatAction_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatAction
+
+        #expect(result.darkMode == .blueDarker50)
+    }
+
+    @Test
     func surfaceChatQuestion_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceChatQuestion
 
