@@ -160,6 +160,15 @@ struct GOVUKColors_TextTests {
     }
 
     @Test
+    func tertiaryIcon_returnsExpectedResult() {
+        let result = UIColor.govUK.text.iconTertiary
+
+        #expect(result.lightMode == .blueTertiary)
+        #expect(result.darkMode == .blueLighter100)
+    }
+
+
+    @Test
     func chatTextArea_returnsExpectedResult() {
         let result = UIColor.govUK.text.chatTextArea
 

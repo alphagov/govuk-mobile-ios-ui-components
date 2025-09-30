@@ -136,6 +136,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let iconTertiary: UIColor = {
+            .init(
+                light: .blueTertiary,
+                dark: .blueLighter100
+            )
+        }()
+
         public static let chatTextArea: UIColor = {
             .init(
                 light: .grey700,
