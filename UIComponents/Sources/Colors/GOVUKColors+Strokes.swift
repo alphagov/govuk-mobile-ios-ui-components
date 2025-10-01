@@ -6,7 +6,7 @@ extension GOVUKColors {
         public static let listDivider: UIColor = {
             .init(
                 light: .blueLighter80,
-                dark: .blueDarker30
+                dark: .darkModeBlue
             )
         }()
 

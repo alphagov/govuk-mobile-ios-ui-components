@@ -8,7 +8,6 @@ extension UIColor {
     static let blueDarker70: UIColor = #colorLiteral(red: 0.03529411765, green: 0.1333333333, blue: 0.2156862745, alpha: 1)
     static let blueDarker65: UIColor = #colorLiteral(red: 0.03921568627, green: 0.1529411765, blue: 0.2509803922, alpha: 1)
     static let blueDarker50: UIColor = #colorLiteral(red: 0.05882352941, green: 0.2196078431, blue: 0.3607843137, alpha: 1)
-    static let blueDarker30: UIColor = #colorLiteral(red: 0.1490196078, green: 0.2392156863, blue: 0.3294117647, alpha: 1)
     static let blueDarker25: UIColor = #colorLiteral(red: 0.0862745098, green: 0.3294117647, blue: 0.5411764706, alpha: 1)
     static let primaryBlue: UIColor = #colorLiteral(red: 0.1137254902, green: 0.4392156863, blue: 0.7215686275, alpha: 1)
     static let accentBlue: UIColor = #colorLiteral(red: 0.06666666667, green: 0.8784313725, blue: 0.9450980392, alpha: 1)
