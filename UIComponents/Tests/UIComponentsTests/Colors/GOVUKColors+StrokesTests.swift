@@ -12,7 +12,7 @@ struct GOVUKColors_StrokesTests {
         let result = UIColor.govUK.strokes.listDivider
 
         #expect(result.lightMode == .blueLighter80)
-        #expect(result.darkMode == .blueDarker30)
+        #expect(result.darkMode == .darkModeBlue)
     }
 
     @Test

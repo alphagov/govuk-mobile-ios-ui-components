@@ -20,7 +20,7 @@ extension GOVUKColors {
         public static let link: UIColor = {
             .init(
                 light: .primaryBlue,
-                dark: .accentBlue
+                dark: .greyWhite
             )
         }()
 
@@ -133,6 +133,13 @@ extension GOVUKColors {
             .init(
                 light: .primaryBlue,
                 dark: .blueLighter95
+            )
+        }()
+
+        public static let iconTertiary: UIColor = {
+            .init(
+                light: .primaryBlue,
+                dark: .greyWhite
             )
         }()
 

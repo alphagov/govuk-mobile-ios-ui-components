@@ -28,7 +28,7 @@ struct GOVUKColors_TextTests {
         let result = UIColor.govUK.text.link
 
         #expect(result.lightMode == .primaryBlue)
-        #expect(result.darkMode == .accentBlue)
+        #expect(result.darkMode == .greyWhite)
     }
 
     @Test
@@ -158,6 +158,15 @@ struct GOVUKColors_TextTests {
         #expect(result.lightMode == .primaryBlue)
         #expect(result.darkMode == .blueLighter95)
     }
+
+    @Test
+    func tertiaryIcon_returnsExpectedResult() {
+        let result = UIColor.govUK.text.iconTertiary
+
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .greyWhite)
+    }
+
 
     @Test
     func chatTextArea_returnsExpectedResult() {
