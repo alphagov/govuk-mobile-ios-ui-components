@@ -250,7 +250,7 @@ struct GOVUKColors_FillsTests {
     func surfaceList_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceList
 
-        #expect(result.lightMode == .blueLighter100)
+        #expect(result.lightMode == .greyWhite)
     }
 
     @Test

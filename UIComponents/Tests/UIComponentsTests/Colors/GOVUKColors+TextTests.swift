@@ -163,8 +163,8 @@ struct GOVUKColors_TextTests {
     func tertiaryIcon_returnsExpectedResult() {
         let result = UIColor.govUK.text.iconTertiary
 
-        #expect(result.lightMode == .blueTertiary)
-        #expect(result.darkMode == .blueLighter100)
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .greyWhite)
     }
 
 
