@@ -16,6 +16,14 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
+    func buttonPrimaryFocused_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonPrimaryFocused
+
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .yellowDarker50)
+    }
+
+    @Test
     func pageControlInactive_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.pageControlInactive
 
@@ -84,14 +92,6 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
-    func chatAnswer_returnsExpectedResult() {
-        let result = UIColor.govUK.strokes.chatAnswer
-
-        #expect(result.lightMode == .clear)
-        #expect(result.darkMode == .blueDarker25)
-    }
-
-    @Test
     func buttonPrimaryDefault_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.buttonPrimaryDefault
 
@@ -132,11 +132,36 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
+    func fixedContainer_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.fixedContainer
+
+        #expect(result.lightMode == .black.withAlphaComponent(0.3))
+        #expect(result.darkMode == .white.withAlphaComponent(0.3))
+    }
+
+    @Test
     func focusedChatTextBox_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.focusedChatTextBox
 
         #expect(result.lightMode == .primaryBlue)
         #expect(result.darkMode == .accentBlue)
+    }
+
+    // MARK: Chat
+    @Test
+    func chatDivider_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatDivider
+
+        #expect(result.lightMode == .blueLighter80)
+        #expect(result.darkMode == .blueDarker25)
+    }
+
+    @Test
+    func chatAnswer_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.chatAnswer
+
+        #expect(result.lightMode == .clear)
+        #expect(result.darkMode == .blueDarker25)
     }
 
     @Test
