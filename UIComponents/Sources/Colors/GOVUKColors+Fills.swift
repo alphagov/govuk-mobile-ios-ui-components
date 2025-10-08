@@ -151,8 +151,8 @@ extension GOVUKColors {
 
         public static let surfaceList: UIColor = {
             .init(
-                light: .greyWhite,
-                dark: .blueDarker65
+                light: .white,
+                dark: .blueDarker70
             )
         }()
 
