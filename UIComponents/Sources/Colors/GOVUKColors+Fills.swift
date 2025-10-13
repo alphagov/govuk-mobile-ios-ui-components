@@ -163,6 +163,20 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceListSelected: UIColor = {
+            .init(
+                light: .primaryBlue,
+                dark: .blueDarker25
+            )
+        }()
+
+        public static let surfaceListUnselected: UIColor = {
+            .init(
+                light: .blueLighter90,
+                dark: .blueDarker75
+            )
+        }()
+
         public static let surfaceChatBlue: UIColor = {
             .init(
                 light: .white,
