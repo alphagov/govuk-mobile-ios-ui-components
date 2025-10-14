@@ -149,5 +149,19 @@ extension GOVUKColors {
                 dark: .white
             )
         }()
+
+        public static let listSelected: UIColor = {
+            .init(
+                light: .white,
+                dark: .white
+            )
+        }()
+
+        public static let listUnselected: UIColor = {
+            .init(
+                light: .black,
+                dark: .white
+            )
+        }()
     }
 }

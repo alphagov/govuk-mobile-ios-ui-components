@@ -175,4 +175,20 @@ struct GOVUKColors_TextTests {
         #expect(result.lightMode == .grey700)
         #expect(result.darkMode == .white)
     }
+
+    @Test
+    func listSelected_returnsExpectedResult() {
+        let result = UIColor.govUK.text.listSelected
+
+        #expect(result.lightMode == .white)
+        #expect(result.darkMode == .white)
+    }
+
+    @Test
+    func listUnselected_returnsExpectedResult() {
+        let result = UIColor.govUK.text.listUnselected
+
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .white)
+    }
 }
