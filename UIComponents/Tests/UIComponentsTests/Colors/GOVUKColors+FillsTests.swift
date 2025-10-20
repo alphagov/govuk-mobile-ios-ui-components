@@ -46,7 +46,7 @@ struct GOVUKColors_FillsTests {
     func surfaceCard_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
-        #expect(result.darkMode == .grey800)
+        #expect(result.darkMode == .blueDarker65)
     }
 
     @Test
@@ -74,7 +74,7 @@ struct GOVUKColors_FillsTests {
     func surfaceCardBlue_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
-        #expect(result.darkMode == .grey800)
+        #expect(result.darkMode == .blueDarker65)
     }
 
     @Test

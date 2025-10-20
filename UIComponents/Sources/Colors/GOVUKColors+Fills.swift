@@ -20,7 +20,7 @@ extension GOVUKColors {
         public static let surfaceCardDefault: UIColor = {
             .init(
                 light: .white,
-                dark: .grey800
+                dark: .blueDarker65
             )
         }()
 
