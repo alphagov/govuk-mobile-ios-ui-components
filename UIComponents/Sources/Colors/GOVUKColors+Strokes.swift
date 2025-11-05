@@ -141,5 +141,19 @@ extension GOVUKColors {
                 dark: .blueDarker50
             )
         }()
+
+        public static let surfaceCardEmergencyNotableDeath: UIColor = {
+            .init(
+                light: .clear,
+                dark: .white
+            )
+        }()
+
+        public static let surfaceCardEmergencyInfo: UIColor = {
+            .init(
+                light: .blueLighter25,
+                dark: .blueLighter25
+            )
+        }()
     }
 }
