@@ -144,6 +144,14 @@ struct GOVUKColors_TextTests {
     }
 
     @Test
+    func linkSecondary_returnsExpectedResult() {
+        let result = UIColor.govUK.text.linkSecondary
+
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .accentBlue)
+    }
+
+    @Test
     func header_returnsExpectedResult() {
         let result = UIColor.govUK.text.header
 

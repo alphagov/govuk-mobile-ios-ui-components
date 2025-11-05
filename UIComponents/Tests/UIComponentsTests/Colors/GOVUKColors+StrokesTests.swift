@@ -179,4 +179,20 @@ struct GOVUKColors_StrokesTests {
         #expect(result.lightMode == .blueLighter80)
         #expect(result.darkMode == .blueDarker50)
     }
+
+    @Test
+    func surfaceCardEmergencyNotableDeath_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.surfaceCardEmergencyNotableDeath
+
+        #expect(result.lightMode == .clear)
+        #expect(result.darkMode == .white)
+    }
+
+    @Test
+    func surfaceCardEmergencyInfo_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.surfaceCardEmergencyInfo
+
+        #expect(result.lightMode == .blueLighter25)
+        #expect(result.darkMode == .blueLighter25)
+    }
 }

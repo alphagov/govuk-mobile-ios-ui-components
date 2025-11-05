@@ -211,5 +211,33 @@ extension GOVUKColors {
                 dark: .blueDarker70
             )
         }()
+
+        public static let surfaceCardEmergencyNotableDeath: UIColor = {
+            .init(
+                light: .black,
+                dark: .black
+            )
+        }()
+
+        public static let surfaceCardEmergencyNational: UIColor = {
+            .init(
+                light: .primaryRed,
+                dark: .primaryRed
+            )
+        }()
+
+        public static let surfaceCardEmergencyLocal: UIColor = {
+            .init(
+                light: .primaryTeal,
+                dark: .primaryTeal
+            )
+        }()
+
+        public static let surfaceCardEmergencyInfo: UIColor = {
+            .init(
+                light: .white,
+                dark: .darkModeBlue
+            )
+        }()
     }
 }

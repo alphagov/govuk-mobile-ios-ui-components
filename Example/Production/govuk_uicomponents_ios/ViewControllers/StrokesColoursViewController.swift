@@ -10,7 +10,9 @@ class StrokesColoursViewController: UIViewController {
         ("Chat Answer", .govUK.strokes.chatAnswer),
         ("Focused Chat Text Box", .govUK.strokes.focusedChatTextBox),
         ("Chat Action", .govUK.strokes.chatAction),
-        ("Chat Onboarding List Divider", .govUK.strokes.chatOnboardingListDivider)
+        ("Chat Onboarding List Divider", .govUK.strokes.chatOnboardingListDivider),
+        ("Emergency Banner Notable Death Border", .govUK.strokes.surfaceCardEmergencyNotableDeath),
+        ("Emergency Banner Info Border", .govUK.strokes.surfaceCardEmergencyInfo)
     ]
 
     override func viewDidLoad() {
