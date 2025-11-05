@@ -10,6 +10,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceFullScreen: UIColor = {
+            .init(
+                light: .white,
+                dark: .blueDarker80
+            )
+        }()
+
         public static let surfaceBackground: UIColor = {
             .init(
                 light: .blueLighter90,
