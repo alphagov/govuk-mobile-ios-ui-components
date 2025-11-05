@@ -18,7 +18,21 @@ struct GOVUKColors_FillsTests {
     func surfaceFixedContainer_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceFixedContainer
 
-        #expect(result.darkMode == .black.withAlphaComponent(0.75))
+        #expect(result.darkMode == .blueDarker80.withAlphaComponent(0.75))
+    }
+
+    @Test
+    func surfaceFullScreen_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceFullScreen
+
+        #expect(result.lightMode == .white)
+    }
+
+    @Test
+    func surfaceFullScreen_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceFullScreen
+
+        #expect(result.darkMode == .blueDarker80)
     }
 
     @Test

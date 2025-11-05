@@ -6,7 +6,14 @@ extension GOVUKColors {
         public static let surfaceFixedContainer: UIColor = {
             .init(
                 light: .white.withAlphaComponent(0.75),
-                dark: .black.withAlphaComponent(0.75)
+                dark: .blueDarker80.withAlphaComponent(0.75)
+            )
+        }()
+
+        public static let surfaceFullScreen: UIColor = {
+            .init(
+                light: .white,
+                dark: .blueDarker80
             )
         }()
 
