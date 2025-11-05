@@ -18,7 +18,7 @@ struct GOVUKColors_FillsTests {
     func surfaceFixedContainer_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceFixedContainer
 
-        #expect(result.darkMode == .black.withAlphaComponent(0.75))
+        #expect(result.darkMode == .blueDarker80.withAlphaComponent(0.75))
     }
 
     @Test
