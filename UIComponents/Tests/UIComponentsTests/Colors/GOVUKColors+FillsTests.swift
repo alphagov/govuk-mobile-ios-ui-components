@@ -18,7 +18,21 @@ struct GOVUKColors_FillsTests {
     func surfaceFixedContainer_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceFixedContainer
 
-        #expect(result.darkMode == .black.withAlphaComponent(0.75))
+        #expect(result.darkMode == .blueDarker80.withAlphaComponent(0.75))
+    }
+
+    @Test
+    func surfaceFullScreen_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceFullScreen
+
+        #expect(result.lightMode == .white)
+    }
+
+    @Test
+    func surfaceFullScreen_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceFullScreen
+
+        #expect(result.darkMode == .blueDarker80)
     }
 
     @Test
@@ -46,7 +60,7 @@ struct GOVUKColors_FillsTests {
     func surfaceCard_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
-        #expect(result.darkMode == .grey800)
+        #expect(result.darkMode == .blueDarker65)
     }
 
     @Test
@@ -74,7 +88,7 @@ struct GOVUKColors_FillsTests {
     func surfaceCardBlue_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
-        #expect(result.darkMode == .grey800)
+        #expect(result.darkMode == .blueDarker65)
     }
 
     @Test
@@ -250,14 +264,14 @@ struct GOVUKColors_FillsTests {
     func surfaceList_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceList
 
-        #expect(result.lightMode == .greyWhite)
+        #expect(result.lightMode == .white)
     }
 
     @Test
     func surfaceList_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceList
 
-        #expect(result.darkMode == .blueDarker65)
+        #expect(result.darkMode == .blueDarker70)
     }
 
     @Test
@@ -272,6 +286,34 @@ struct GOVUKColors_FillsTests {
         let result = UIColor.govUK.fills.surfaceListHeading
 
         #expect(result.darkMode == .blueDarker50)
+    }
+
+    @Test
+    func surfaceListSelected_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListSelected
+
+        #expect(result.lightMode == .primaryBlue)
+    }
+
+    @Test
+    func surfaceListSelected_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListSelected
+
+        #expect(result.darkMode == .blueDarker25)
+    }
+
+    @Test
+    func surfaceListUnselected_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListUnselected
+
+        #expect(result.lightMode == .blueLighter90)
+    }
+
+    @Test
+    func surfaceListUnselected_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListUnselected
+
+        #expect(result.darkMode == .blueDarker75)
     }
 
     @Test
@@ -342,5 +384,61 @@ struct GOVUKColors_FillsTests {
         let result = UIColor.govUK.fills.surfaceChatOnboardingListBackground
 
         #expect(result.darkMode == .blueDarker70)
+    }
+
+    @Test
+    func surfaceCardEmergencyNotableDeath_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyNotableDeath
+
+        #expect(result.lightMode == .black)
+    }
+
+    @Test
+    func surfaceCardEmergencyNotableDeath_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyNotableDeath
+
+        #expect(result.darkMode == .black)
+    }
+
+    @Test
+    func surfaceCardEmergencyNational_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyNational
+
+        #expect(result.lightMode == .primaryRed)
+    }
+
+    @Test
+    func surfaceCardEmergencyNational_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyNational
+
+        #expect(result.darkMode == .primaryRed)
+    }
+
+    @Test
+    func surfaceCardEmergencyLocal_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyLocal
+
+        #expect(result.lightMode == .primaryTeal)
+    }
+
+    @Test
+    func surfaceCardEmergencyLocal_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyLocal
+
+        #expect(result.darkMode == .primaryTeal)
+    }
+
+    @Test
+    func surfaceCardEmergencyInfo_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyInfo
+
+        #expect(result.lightMode == .white)
+    }
+
+    @Test
+    func surfaceCardEmergencyInfo_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardEmergencyInfo
+
+        #expect(result.darkMode == .darkModeBlue)
     }
 }

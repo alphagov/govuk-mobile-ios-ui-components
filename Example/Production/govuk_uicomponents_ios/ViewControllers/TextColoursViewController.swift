@@ -2,7 +2,7 @@ import UIKit
 import UIComponents
 
 class TextColoursViewController: UIViewController {
-    let colors: [(name: String, color: UIColor)] = [
+    private let colors: [(name: String, color: UIColor)] = [
         ("Primary", .govUK.text.primary),
         ("Secondary", .govUK.text.secondary),
         ("Link", .govUK.text.link),
@@ -19,7 +19,14 @@ class TextColoursViewController: UIViewController {
         ("Button Compact Focussed", .govUK.text.buttonCompactFocussed),
         ("Button Compact Disabled", .govUK.text.buttonCompactDisabled),
         ("Trailing Icon", .govUK.text.trailingIcon),
-        ("Chat Text Area", .govUK.text.chatTextArea)
+        ("Chat Text Area", .govUK.text.chatTextArea),
+        ("List Selected", .govUK.text.listSelected),
+        ("List Unselected", .govUK.text.listUnselected)
+    ]
+
+    private let blackTextOverrides: [String] = [
+        "List Selected",
+        "Button Primary"
     ]
 
     override func viewDidLoad() {
@@ -66,10 +73,8 @@ class TextColoursViewController: UIViewController {
 
         let label = UILabel()
         label.text = name
-        label.textColor = .white
-        if name == "Button Primary" {
-            label.textColor = .black
-        }
+        let textColour: UIColor = blackTextOverrides.contains(name) ? .black : .white
+        label.textColor = textColour
         label.font = .systemFont(ofSize: 16)
         label.textAlignment = .center
         label.numberOfLines = 0

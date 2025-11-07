@@ -28,7 +28,7 @@ struct GOVUKColors_TextTests {
         let result = UIColor.govUK.text.link
 
         #expect(result.lightMode == .primaryBlue)
-        #expect(result.darkMode == .greyWhite)
+        #expect(result.darkMode == .white)
     }
 
     @Test
@@ -144,6 +144,14 @@ struct GOVUKColors_TextTests {
     }
 
     @Test
+    func linkSecondary_returnsExpectedResult() {
+        let result = UIColor.govUK.text.linkSecondary
+
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .accentBlue)
+    }
+
+    @Test
     func header_returnsExpectedResult() {
         let result = UIColor.govUK.text.header
 
@@ -164,7 +172,7 @@ struct GOVUKColors_TextTests {
         let result = UIColor.govUK.text.iconTertiary
 
         #expect(result.lightMode == .primaryBlue)
-        #expect(result.darkMode == .greyWhite)
+        #expect(result.darkMode == .white)
     }
 
 
@@ -173,6 +181,22 @@ struct GOVUKColors_TextTests {
         let result = UIColor.govUK.text.chatTextArea
 
         #expect(result.lightMode == .grey700)
+        #expect(result.darkMode == .white)
+    }
+
+    @Test
+    func listSelected_returnsExpectedResult() {
+        let result = UIColor.govUK.text.listSelected
+
+        #expect(result.lightMode == .white)
+        #expect(result.darkMode == .white)
+    }
+
+    @Test
+    func listUnselected_returnsExpectedResult() {
+        let result = UIColor.govUK.text.listUnselected
+
+        #expect(result.lightMode == .black)
         #expect(result.darkMode == .white)
     }
 }

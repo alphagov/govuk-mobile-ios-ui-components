@@ -4,6 +4,7 @@ import UIComponents
 class FillsColoursViewController: UIViewController {
     let colors: [(name: String, color: UIColor)] = [
         ("Surface Fixed Container", .govUK.fills.surfaceFixedContainer),
+        ("Surface Full Screen", .govUK.fills.surfaceFullScreen),
         ("Surface Background", .govUK.fills.surfaceBackground),
         ("Surface List", .govUK.fills.surfaceList),
         ("Surface Card Default", .govUK.fills.surfaceCardDefault),
@@ -30,7 +31,11 @@ class FillsColoursViewController: UIViewController {
         ("Surface Chat Answer", .govUK.fills.surfaceChatBlue),
         ("Surface Chat Action", .govUK.fills.surfaceChatAction),
         ("Surface Chat Background", .govUK.fills.surfaceChatBackground),
-        ("Surface Chat Onboarding List Background", .govUK.fills.surfaceChatOnboardingListBackground)
+        ("Surface Chat Onboarding List Background", .govUK.fills.surfaceChatOnboardingListBackground),
+        ("Surface Card Emergency Notable Death", .govUK.fills.surfaceCardEmergencyNotableDeath),
+        ("Surface Card Emergency National", .govUK.fills.surfaceCardEmergencyNational),
+        ("Surface Card Emergency Local", .govUK.fills.surfaceCardEmergencyLocal),
+        ("Surface Card Emergency Info", .govUK.fills.surfaceCardEmergencyInfo)
     ]
 
     override func viewDidLoad() {
