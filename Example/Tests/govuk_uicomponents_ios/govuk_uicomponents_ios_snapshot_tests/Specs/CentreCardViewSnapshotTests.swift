@@ -7,7 +7,8 @@ import iOSSnapshotTestCase
 @testable import UIComponents
 
 @MainActor
-final class CentreCardViewSnapshotTests: FBSnapshotTestCase {
+final class CentreCardViewSnapshotTests:
+    FBSnapshotTestCase {
 
     override func setUp() {
         super.setUp()
