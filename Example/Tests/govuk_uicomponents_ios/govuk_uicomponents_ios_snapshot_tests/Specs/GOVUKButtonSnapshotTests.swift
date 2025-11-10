@@ -21,7 +21,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = UIApplication.shared.windows.first
+        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
 
@@ -35,7 +35,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = UIApplication.shared.windows.first
+        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
 
@@ -49,7 +49,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = UIApplication.shared.windows.first
+        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
 
@@ -63,7 +63,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = UIApplication.shared.windows.first
+        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
 
