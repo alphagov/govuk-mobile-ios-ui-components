@@ -1,11 +1,11 @@
 import Foundation
 
-struct CentreCard {
+public struct CentreCard {
     let primaryText: String?
     let secondaryText: String?
 
-    init(primaryText: String? = nil,
-         secondaryText: String? = nil) {
+    public init(primaryText: String? = nil,
+                secondaryText: String? = nil) {
         self.primaryText = primaryText
         self.secondaryText = secondaryText
     }
