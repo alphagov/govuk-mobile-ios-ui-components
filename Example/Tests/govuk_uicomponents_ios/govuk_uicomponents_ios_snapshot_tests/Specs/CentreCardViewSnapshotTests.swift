@@ -16,14 +16,18 @@ final class CentreCardViewSnapshotTests:
     }
 
     func test_primaryAndSecondaryTextProvided_rendersCorrectly() {
-        let view = CentreCardView(
+        let centreCardView = CentreCardView(
             model: CentreCard(
                 primaryText: "primary text",
                 secondaryText: "secondary text"
             )
+        ).frame(width: 300, height: 200)
+
+        let hosting = UIHostingController(rootView: centreCardView
         )
-        let hosting = UIHostingController(rootView: view)
-        let nav = UINavigationController(rootViewController: hosting)
+        let nav = UINavigationController(
+            rootViewController: hosting
+        )
         nav.navigationBar.prefersLargeTitles = true
 
         let scenes = UIApplication.shared.connectedScenes
@@ -42,7 +46,7 @@ final class CentreCardViewSnapshotTests:
             model: CentreCard(
                 primaryText: "primary text"
             )
-        )
+        ).frame(width: 300, height: 200)
         let hosting = UIHostingController(rootView: view)
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
@@ -63,7 +67,7 @@ final class CentreCardViewSnapshotTests:
             model: CentreCard(
                 secondaryText: "secondarytext"
             )
-        )
+        ).frame(width: 300, height: 200)
         let hosting = UIHostingController(rootView: view)
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
@@ -82,7 +86,7 @@ final class CentreCardViewSnapshotTests:
     func test_noTextProvided_rendersCorrectly() {
         let view = CentreCardView(
             model: CentreCard()
-        )
+        ).frame(width: 300, height: 200)
         let hosting = UIHostingController(rootView: view)
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
