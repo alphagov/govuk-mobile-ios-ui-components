@@ -36,6 +36,20 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
+    func surfaceFullscreen_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceFullscreen
+
+        #expect(result.lightMode == .white)
+    }
+
+    @Test
+    func surfaceFullscreen_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceFullscreen
+
+        #expect(result.darkMode == .blueDarker80)
+    }
+
+    @Test
     func surfaceCard_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
