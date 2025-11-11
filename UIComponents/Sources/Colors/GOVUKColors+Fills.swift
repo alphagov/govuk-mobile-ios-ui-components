@@ -17,6 +17,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceFullscreen: UIColor = {
+            .init(
+                light: .white,
+                dark: .blueDarker80
+            )
+        }()
+
         public static let surfaceCardDefault: UIColor = {
             .init(
                 light: .white,
