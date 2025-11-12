@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct CentreCardView: View {
+public struct CentreCardView: View {
     public let model: CentreCard
 
     public init(model: CentreCard) {
         self.model = model
     }
 
-    var body: some View {
+    public var body: some View {
         VStack {
             HStack(alignment: .center) {
                 Spacer()
