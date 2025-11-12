@@ -10,12 +10,11 @@ import iOSSnapshotTestCase
 class GOVUKUIComponentsSnapshotTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
-        self.recordMode = false
+//        self.recordMode = true
     }
 
     func test_buttons_rendersCorrectly() {
-        let viewController = ButtonTestingViewController(
-        )
+        let viewController = ButtonTestingViewController()
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = false
 
