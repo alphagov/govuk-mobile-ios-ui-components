@@ -12,7 +12,7 @@ struct GOVUKColors_StrokesTests {
         let result = UIColor.govUK.strokes.listDivider
 
         #expect(result.lightMode == .blueLighter80)
-        #expect(result.darkMode == .darkModeBlue)
+        #expect(result.darkMode == .blueDarkMode)
     }
 
     @Test
@@ -64,7 +64,7 @@ struct GOVUKColors_StrokesTests {
     func cardDefault_dark_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardDefault
 
-        #expect(result.darkMode == .darkModeBlue)
+        #expect(result.darkMode == .blueDarkMode)
     }
 
     @Test

@@ -142,10 +142,10 @@ extension GOVUKColors {
             )
         }()
 
-        public static let surfaceSearchBox: UIColor = {
+        public static let surfaceSearch: UIColor = {
             .init(
-                light: .grey550.withAlphaComponent(0.12),
-                dark: .grey550.withAlphaComponent(0.24)
+                light: .white,
+                dark: .blueDarkMode
             )
         }()
 
@@ -250,7 +250,7 @@ extension GOVUKColors {
         public static let surfaceCardEmergencyInfo: UIColor = {
             .init(
                 light: .white,
-                dark: .darkModeBlue
+                dark: .blueDarkMode
             )
         }()
     }
