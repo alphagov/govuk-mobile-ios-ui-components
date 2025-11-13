@@ -75,7 +75,6 @@ class SnapshotTestCase: FBSnapshotTestCase {
                         overallTolerance: CGFloat = 0,
                         file: StaticString = #file,
                         line: UInt = #line) {
-        view.sizeToFit()
         FBSnapshotVerifyView(
             view,
             overallTolerance: overallTolerance,
