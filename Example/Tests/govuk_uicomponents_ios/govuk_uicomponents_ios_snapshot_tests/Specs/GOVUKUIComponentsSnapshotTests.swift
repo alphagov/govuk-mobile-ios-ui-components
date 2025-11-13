@@ -8,11 +8,6 @@ import iOSSnapshotTestCase
 
 @MainActor
 class GOVUKUIComponentsSnapshotTests: SnapshotTestCase {
-    override func setUp() {
-        super.setUp()
-        self.recordMode = false
-    }
-
     func test_buttons_rendersCorrectly() {
         let viewController = ButtonTestingViewController()
         VerifySnapshot(viewController)
