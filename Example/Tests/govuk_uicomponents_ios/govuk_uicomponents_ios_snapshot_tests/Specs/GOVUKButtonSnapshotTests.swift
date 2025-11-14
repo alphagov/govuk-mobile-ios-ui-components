@@ -7,13 +7,7 @@ import iOSSnapshotTestCase
 @testable import UIComponents
 
 @MainActor
-class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
-
-    override func setUp() {
-        super.setUp()
-        self.recordMode = false
-    }
-
+class GOVUKButtonSnapshotTests: SnapshotTestCase {
     func test_primary_rendersCorrectly() {
         let viewController = ButtonStateViewController(
             viewModel: .init(title: "Primary", config: .primary, width: 200)
@@ -21,11 +15,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 
     func test_secondary_rendersCorrectly() {
@@ -35,11 +25,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 
     func test_compact_rendersCorrectly() {
@@ -49,11 +35,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 
     func test_destructive_rendersCorrectly() {
@@ -63,11 +45,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: viewController)
         nav.navigationBar.prefersLargeTitles = true
 
-        let window = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 
     func test_primary_button_default() {
@@ -76,7 +54,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_primary_button_highlighted() {
@@ -86,7 +64,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_primary_button_disabled() {
@@ -96,7 +74,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_secondary_button_default() {
@@ -105,7 +83,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_secondary_button_highlighted() {
@@ -115,7 +93,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_secondary_button_disabled() {
@@ -125,7 +103,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_compact_button_default() {
@@ -134,7 +112,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_compact_button_highlighted() {
@@ -144,7 +122,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_compact_button_disabled() {
@@ -154,7 +132,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_destructive_button_default() {
@@ -163,7 +141,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_destructive_button_highlighted() {
@@ -173,7 +151,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
     func test_destructive_button_disabled() {
@@ -183,7 +161,7 @@ class GOVUKButtonSnapshotTests: FBSnapshotTestCase {
 
         button.frame.size = CGSize(width: 200, height: 47)
 
-        FBSnapshotVerifyView(button)
+        VerifySnapshot(button)
     }
 
 }

@@ -7,13 +7,7 @@ import iOSSnapshotTestCase
 @testable import UIComponents
 
 @MainActor
-final class SwiftUIButtonSnapshotTests: FBSnapshotTestCase {
-
-    override func setUp() {
-        super.setUp()
-        self.recordMode = false
-    }
-
+final class SwiftUIButtonSnapshotTests: SnapshotTestCase {
     func test_primary_swiftui_rendersCorrectly() {
         let view = SwiftUIButtonStateView(
             viewModel: .init(title: "Primary", config: .primary, width: 200)
@@ -22,15 +16,9 @@ final class SwiftUIButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
         hosting.updateFocusIfNeeded()
 
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 
     func test_secondary_swiftui_rendersCorrectly() {
@@ -41,13 +29,7 @@ final class SwiftUIButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 
     func test_compact_swiftui_rendersCorrectly() {
@@ -58,13 +40,7 @@ final class SwiftUIButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 
     func test_destructive_swiftui_rendersCorrectly() {
@@ -75,12 +51,6 @@ final class SwiftUIButtonSnapshotTests: FBSnapshotTestCase {
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(nav)
     }
 }

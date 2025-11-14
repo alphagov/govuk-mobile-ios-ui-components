@@ -4,7 +4,7 @@ import UIComponents
 class FillsColoursViewController: UIViewController {
     let colors: [(name: String, color: UIColor)] = [
         ("Surface Fixed Container", .govUK.fills.surfaceFixedContainer),
-        ("Surface Full Screen", .govUK.fills.surfaceFullScreen),
+        ("Surface Full Screen", .govUK.fills.surfaceFullscreen),
         ("Surface Background", .govUK.fills.surfaceBackground),
         ("Surface List", .govUK.fills.surfaceList),
         ("Surface Card Default", .govUK.fills.surfaceCardDefault),

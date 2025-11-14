@@ -7,98 +7,52 @@ import iOSSnapshotTestCase
 @testable import UIComponents
 
 @MainActor
-final class CentreCardViewSnapshotTests:
-    FBSnapshotTestCase {
-
-    override func setUp() {
-        super.setUp()
-        self.recordMode = false
-    }
-
+final class CentreCardViewSnapshotTests: SnapshotTestCase {
     func test_primaryAndSecondaryTextProvided_rendersCorrectly() {
-        let centreCardView = CentreCardView(
+        let sut = CentreCardView(
             model: CentreCard(
                 primaryText: "primary text",
                 secondaryText: "secondary text"
             )
-        ).frame(width: 300, height: 200)
+        ).frame(width: 300, height: 150)
 
-        let hosting = UIHostingController(rootView: centreCardView
-        )
-        let nav = UINavigationController(
-            rootViewController: hosting
-        )
-        nav.navigationBar.prefersLargeTitles = true
+        let hosting = UIHostingController(rootView: sut)
+        hosting.view.backgroundColor = .lightGray
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        hosting.updateFocusIfNeeded()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(hosting)
     }
 
     func test_primaryTextProvided_rendersCorrectly() {
-        let view = CentreCardView(
+        let sut = CentreCardView(
             model: CentreCard(
                 primaryText: "primary text"
             )
-        ).frame(width: 300, height: 200)
-        let hosting = UIHostingController(rootView: view)
-        let nav = UINavigationController(rootViewController: hosting)
-        nav.navigationBar.prefersLargeTitles = true
+        ).frame(width: 300, height: 150)
+        let hosting = UIHostingController(rootView: sut)
+        hosting.view.backgroundColor = .lightGray
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        hosting.updateFocusIfNeeded()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(hosting)
     }
 
     func test_secondaryTextProvided_rendersCorrectly() {
-        let view = CentreCardView(
+        let sut = CentreCardView(
             model: CentreCard(
                 secondaryText: "secondarytext"
             )
-        ).frame(width: 300, height: 200)
-        let hosting = UIHostingController(rootView: view)
-        let nav = UINavigationController(rootViewController: hosting)
-        nav.navigationBar.prefersLargeTitles = true
+        ).frame(width: 300, height: 150)
+        let hosting = UIHostingController(rootView: sut)
+        hosting.view.backgroundColor = .lightGray
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        hosting.updateFocusIfNeeded()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(hosting)
     }
 
     func test_noTextProvided_rendersCorrectly() {
-        let view = CentreCardView(
+        let sut = CentreCardView(
             model: CentreCard()
-        ).frame(width: 300, height: 200)
-        let hosting = UIHostingController(rootView: view)
-        let nav = UINavigationController(rootViewController: hosting)
-        nav.navigationBar.prefersLargeTitles = true
+        ).frame(width: 300, height: 150)
+        let hosting = UIHostingController(rootView: sut)
+        hosting.view.backgroundColor = .lightGray
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
-        hosting.updateFocusIfNeeded()
-
-        FBSnapshotVerifyView(nav.view)
+        VerifySnapshotInWindow(hosting)
     }
 }
