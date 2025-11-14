@@ -222,14 +222,14 @@ struct GOVUKColors_FillsTests {
     func surfaceSearch_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceSearch
 
-        #expect(result.lightMode == .grey550.withAlphaComponent(0.12))
+        #expect(result.lightMode == .white)
     }
 
     @Test
     func surfaceSearch_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceSearch
 
-        #expect(result.darkMode == .grey550.withAlphaComponent(0.24))
+        #expect(result.darkMode == .blueDarkMode)
     }
 
     @Test
