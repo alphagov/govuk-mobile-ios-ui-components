@@ -22,20 +22,6 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
-    func surfaceFullScreen_light_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceFullScreen
-
-        #expect(result.lightMode == .white)
-    }
-
-    @Test
-    func surfaceFullScreen_dark_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceFullScreen
-
-        #expect(result.darkMode == .blueDarker80)
-    }
-
-    @Test
     func surfaceBackground_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceBackground
 
