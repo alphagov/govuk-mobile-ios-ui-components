@@ -219,17 +219,17 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
-    func surfaceSearchbox_light_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceSearchBox
+    func surfaceSearch_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceSearch
 
-        #expect(result.lightMode == .grey550.withAlphaComponent(0.12))
+        #expect(result.lightMode == .white)
     }
 
     @Test
-    func surfaceSearchbox_dark_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceSearchBox
+    func surfaceSearch_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceSearch
 
-        #expect(result.darkMode == .grey550.withAlphaComponent(0.24))
+        #expect(result.darkMode == .blueDarkMode)
     }
 
     @Test
@@ -439,6 +439,6 @@ struct GOVUKColors_FillsTests {
     func surfaceCardEmergencyInfo_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardEmergencyInfo
 
-        #expect(result.darkMode == .darkModeBlue)
+        #expect(result.darkMode == .blueDarkMode)
     }
 }
