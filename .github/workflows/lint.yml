@@ -10,7 +10,7 @@ concurrency:
 jobs:
   run-linters:
     name: Run linters
-    runs-on: macos-15
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check out Git repository
