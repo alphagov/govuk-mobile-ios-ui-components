@@ -6,7 +6,7 @@ extension GOVUKColors {
         public static let surfaceFixedContainer: UIColor = {
             .init(
                 light: .white.withAlphaComponent(0.75),
-                dark: .black.withAlphaComponent(0.75)
+                dark: .blueDarker80.withAlphaComponent(0.75)
             )
         }()
 
@@ -27,7 +27,7 @@ extension GOVUKColors {
         public static let surfaceCardDefault: UIColor = {
             .init(
                 light: .white,
-                dark: .grey800
+                dark: .blueDarker65
             )
         }()
 
@@ -131,21 +131,21 @@ extension GOVUKColors {
         public static let surfaceModal: UIColor = {
             .init(
                 light: .white,
-                dark: .grey850
+                dark: .blueDarker80
             )
         }()
 
-        public static let surfaceSearchBox: UIColor = {
+        public static let surfaceSearch: UIColor = {
             .init(
-                light: .grey550.withAlphaComponent(0.12),
-                dark: .grey550.withAlphaComponent(0.24)
+                light: .white,
+                dark: .blueDarkMode
             )
         }()
 
         public static let surfaceHomeHeaderBackground: UIColor = {
             .init(
                 light: .primaryBlue,
-                dark: .blueDarker70
+                dark: .blueDarker65
             )
         }()
 
@@ -158,8 +158,8 @@ extension GOVUKColors {
 
         public static let surfaceList: UIColor = {
             .init(
-                light: .blueLighter95,
-                dark: .blueDarker80
+                light: .white,
+                dark: .blueDarker70
             )
         }()
 
@@ -216,6 +216,34 @@ extension GOVUKColors {
             .init(
                 light: .blueLighter90,
                 dark: .blueDarker70
+            )
+        }()
+
+        public static let surfaceCardEmergencyNotableDeath: UIColor = {
+            .init(
+                light: .black,
+                dark: .black
+            )
+        }()
+
+        public static let surfaceCardEmergencyNational: UIColor = {
+            .init(
+                light: .primaryRed,
+                dark: .primaryRed
+            )
+        }()
+
+        public static let surfaceCardEmergencyLocal: UIColor = {
+            .init(
+                light: .primaryTeal,
+                dark: .primaryTeal
+            )
+        }()
+
+        public static let surfaceCardEmergencyInfo: UIColor = {
+            .init(
+                light: .white,
+                dark: .blueDarkMode
             )
         }()
     }

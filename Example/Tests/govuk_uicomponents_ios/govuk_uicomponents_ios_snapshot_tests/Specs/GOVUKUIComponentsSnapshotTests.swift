@@ -20,7 +20,7 @@ class GOVUKUIComponentsSnapshotTests: SnapshotTestCase {
 
     func test_colours_fills_rendersCorrectly() {
         let viewController = FillsColoursViewController()
-        VerifySnapshot(viewController.view)
+        VerifySnapshot(viewController)
     }
 
     func test_colours_strokes_rendersCorrectly() {

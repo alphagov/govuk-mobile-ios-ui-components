@@ -20,6 +20,13 @@ extension GOVUKColors {
         public static let link: UIColor = {
             .init(
                 light: .primaryBlue,
+                dark: .white
+            )
+        }()
+
+        public static let linkSecondary: UIColor = {
+            .init(
+                light: .primaryBlue,
                 dark: .accentBlue
             )
         }()
@@ -136,9 +143,30 @@ extension GOVUKColors {
             )
         }()
 
+        public static let iconTertiary: UIColor = {
+            .init(
+                light: .primaryBlue,
+                dark: .white
+            )
+        }()
+
         public static let chatTextArea: UIColor = {
             .init(
                 light: .grey700,
+                dark: .white
+            )
+        }()
+
+        public static let listSelected: UIColor = {
+            .init(
+                light: .white,
+                dark: .white
+            )
+        }()
+
+        public static let listUnselected: UIColor = {
+            .init(
+                light: .black,
                 dark: .white
             )
         }()

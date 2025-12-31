@@ -24,14 +24,18 @@ class FillsColoursViewController: UIViewController {
         ("Surface Button Destructive", .govUK.fills.surfaceButtonDestructive),
         ("Surface Button Destructive Highlight", .govUK.fills.surfaceButtonDestructiveHighlight),
         ("Surface Modal", .govUK.fills.surfaceModal),
-        ("Surface Search Box", .govUK.fills.surfaceSearchBox),
+        ("Surface Search", .govUK.fills.surfaceSearch),
         ("Surface Home Header Background", .govUK.fills.surfaceHomeHeaderBackground),
         ("Surface Toggle Selected", .govUK.fills.surfaceToggleSelected),
         ("Surface Chat Question", .govUK.fills.surfaceChatQuestion),
         ("Surface Chat Answer", .govUK.fills.surfaceChatBlue),
         ("Surface Chat Action", .govUK.fills.surfaceChatAction),
         ("Surface Chat Background", .govUK.fills.surfaceChatBackground),
-        ("Surface Chat Onboarding List Background", .govUK.fills.surfaceChatOnboardingListBackground)
+        ("Surface Chat Onboarding List Background", .govUK.fills.surfaceChatOnboardingListBackground),
+        ("Surface Card Emergency Notable Death", .govUK.fills.surfaceCardEmergencyNotableDeath),
+        ("Surface Card Emergency National", .govUK.fills.surfaceCardEmergencyNational),
+        ("Surface Card Emergency Local", .govUK.fills.surfaceCardEmergencyLocal),
+        ("Surface Card Emergency Info", .govUK.fills.surfaceCardEmergencyInfo)
     ]
 
     override func viewDidLoad() {

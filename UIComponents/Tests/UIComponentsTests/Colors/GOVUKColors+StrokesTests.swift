@@ -11,8 +11,8 @@ struct GOVUKColors_StrokesTests {
     func listDivider_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.listDivider
 
-        #expect(result.lightMode == .grey300)
-        #expect(result.darkMode == .grey500)
+        #expect(result.lightMode == .blueLighter80)
+        #expect(result.darkMode == .blueDarkMode)
     }
 
     @Test
@@ -64,7 +64,7 @@ struct GOVUKColors_StrokesTests {
     func cardDefault_dark_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardDefault
 
-        #expect(result.darkMode == .darkModeBlue)
+        #expect(result.darkMode == .blueDarkMode)
     }
 
     @Test
@@ -178,5 +178,21 @@ struct GOVUKColors_StrokesTests {
 
         #expect(result.lightMode == .blueLighter80)
         #expect(result.darkMode == .blueDarker50)
+    }
+
+    @Test
+    func surfaceCardEmergencyNotableDeath_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.surfaceCardEmergencyNotableDeath
+
+        #expect(result.lightMode == .clear)
+        #expect(result.darkMode == .white)
+    }
+
+    @Test
+    func surfaceCardEmergencyInfo_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.surfaceCardEmergencyInfo
+
+        #expect(result.lightMode == .blueLighter25)
+        #expect(result.darkMode == .blueLighter25)
     }
 }

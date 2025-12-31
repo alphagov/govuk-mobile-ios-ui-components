@@ -29,12 +29,6 @@ final class SwiftUIButtonSnapshotTests: SnapshotTestCase {
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
         VerifySnapshotInWindow(nav)
     }
 
@@ -46,12 +40,6 @@ final class SwiftUIButtonSnapshotTests: SnapshotTestCase {
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
 
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
-
         VerifySnapshotInWindow(nav)
     }
 
@@ -62,12 +50,6 @@ final class SwiftUIButtonSnapshotTests: SnapshotTestCase {
         let hosting = UIHostingController(rootView: view)
         let nav = UINavigationController(rootViewController: hosting)
         nav.navigationBar.prefersLargeTitles = true
-
-        let scenes = UIApplication.shared.connectedScenes
-        let windowScenes = scenes.first as? UIWindowScene
-        let window = windowScenes?.windows.first
-        window?.rootViewController = nav
-        window?.makeKeyAndVisible()
 
         VerifySnapshotInWindow(nav)
     }

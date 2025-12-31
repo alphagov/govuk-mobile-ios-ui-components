@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests='210' failures='0' skipped='0' time='56.8579'>
+  <testsuite name='UIComponentsTests' time='56.0' tests='185' failures='0' skipped='0'>
+    <testsuite name='GOVUKButtonTests' time='5.0' tests='5' failures='0' skipped='0'>
+      <testcase name='setViewModel_changesViewModel()' classname='GOVUKButtonTests' time='1.0'/>
+      <testcase name='setTitleText_setsTitle()' classname='GOVUKButtonTests' time='1.0'/>
+      <testcase name='setButtonConfiguration_changesConfig()' classname='GOVUKButtonTests' time='1.0'/>
+      <testcase name='setBackgroundColor_setsColor()' classname='GOVUKButtonTests' time='1.0'/>
+      <testcase name='init_withConfig_noTitle_returnsExpectedResult()' classname='GOVUKButtonTests' time='1.0'/>
+    </testsuite>
+    <testsuite name='FontExtensionsTests' time='2.0' tests='34' failures='0' skipped='0'>
+      <testcase name='bodySemibold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='subheadlineSemibold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='title3Semibold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='callout_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='title3_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='bodySemiboldItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption2Semibold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='footnote_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption1_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption1Italic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='calloutSemibold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='headlineSemiboldItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='footnoteSemibold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption1Medium_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='footnoteItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption1MediumItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='title1_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='title1Bold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='footnoteSemiboldItalic_exists()' classname='FontExtensionsTests' time='1.0'/>
+      <testcase name='headlineSemibold_exists()' classname='FontExtensionsTests' time='1.0'/>
+      <testcase name='calloutItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='subheadlineSemiboldItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption2_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='subheadline_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='largeTitle_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption2SemiboldItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='largeTitleBold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='title2Bold_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='caption2Italic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='body_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='subheadlineItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='calloutSemiboldItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='bodyItalic_exists()' classname='FontExtensionsTests' time='0.0'/>
+      <testcase name='title2_exists()' classname='FontExtensionsTests' time='0.0'/>
+    </testsuite>
+    <testsuite name='ButtonConfigurationTests' time='0.0' tests='6' failures='0' skipped='0'>
+      <testcase name='compact_returnsExpectedConfiguration()' classname='ButtonConfigurationTests' time='0.0'/>
+      <testcase name='backgroundColorFor_focussed_returnsExpectedColor()' classname='ButtonConfigurationTests' time='0.0'/>
+      <testcase name='backgroundColorFor_highlighted_returnsExpectedColor()' classname='ButtonConfigurationTests' time='0.0'/>
+      <testcase name='primary_returnsExpectedConfiguration()' classname='ButtonConfigurationTests' time='0.0'/>
+      <testcase name='secondary_returnsExpectedConfiguration()' classname='ButtonConfigurationTests' time='0.0'/>
+      <testcase name='destructive_returnsExpectedConfiguration()' classname='ButtonConfigurationTests' time='0.0'/>
+    </testsuite>
+    <testsuite name='GOVUKColors_TextTests' time='3.0' tests='24' failures='0' skipped='0'>
+      <testcase name='buttonPrimaryDisabled_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonDestructive_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonSuccess_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='listSelected_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonCompactDisabled_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonPrimary_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='secondaryreturnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonCompactFocussed_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='primary_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonSecondaryHighlight_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='listUnselected_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonSecondary_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='chatTextArea_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='1.0'/>
+      <testcase name='header_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='trailingIcon_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='linkHeader_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='tertiaryIcon_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonPrimaryFocussed_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='1.0'/>
+      <testcase name='buttonSecondaryDisabled_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonCompactHighlight_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonCompact_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='buttonSecondaryFocussed_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='linkSecondary_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='0.0'/>
+      <testcase name='link_returnsExpectedResult()' classname='GOVUKColors_TextTests' time='1.0'/>
+    </testsuite>
+    <testsuite name='UIButtonExtensionsTests' time='2.0' tests='2' failures='0' skipped='0'>
+      <testcase name='removeAllActions_withUIAction_removesAction()' classname='UIButtonExtensionsTests' time='1.0'/>
+      <testcase name='removeAllActions_withTargetAction_removesAction()' classname='UIButtonExtensionsTests' time='1.0'/>
+    </testsuite>
+    <testsuite name='UIFontExtensionsTests' time='27.0' tests='27' failures='0' skipped='0'>
+      <testcase name='callout_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='caption2_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='subheadlineItalic_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='caption1_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='title2Bold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='bodySemibold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='subheadlineSemibold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='footnoteSemibold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='bodyItalic_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='caption1Italic_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='title2_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='subheadline_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='caption1Medium_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='calloutSemibold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='title1Bold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='headlineSemibold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='calloutItalic_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='title3Semibold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='largeTitleBold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='title1_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='footnoteItalic_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='caption2Italic_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='title3_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='largeTitle_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='body_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='caption2Semibold_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+      <testcase name='footnote_hasCorrectSizeAndFont()' classname='UIFontExtensionsTests' time='1.0'/>
+    </testsuite>
+    <testsuite name='GOVUKColors_FillsTests' time='15.0' tests='63' failures='0' skipped='0'>
+      <testcase name='surfaceCardEmergencyNotableDeath_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatQuestion_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyLocal_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceBackground_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceListHeading_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonCompact_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonCompactDisabled_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatOnboardingListBackground_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCard_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatBlue_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceToggleSelected_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceBackground_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardBlue_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonCompactFocussed_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceFixedContainer_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceListSelected_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceFixedContainer_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonPrimaryHighlight_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceFullScreen_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceFullScreen_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyNational_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatBlue_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCard_nonTappable_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyInfo_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceSearchbox_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyNational_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceToggleSelected_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatAction_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonSecondaryHighlight_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceListHeading_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCard_nonTappable_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonSecondary_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceFullscreen_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceSearchbox_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyNotableDeath_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonSecondaryFocussed_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonPrimaryFocussed_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceModal_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonDestructive_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatBackground_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyInfo_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceCardBlue_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceFullscreen_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceList_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceButtonPrimary_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceChatBackground_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatAction_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceCardEmergencyLocal_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceListUnselected_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceHomeHeaderBackground_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceList_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceCardSelected_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceHomeHeaderBackground_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='0.0'/>
+      <testcase name='surfaceChatQuestion_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceListSelected_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceCardSelected_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceChatOnboardingListBackground_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceListUnselected_light_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceCard_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceButtonCompactHighlight_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceButtonPrimaryDisabled_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceButtonDestructiveHighlight_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+      <testcase name='surfaceModal_dark_returnsExpectedResult()' classname='GOVUKColors_FillsTests' time='1.0'/>
+    </testsuite>
+    <testsuite name='GOVUKColors_StrokesTests' time='2.0' tests='24' failures='0' skipped='0'>
+      <testcase name='buttonPrimaryDefault_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='chatOnboardingListDivider_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='listDivider_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='buttonFocused_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='chatAnswer_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyInfo_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='surfaceCardEmergencyNotableDeath_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='fixedContainer_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='buttonDestructiveHighlight_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='buttonPrimaryFocused_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='cardDefault_light_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='chatAction_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='error_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='cardBlue_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='buttonPrimaryHighlight_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='cardGreen_dark_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='chatDivider_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='cardSelected_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='buttonDestructiveDefault_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='focusedChatTextBox_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='buttonCompactHighlight_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='cardDefault_dark_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='1.0'/>
+      <testcase name='pageControlInactive_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='0.0'/>
+      <testcase name='cardGreen_light_returnsExpectedResult()' classname='GOVUKColors_StrokesTests' time='1.0'/>
+    </testsuite>
+    <properties>
+      <property name='Configuration' value='Test Scheme Action'/>
+      <property name='device' value='iPhone 17 Pro (26.0)'/>
+    </properties>
+  </testsuite>
+  <testsuite name='govuk_uicomponents_ios_snapshot_tests' time='0.8579' tests='25' failures='0' skipped='0'>
+    <testsuite name='GOVUKButtonSnapshotTests' time='0.3449' tests='16' failures='0' skipped='0'>
+      <testcase name='test_compact_button_default()' classname='GOVUKButtonSnapshotTests' time='0.061'/>
+      <testcase name='test_compact_button_disabled()' classname='GOVUKButtonSnapshotTests' time='0.0047'/>
+      <testcase name='test_compact_button_highlighted()' classname='GOVUKButtonSnapshotTests' time='0.0042'/>
+      <testcase name='test_compact_rendersCorrectly()' classname='GOVUKButtonSnapshotTests' time='0.071'/>
+      <testcase name='test_destructive_button_default()' classname='GOVUKButtonSnapshotTests' time='0.0057'/>
+      <testcase name='test_destructive_button_disabled()' classname='GOVUKButtonSnapshotTests' time='0.0048'/>
+      <testcase name='test_destructive_button_highlighted()' classname='GOVUKButtonSnapshotTests' time='0.0068'/>
+      <testcase name='test_destructive_rendersCorrectly()' classname='GOVUKButtonSnapshotTests' time='0.061'/>
+      <testcase name='test_primary_button_default()' classname='GOVUKButtonSnapshotTests' time='0.0045'/>
+      <testcase name='test_primary_button_disabled()' classname='GOVUKButtonSnapshotTests' time='0.0039'/>
+      <testcase name='test_primary_button_highlighted()' classname='GOVUKButtonSnapshotTests' time='0.0043'/>
+      <testcase name='test_primary_rendersCorrectly()' classname='GOVUKButtonSnapshotTests' time='0.059'/>
+      <testcase name='test_secondary_button_default()' classname='GOVUKButtonSnapshotTests' time='0.0045'/>
+      <testcase name='test_secondary_button_disabled()' classname='GOVUKButtonSnapshotTests' time='0.0057'/>
+      <testcase name='test_secondary_button_highlighted()' classname='GOVUKButtonSnapshotTests' time='0.0048'/>
+      <testcase name='test_secondary_rendersCorrectly()' classname='GOVUKButtonSnapshotTests' time='0.039'/>
+    </testsuite>
+    <testsuite name='GOVUKUIComponentsSnapshotTests' time='0.243' tests='5' failures='0' skipped='0'>
+      <testcase name='test_buttons_rendersCorrectly()' classname='GOVUKUIComponentsSnapshotTests' time='0.049'/>
+      <testcase name='test_colours_fills_rendersCorrectly()' classname='GOVUKUIComponentsSnapshotTests' time='0.075'/>
+      <testcase name='test_colours_strokes_rendersCorrectly()' classname='GOVUKUIComponentsSnapshotTests' time='0.035'/>
+      <testcase name='test_colours_text_rendersCorrectly()' classname='GOVUKUIComponentsSnapshotTests' time='0.041'/>
+      <testcase name='test_font_rendersCorrectly()' classname='GOVUKUIComponentsSnapshotTests' time='0.043'/>
+    </testsuite>
+    <testsuite name='SwiftUIButtonSnapshotTests' time='0.27' tests='4' failures='0' skipped='0'>
+      <testcase name='test_compact_swiftui_rendersCorrectly()' classname='SwiftUIButtonSnapshotTests' time='0.15'/>
+      <testcase name='test_destructive_swiftui_rendersCorrectly()' classname='SwiftUIButtonSnapshotTests' time='0.039'/>
+      <testcase name='test_primary_swiftui_rendersCorrectly()' classname='SwiftUIButtonSnapshotTests' time='0.039'/>
+      <testcase name='test_secondary_swiftui_rendersCorrectly()' classname='SwiftUIButtonSnapshotTests' time='0.042'/>
+    </testsuite>
+    <properties>
+      <property name='Configuration' value='Test Scheme Action'/>
+      <property name='device' value='iPhone 17 Pro (26.0)'/>
+    </properties>
+  </testsuite>
+</testsuites>

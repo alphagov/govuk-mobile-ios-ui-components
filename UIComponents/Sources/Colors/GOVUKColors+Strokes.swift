@@ -5,8 +5,8 @@ extension GOVUKColors {
     public struct Strokes {
         public static let listDivider: UIColor = {
             .init(
-                light: .grey300,
-                dark: .grey500
+                light: .blueLighter80,
+                dark: .blueDarkMode
             )
         }()
 
@@ -68,7 +68,7 @@ extension GOVUKColors {
 
         public static let cardDefault: UIColor = {
             .init(light: .blueLighter80,
-                  dark: .darkModeBlue
+                  dark: .blueDarkMode
             )
         }()
 
@@ -139,6 +139,20 @@ extension GOVUKColors {
             .init(
                 light: .blueLighter80,
                 dark: .blueDarker50
+            )
+        }()
+
+        public static let surfaceCardEmergencyNotableDeath: UIColor = {
+            .init(
+                light: .clear,
+                dark: .white
+            )
+        }()
+
+        public static let surfaceCardEmergencyInfo: UIColor = {
+            .init(
+                light: .blueLighter25,
+                dark: .blueLighter25
             )
         }()
     }
