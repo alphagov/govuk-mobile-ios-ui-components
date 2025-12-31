@@ -1,0 +1,42 @@
+# frozen_string_literal: true
+
+require_relative 'configuration'
+
+default_platform :ios
+
+platform :ios do
+  desc 'Runs all the tests'
+  lane :unit do
+    unit_test
+    convert_coverage
+  end
+
+  private_lane :unit_test do
+    scan(
+      workspace: configuration.app_workspace,
+      scheme: configuration.app_scheme,
+      devices: configuration.scan_devices,
+      testplan: configuration.app_test_plan,
+      clean: false,
+      prelaunch_simulator: true,
+      output_directory: configuration.scan_output_directory
+    )
+  end
+
+  private_lane :convert_coverage do
+    slather(
+      workspace: configuration.app_workspace,
+      proj: configuration.app_project,
+      scheme: configuration.app_scheme,
+      output_directory: configuration.scan_output_directory,
+      sonarqube_xml: true
+    )
+  end
+end
+
+def configuration
+  @configuration ||= Configuration.new(
+    lane_context[SharedValues::LANE_NAME],
+    '.build.yml'
+  )
+end

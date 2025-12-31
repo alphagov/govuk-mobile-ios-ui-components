@@ -1,0 +1,74 @@
+{
+  "configurations" : [
+    {
+      "id" : "FCC23714-B52A-407F-A40F-46A191F25561",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "commandLineArgumentEntries" : [
+      {
+        "argument" : "-UIPreferredContentSizeCategoryName UICTContentSizeCategoryL"
+      }
+    ],
+    "environmentVariableEntries" : [
+      {
+        "key" : "IMAGE_DIFF_DIR",
+        "value" : "$(SOURCE_ROOT)\/FailureDiffs"
+      },
+      {
+        "key" : "FB_REFERENCE_IMAGE_DIR",
+        "value" : "$(SOURCE_ROOT)\/Tests\/govuk_uicomponents_ios\/govuk_uicomponents_ios_snapshot_tests\/ReferenceImages"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:GovUK-UIComponents.xcodeproj",
+      "identifier" : "5D0278452C2AA90900F2A4EB",
+      "name" : "govuk_uicomponents_ios"
+    }
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "AdaptiveStackTests",
+        "AdaptiveStackTests\/test_body_returnsConditionalContentInOrder()",
+        "SwiftUIButtonTests",
+        "SwiftUIButtonTests\/test_init_config_viewModel_createsButton()"
+      ],
+      "target" : {
+        "containerPath" : "container:..",
+        "identifier" : "UIComponentsTests",
+        "name" : "UIComponentsTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:GovUK-UIComponents.xcodeproj",
+        "identifier" : "5DB0C06B2CC247F200C4E010",
+        "name" : "govuk_uicomponents_ios_snapshot_tests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:GovUK-UIComponents.xcodeproj",
+        "identifier" : "5D02785B2C2AA91000F2A4EB",
+        "name" : "govuk_uicomponents_ios_unit_tests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:GovUK-UIComponents.xcodeproj",
+        "identifier" : "5D0278652C2AA91000F2A4EB",
+        "name" : "govuk_uicomponents_ios_ui_tests"
+      }
+    }
+  ],
+  "version" : 1
+}
