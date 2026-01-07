@@ -1,9 +1,9 @@
 import SwiftUI
 
-public struct HeaderViewComponent: View {
-    let model: HeaderComponent
+public struct SectionHeaderLabelView: View {
+    let model: SectionHeaderLabelViewModel
 
-    public init(model: HeaderComponent) {
+    public init(model: SectionHeaderLabelViewModel) {
         self.model = model
     }
 

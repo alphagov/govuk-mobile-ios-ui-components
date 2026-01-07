@@ -7,11 +7,11 @@ import iOSSnapshotTestCase
 @testable import UIComponents
 
 @MainActor
-final class HeaderViewComponentSnapshotTests: SnapshotTestCase  {
+final class SectionHeaderLabelViewSnapshotTests: SnapshotTestCase  {
 
-    func test_secondaryButton_isNotNull_rendersCorrectly() async throws {
-        let sut = HeaderViewComponent(
-            model: HeaderComponent(
+    func test_withButton_rendersCorrectly() {
+        let sut = SectionHeaderLabelView(
+            model: SectionHeaderLabelViewModel(
                 title: "headerTitle",
                 secondaryButton: .init(
                     title: "button title",
@@ -23,9 +23,9 @@ final class HeaderViewComponentSnapshotTests: SnapshotTestCase  {
         VerifySnapshotInWindow(hosting)
     }
 
-    func test_secondaryButtonNull_rendersCorrectly() async throws {
-        let sut = HeaderViewComponent(
-            model: HeaderComponent(
+    func test_withoutButton_rendersCorrectly() {
+        let sut = SectionHeaderLabelView(
+            model: SectionHeaderLabelViewModel(
                 title: "headerTitle"
             )
         ).frame(width: 300, height: 150)

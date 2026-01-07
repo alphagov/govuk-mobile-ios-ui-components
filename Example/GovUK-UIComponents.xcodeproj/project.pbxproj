@@ -98,7 +98,7 @@
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/CentreCardViewSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/GOVUKButtonSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/GOVUKUIComponentsSnapshotTests.swift,
-				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/HeaderViewComponentSnapshotTests.swift,
+				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/SectionHeaderLabelViewSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/SwiftUIButtonSnapshotTests.swift,
 			);
 			target = 5DB0C06B2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */;

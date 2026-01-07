@@ -1,6 +1,6 @@
 import Foundation
 
-public struct HeaderComponent {
+public struct SectionHeaderLabelViewModel {
     let title: String
     let secondaryButton: SecondaryButton?
 
