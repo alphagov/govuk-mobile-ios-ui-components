@@ -94,10 +94,11 @@
 		5DFBF3432CD0E8F900961CD3 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/CentreCardViewSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/SnapshotTestCase.swift,
+				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/CentreCardViewSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/GOVUKButtonSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/GOVUKUIComponentsSnapshotTests.swift,
+				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/SectionHeaderLabelViewSnapshotTests.swift,
 				govuk_uicomponents_ios/govuk_uicomponents_ios_snapshot_tests/Specs/SwiftUIButtonSnapshotTests.swift,
 			);
 			target = 5DB0C06B2CC247F200C4E010 /* govuk_uicomponents_ios_snapshot_tests */;

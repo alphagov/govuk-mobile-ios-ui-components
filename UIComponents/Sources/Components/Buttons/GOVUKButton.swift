@@ -121,6 +121,7 @@ final public class GOVUKButton: UIButton {
 
     private func viewModelUpdate() {
         setTitle(viewModel?.localisedTitle, for: .normal)
+        accessibilityLabel = viewModel?.localisedAccessibilityLabel ?? viewModel?.localisedTitle
         removeAllActions()
         if let action = viewModel?.action {
             addNewAction(action)
