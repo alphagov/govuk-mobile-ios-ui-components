@@ -1,15 +1,15 @@
 import SwiftUI
 
 public struct SectionHeaderLabelView: View {
-    let model: SectionHeaderLabelViewModel
+    let viewModel: SectionHeaderLabelViewModel
 
     public init(model: SectionHeaderLabelViewModel) {
-        self.model = model
+        self.viewModel = model
     }
 
     public var body: some View {
         HStack {
-            Text(model.title)
+            Text(viewModel.title)
                 .font(Font.govUK.title3Semibold)
                 .foregroundColor(
                     Color(
@@ -18,16 +18,16 @@ public struct SectionHeaderLabelView: View {
                 )
                 .accessibilityAddTraits(.isHeader)
             Spacer()
-            if let button = model.secondaryButton {
+            if let button = viewModel.button {
                 Button {
                     button.action()
                 } label: {
-                    Text(button.title)
+                    Text(button.localisedTitle)
                         .foregroundColor(Color(UIColor.govUK.text.buttonSecondary))
                         .font(Font.govUK.subheadlineSemibold)
                 }
                 .accessibilityLabel(
-                    button.accessibilityLabel ?? ""
+                    button.localisedAccessibilityLabel ?? button.localisedTitle
                 )
             }
         }

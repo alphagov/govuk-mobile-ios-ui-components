@@ -10,24 +10,27 @@ import iOSSnapshotTestCase
 final class SectionHeaderLabelViewSnapshotTests: SnapshotTestCase  {
 
     func test_withButton_rendersCorrectly() {
-        let sut = SectionHeaderLabelView(
-            model: SectionHeaderLabelViewModel(
-                title: "headerTitle",
-                secondaryButton: .init(
-                    title: "button title",
-                    action: { }
-                )
+        let viewModel = SectionHeaderLabelViewModel(
+            title: "headerTitle",
+            button: .init(
+                localisedTitle: "button title",
+                action: { }
             )
+        )
+        let sut = SectionHeaderLabelView(
+            model: viewModel
         ).frame(width: 300, height: 150)
         let hosting = UIHostingController(rootView: sut)
         VerifySnapshotInWindow(hosting)
     }
 
     func test_withoutButton_rendersCorrectly() {
+        let viewModel = SectionHeaderLabelViewModel(
+            title: "headerTitle",
+            button: nil
+        )
         let sut = SectionHeaderLabelView(
-            model: SectionHeaderLabelViewModel(
-                title: "headerTitle"
-            )
+            model: viewModel
         ).frame(width: 300, height: 150)
 
         let hosting = UIHostingController(rootView: sut)

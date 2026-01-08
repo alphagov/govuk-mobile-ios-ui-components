@@ -2,25 +2,11 @@ import Foundation
 
 public struct SectionHeaderLabelViewModel {
     let title: String
-    let secondaryButton: SecondaryButton?
+    let button: GOVUKButton.ButtonViewModel?
 
     public init(title: String,
-                secondaryButton: SecondaryButton? = nil) {
+                button: GOVUKButton.ButtonViewModel? = nil) {
         self.title = title
-        self.secondaryButton = secondaryButton
-    }
-
-   public struct SecondaryButton {
-        let title: String
-        let accessibilityLabel: String?
-        let action: () -> Void?
-
-         public init(title: String,
-                     accessibilityLabel: String? = nil,
-                     action: @escaping () -> Void) {
-             self.title = title
-             self.accessibilityLabel = accessibilityLabel
-             self.action = action
-        }
+        self.button = button
     }
 }
